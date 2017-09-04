@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D151F5DE5CA0007A37D /* AppDelegate.swift */; };
-		CD780D181F5DE5CA0007A37D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D171F5DE5CA0007A37D /* ViewController.swift */; };
 		CD780D1B1F5DE5CA0007A37D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD780D191F5DE5CA0007A37D /* Main.storyboard */; };
 		CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD780D1C1F5DE5CA0007A37D /* Assets.xcassets */; };
 		CD780D201F5DE5CA0007A37D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD780D1E1F5DE5CA0007A37D /* LaunchScreen.storyboard */; };
+		CD780D2D1F5DE9960007A37D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D2C1F5DE9960007A37D /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CD780D121F5DE5CA0007A37D /* project-estimator-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-estimator-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD780D151F5DE5CA0007A37D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD780D171F5DE5CA0007A37D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD780D1A1F5DE5CA0007A37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD780D1C1F5DE5CA0007A37D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD780D1F1F5DE5CA0007A37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD780D211F5DE5CA0007A37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD780D2C1F5DE9960007A37D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,38 @@
 		CD780D141F5DE5CA0007A37D /* project-estimator-ios */ = {
 			isa = PBXGroup;
 			children = (
+				CD780D2E1F5DEA4E0007A37D /* Storyboards */,
+				CD780D271F5DE8790007A37D /* ViewControllers */,
+				CD780D2F1F5DEA820007A37D /* Resources */,
 				CD780D151F5DE5CA0007A37D /* AppDelegate.swift */,
-				CD780D171F5DE5CA0007A37D /* ViewController.swift */,
-				CD780D191F5DE5CA0007A37D /* Main.storyboard */,
-				CD780D1C1F5DE5CA0007A37D /* Assets.xcassets */,
-				CD780D1E1F5DE5CA0007A37D /* LaunchScreen.storyboard */,
-				CD780D211F5DE5CA0007A37D /* Info.plist */,
 			);
 			path = "project-estimator-ios";
+			sourceTree = "<group>";
+		};
+		CD780D271F5DE8790007A37D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD780D2C1F5DE9960007A37D /* MainViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CD780D2E1F5DEA4E0007A37D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CD780D1E1F5DE5CA0007A37D /* LaunchScreen.storyboard */,
+				CD780D191F5DE5CA0007A37D /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		CD780D2F1F5DEA820007A37D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CD780D1C1F5DE5CA0007A37D /* Assets.xcassets */,
+				CD780D211F5DE5CA0007A37D /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD780D181F5DE5CA0007A37D /* ViewController.swift in Sources */,
 				CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */,
+				CD780D2D1F5DE9960007A37D /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
