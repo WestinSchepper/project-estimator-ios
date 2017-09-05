@@ -27,6 +27,7 @@ class SettingsTableViewCell: UITableViewCell, TableViewRegisterable {
   @IBAction func valueTextFieldDidChange(_ sender: UITextField) {
     guard let newValue = Int(sender.text ?? "0") else {
       value = 0
+      didChange(id, 0)
       return
     }
 
