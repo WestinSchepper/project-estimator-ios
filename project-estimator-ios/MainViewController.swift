@@ -2,18 +2,6 @@
 
 import UIKit
 
-struct Setting {
-  var id: String
-  var title: String
-  var value: Int
-
-  init(id: String = UUID().uuidString, title: String, value: Int) {
-    self.id = id
-    self.title = title
-    self.value = value
-  }
-}
-
 final class MainViewController: UIViewController {
   @IBOutlet weak var settingsTable: UITableView!
   var settings: [Setting] = [

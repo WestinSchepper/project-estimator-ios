@@ -16,6 +16,7 @@
 		CD780D381F5E1EE50007A37D /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD780D361F5E1EE50007A37D /* SettingsTableViewCell.xib */; };
 		CD780D3C1F5E1F7F0007A37D /* TableViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D3B1F5E1F7F0007A37D /* TableViewRegisterable.swift */; };
 		CD780D3E1F5E1FB80007A37D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D3D1F5E1FB80007A37D /* TableViewController.swift */; };
+		CD780D411F5E4ABD0007A37D /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D401F5E4ABD0007A37D /* Setting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CD780D361F5E1EE50007A37D /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		CD780D3B1F5E1F7F0007A37D /* TableViewRegisterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewRegisterable.swift; sourceTree = "<group>"; };
 		CD780D3D1F5E1FB80007A37D /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		CD780D401F5E4ABD0007A37D /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		CD780D141F5DE5CA0007A37D /* project-estimator-ios */ = {
 			isa = PBXGroup;
 			children = (
+				CD780D3F1F5E4AAE0007A37D /* Models */,
 				CD780D3A1F5E1F6E0007A37D /* Extensions */,
 				CD780D391F5E1F670007A37D /* Protocols */,
 				CD780D331F5E1EB30007A37D /* Views */,
@@ -130,6 +133,14 @@
 				CD780D3D1F5E1FB80007A37D /* TableViewController.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		CD780D3F1F5E4AAE0007A37D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD780D401F5E4ABD0007A37D /* Setting.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +219,7 @@
 			files = (
 				CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */,
 				CD780D2D1F5DE9960007A37D /* MainViewController.swift in Sources */,
+				CD780D411F5E4ABD0007A37D /* Setting.swift in Sources */,
 				CD780D3C1F5E1F7F0007A37D /* TableViewRegisterable.swift in Sources */,
 				CD780D3E1F5E1FB80007A37D /* TableViewController.swift in Sources */,
 				CD780D371F5E1EE50007A37D /* SettingsTableViewCell.swift in Sources */,
