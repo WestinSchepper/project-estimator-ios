@@ -30,14 +30,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yVp-Bl-xxR">
+                                <rect key="frame" x="0.0" y="66" width="375" height="132"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="0hm-hb-a9g"/>
+                                </constraints>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="R2g-RR-GsE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Mbc-jj-eBd"/>
                             <constraint firstAttribute="trailing" secondItem="R2g-RR-GsE" secondAttribute="trailing" constant="16" id="W3s-st-bFv"/>
                             <constraint firstItem="R2g-RR-GsE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="aL8-lR-iXo"/>
+                            <constraint firstItem="yVp-Bl-xxR" firstAttribute="top" secondItem="R2g-RR-GsE" secondAttribute="bottom" constant="8" id="cNT-mS-L47"/>
+                            <constraint firstAttribute="trailing" secondItem="yVp-Bl-xxR" secondAttribute="trailing" id="ig3-Da-kxH"/>
+                            <constraint firstItem="yVp-Bl-xxR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kNe-KL-GN0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="settingsTable" destination="yVp-Bl-xxR" id="6ty-i0-U80"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
