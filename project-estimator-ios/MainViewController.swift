@@ -1,14 +1,37 @@
 //  Created by Westin Schepper on 9/4/17.
 
 import UIKit
+import ReSwift
 
-final class MainViewController: UIViewController {
-  @IBOutlet weak var settingsTable: UITableView!
+final class MainViewController: UIViewController, StoreSubscriber {
   var settings: [Setting] = [
     Setting(title: "Padding percentage", value: 10),
     Setting(title: "Hours per meeting per person", value: 2),
     Setting(title: "Hours per sprint", value: 80)
   ]
+
+  @IBOutlet weak var settingsTable: UITableView!
+  @IBOutlet var counterLabel: UILabel!
+
+  @IBAction func increaseButtonTapped(sender: UIButton) {
+    mainStore.dispatch(
+      counterIncrease(2)
+    )
+  }
+
+  @IBAction func decreaseButtonTapped(sender: UIButton) {
+    mainStore.dispatch(
+      counterDecrease(5)
+    )
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    mainStore.subscribe(self)
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+    mainStore.unsubscribe(self)
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -21,6 +44,10 @@ final class MainViewController: UIViewController {
 
     SettingsTableViewCell.register(tableView: settingsTable)
     settingsTable.rowHeight = SettingsTableViewCell.preferredHeight
+  }
+
+  func newState(state: AppState) {
+    counterLabel.text = "\(state.counter)"
   }
 
   func updateSetting(id: String, value: Int) {

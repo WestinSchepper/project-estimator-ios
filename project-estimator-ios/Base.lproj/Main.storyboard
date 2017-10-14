@@ -37,18 +37,57 @@
                                     <constraint firstAttribute="height" constant="132" id="0hm-hb-a9g"/>
                                 </constraints>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXk-Ha-UgU">
+                                <rect key="frame" x="166" y="206" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="B4e-XH-Q49"/>
+                                    <constraint firstAttribute="height" constant="21" id="c2h-N8-7zm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOo-my-t6J">
+                                <rect key="frame" x="236" y="206" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="59J-6d-7Ff"/>
+                                    <constraint firstAttribute="height" constant="30" id="pfW-Sv-YLl"/>
+                                </constraints>
+                                <state key="normal" title="Up"/>
+                                <connections>
+                                    <action selector="increaseButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Og0-hK-zni"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulO-Ws-8I5">
+                                <rect key="frame" x="87" y="206" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fSz-DV-rJq"/>
+                                    <constraint firstAttribute="width" constant="46" id="vRn-Fp-uFF"/>
+                                </constraints>
+                                <state key="normal" title="Down"/>
+                                <connections>
+                                    <action selector="decreaseButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rXn-hA-dmc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="LXk-Ha-UgU" firstAttribute="leading" secondItem="ulO-Ws-8I5" secondAttribute="trailing" constant="33" id="D1f-zc-1Be"/>
+                            <constraint firstItem="HOo-my-t6J" firstAttribute="top" secondItem="yVp-Bl-xxR" secondAttribute="bottom" constant="8" id="LW9-oX-5mO"/>
                             <constraint firstItem="R2g-RR-GsE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Mbc-jj-eBd"/>
+                            <constraint firstItem="LXk-Ha-UgU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NWa-N3-xih"/>
+                            <constraint firstItem="ulO-Ws-8I5" firstAttribute="top" secondItem="yVp-Bl-xxR" secondAttribute="bottom" constant="8" id="VHh-Nz-UAd"/>
                             <constraint firstAttribute="trailing" secondItem="R2g-RR-GsE" secondAttribute="trailing" constant="16" id="W3s-st-bFv"/>
+                            <constraint firstItem="HOo-my-t6J" firstAttribute="leading" secondItem="LXk-Ha-UgU" secondAttribute="trailing" constant="28" id="Zbl-5N-Qtg"/>
                             <constraint firstItem="R2g-RR-GsE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="aL8-lR-iXo"/>
                             <constraint firstItem="yVp-Bl-xxR" firstAttribute="top" secondItem="R2g-RR-GsE" secondAttribute="bottom" constant="8" id="cNT-mS-L47"/>
                             <constraint firstAttribute="trailing" secondItem="yVp-Bl-xxR" secondAttribute="trailing" id="ig3-Da-kxH"/>
                             <constraint firstItem="yVp-Bl-xxR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kNe-KL-GN0"/>
+                            <constraint firstItem="LXk-Ha-UgU" firstAttribute="top" secondItem="yVp-Bl-xxR" secondAttribute="bottom" constant="8" id="mGK-oM-j2e"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="counterLabel" destination="LXk-Ha-UgU" id="Jxc-oL-nli"/>
                         <outlet property="settingsTable" destination="yVp-Bl-xxR" id="6ty-i0-U80"/>
                     </connections>
                 </viewController>
