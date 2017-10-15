@@ -4,36 +4,13 @@ import UIKit
 import ReSwift
 
 final class MainViewController: UIViewController, StoreSubscriber {
-  var settings: [Setting] = [
-    Setting(title: "Padding percentage", value: 10),
-    Setting(title: "Hours per meeting per person", value: 2),
-    Setting(title: "Hours per sprint", value: 80)
-  ]
-
   var categories: [Category] = []
+  var toolbar: UIToolbar!
 
-  @IBOutlet weak var settingsTable: UITableView!
-  @IBOutlet weak var categoryName: UITextField!
+  @IBOutlet weak var tableView: UITableView!
 
   @IBAction func addNewCategory (_ sender: UIButton) {
     mainStore.dispatch(addCategory())
-  }
-
-  @IBAction func removeRandomCategory (_ sender: UIButton) {
-    guard categories.isEmpty != true else { return }
-
-    mainStore.dispatch(removeCategory(categories.first!))
-  }
-
-  @IBAction func updateFirstCategory (_ sender: UIButton) {
-    guard categories.isEmpty != true, categoryName.text != nil else { return }
-
-    var category: Category = categories[0]
-    category.title = categoryName.text!
-
-    print(category)
-
-    mainStore.dispatch(updateCategory(category))
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -47,44 +24,84 @@ final class MainViewController: UIViewController, StoreSubscriber {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    settingsTable.delegate = self
-    settingsTable.dataSource = self
-    settingsTable.tableFooterView = UIView()
-    settingsTable.isScrollEnabled = false
-    settingsTable.allowsSelection = false
+    tableView.delegate = self
+    tableView.dataSource = self
+    tableView.tableFooterView = UIView()
+    tableView.allowsSelection = false
 
-    SettingsTableViewCell.register(tableView: settingsTable)
-    settingsTable.rowHeight = SettingsTableViewCell.preferredHeight
+    CategorySectionHeaderView.register(tableView: tableView, forIdentifierType: .headerFooterView)
+    CategorySectionFooterView.register(tableView: tableView, forIdentifierType: .headerFooterView)
+
+    toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 30))
+
+    // swiftlint:disable:next line_length
+    let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+    let doneBtn: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+    toolbar.setItems([flexSpace, doneBtn], animated: false)
+    toolbar.sizeToFit()
+  }
+
+  func doneButtonAction () {
+    self.view.endEditing(true)
   }
 
   func newState(state: AppState) {
-    print(state)
     categories = state.categories
-  }
 
-  func updateSetting(id: String, value: Int) {
-    guard let settingIndex = settings.index(where: { $0.id == id }) else { return }
-
-    settings[settingIndex].value = value
+    tableView.reloadData()
   }
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+  func numberOfSections(in tableView: UITableView) -> Int {
+    return categories.count
+  }
+
+  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    var category = categories[section]
+    // swiftlint:disable:next force_cast line_length
+    let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: CategorySectionHeaderView.identifier) as! CategorySectionHeaderView
+
+    header.title = category.title
+    header.titleField.inputAccessoryView = toolbar
+    header.actionPressed = {
+      mainStore.dispatch(removeCategory(category))
+    }
+
+    header.titleDidUpdate = { title in
+      category.title = title
+      mainStore.dispatch(updateCategory(category))
+    }
+
+    return header
+  }
+
+  func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    // swiftlint:disable:next force_cast line_length
+    let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: CategorySectionFooterView.identifier) as! CategorySectionFooterView
+
+    footer.actionPressed = {
+      mainStore.dispatch(addCategory())
+    }
+
+    return footer
+  }
+
+  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return CategorySectionHeaderView.preferredHeight
+  }
+
+  func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    return CategorySectionFooterView.preferredHeight
+  }
+
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return settings.count
+    return 0
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.identifier) as! SettingsTableViewCell
-    let setting = settings[indexPath.row]
+    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
 
-    cell.id = setting.id
-    cell.title = setting.title
-    cell.value = setting.value
-    cell.didChange = { (id, value) in
-      self.updateSetting(id: id, value: value)
-    }
-
-    return cell
+    return cell!
   }
 }
