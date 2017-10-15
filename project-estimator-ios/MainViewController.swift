@@ -10,10 +10,30 @@ final class MainViewController: UIViewController, StoreSubscriber {
     Setting(title: "Hours per sprint", value: 80)
   ]
 
+  var categories: [Category] = []
+
   @IBOutlet weak var settingsTable: UITableView!
+  @IBOutlet weak var categoryName: UITextField!
 
   @IBAction func addNewCategory (_ sender: UIButton) {
     mainStore.dispatch(addCategory())
+  }
+
+  @IBAction func removeRandomCategory (_ sender: UIButton) {
+    guard categories.isEmpty != true else { return }
+
+    mainStore.dispatch(removeCategory(categories.first!))
+  }
+
+  @IBAction func updateFirstCategory (_ sender: UIButton) {
+    guard categories.isEmpty != true, categoryName.text != nil else { return }
+
+    var category: Category = categories[0]
+    category.title = categoryName.text!
+
+    print(category)
+
+    mainStore.dispatch(updateCategory(category))
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +59,7 @@ final class MainViewController: UIViewController, StoreSubscriber {
 
   func newState(state: AppState) {
     print(state)
+    categories = state.categories
   }
 
   func updateSetting(id: String, value: Int) {

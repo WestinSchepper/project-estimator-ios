@@ -19,7 +19,7 @@ class SettingsTableViewCell: UITableViewCell, TableViewRegisterable {
     }
   }
 
-  var didChange: (_ id: String, _ value: Int) -> () = { _ in }
+  var didChange: (_ id: String, _ value: Int) -> Void = { _ in }
 
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var valueTextField: UITextField!
@@ -34,7 +34,6 @@ class SettingsTableViewCell: UITableViewCell, TableViewRegisterable {
     value = newValue
     didChange(id, newValue)
   }
-  
 
   override func awakeFromNib() {
     super.awakeFromNib()

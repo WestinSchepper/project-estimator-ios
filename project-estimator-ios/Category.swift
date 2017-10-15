@@ -2,7 +2,7 @@
 
 import Foundation
 
-struct Category {
+struct Category: IdEquatable {
   let id: String = UUID().uuidString
   var title: String = ""
 }

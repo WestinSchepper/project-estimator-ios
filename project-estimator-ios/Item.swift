@@ -15,4 +15,3 @@ struct Item {
     self.estimate = estimate
   }
 }
-
