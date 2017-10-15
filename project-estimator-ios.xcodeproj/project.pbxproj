@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		CD11C7DA1F92B66E000D0DB1 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD11C7D91F92B66E000D0DB1 /* ReSwift.framework */; };
 		CD11C7E01F92BA10000D0DB1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7DF1F92BA10000D0DB1 /* AppState.swift */; };
-		CD11C7E31F92BA7E000D0DB1 /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7E21F92BA7E000D0DB1 /* CounterReducer.swift */; };
-		CD11C7E51F92BC23000D0DB1 /* CounterActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7E41F92BC23000D0DB1 /* CounterActions.swift */; };
+		CD11C7E31F92BA7E000D0DB1 /* CategoryReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7E21F92BA7E000D0DB1 /* CategoryReducer.swift */; };
+		CD11C7E51F92BC23000D0DB1 /* CategoryActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7E41F92BC23000D0DB1 /* CategoryActions.swift */; };
+		CD11C7E91F92D5D0000D0DB1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7E81F92D5D0000D0DB1 /* Category.swift */; };
+		CD11C7EB1F92D654000D0DB1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7EA1F92D654000D0DB1 /* Item.swift */; };
 		CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D151F5DE5CA0007A37D /* AppDelegate.swift */; };
 		CD780D1B1F5DE5CA0007A37D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD780D191F5DE5CA0007A37D /* Main.storyboard */; };
 		CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD780D1C1F5DE5CA0007A37D /* Assets.xcassets */; };
@@ -26,8 +28,10 @@
 /* Begin PBXFileReference section */
 		CD11C7D91F92B66E000D0DB1 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		CD11C7DF1F92BA10000D0DB1 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		CD11C7E21F92BA7E000D0DB1 /* CounterReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
-		CD11C7E41F92BC23000D0DB1 /* CounterActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterActions.swift; sourceTree = "<group>"; };
+		CD11C7E21F92BA7E000D0DB1 /* CategoryReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryReducer.swift; sourceTree = "<group>"; };
+		CD11C7E41F92BC23000D0DB1 /* CategoryActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryActions.swift; sourceTree = "<group>"; };
+		CD11C7E81F92D5D0000D0DB1 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		CD11C7EA1F92D654000D0DB1 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CD780D121F5DE5CA0007A37D /* project-estimator-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-estimator-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD780D151F5DE5CA0007A37D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD780D1A1F5DE5CA0007A37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,7 +77,7 @@
 		CD11C7DD1F92B9F8000D0DB1 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				CD11C7E41F92BC23000D0DB1 /* CounterActions.swift */,
+				CD11C7E41F92BC23000D0DB1 /* CategoryActions.swift */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -81,7 +85,7 @@
 		CD11C7DE1F92BA00000D0DB1 /* Reducers */ = {
 			isa = PBXGroup;
 			children = (
-				CD11C7E21F92BA7E000D0DB1 /* CounterReducer.swift */,
+				CD11C7E21F92BA7E000D0DB1 /* CategoryReducer.swift */,
 			);
 			name = Reducers;
 			sourceTree = "<group>";
@@ -184,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				CD780D401F5E4ABD0007A37D /* Setting.swift */,
+				CD11C7E81F92D5D0000D0DB1 /* Category.swift */,
+				CD11C7EA1F92D654000D0DB1 /* Item.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -296,14 +302,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD11C7E51F92BC23000D0DB1 /* CounterActions.swift in Sources */,
+				CD11C7E51F92BC23000D0DB1 /* CategoryActions.swift in Sources */,
+				CD11C7E91F92D5D0000D0DB1 /* Category.swift in Sources */,
 				CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */,
 				CD780D2D1F5DE9960007A37D /* MainViewController.swift in Sources */,
 				CD11C7E01F92BA10000D0DB1 /* AppState.swift in Sources */,
 				CD780D411F5E4ABD0007A37D /* Setting.swift in Sources */,
+				CD11C7EB1F92D654000D0DB1 /* Item.swift in Sources */,
 				CD780D3C1F5E1F7F0007A37D /* TableViewRegisterable.swift in Sources */,
 				CD780D3E1F5E1FB80007A37D /* TableViewController.swift in Sources */,
-				CD11C7E31F92BA7E000D0DB1 /* CounterReducer.swift in Sources */,
+				CD11C7E31F92BA7E000D0DB1 /* CategoryReducer.swift in Sources */,
 				CD780D371F5E1EE50007A37D /* SettingsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

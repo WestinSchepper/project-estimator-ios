@@ -11,18 +11,9 @@ final class MainViewController: UIViewController, StoreSubscriber {
   ]
 
   @IBOutlet weak var settingsTable: UITableView!
-  @IBOutlet var counterLabel: UILabel!
 
-  @IBAction func increaseButtonTapped(sender: UIButton) {
-    mainStore.dispatch(
-      counterIncrease(2)
-    )
-  }
-
-  @IBAction func decreaseButtonTapped(sender: UIButton) {
-    mainStore.dispatch(
-      counterDecrease(5)
-    )
+  @IBAction func addNewCategory (_ sender: UIButton) {
+    mainStore.dispatch(addCategory())
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -47,7 +38,7 @@ final class MainViewController: UIViewController, StoreSubscriber {
   }
 
   func newState(state: AppState) {
-    counterLabel.text = "\(state.counter)"
+    print(state)
   }
 
   func updateSetting(id: String, value: Int) {
