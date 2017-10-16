@@ -2,7 +2,7 @@
 
 import UIKit
 
-class CategorySectionHeaderView: UITableViewHeaderFooterView, TableViewRegisterable {
+final class CategorySectionHeaderView: UITableViewHeaderFooterView, TableViewRegisterable {
   static let preferredHeight: CGFloat = 32
   static let identifier = String(describing: CategorySectionHeaderView.self)
 

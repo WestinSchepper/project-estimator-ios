@@ -2,7 +2,7 @@
 
 import UIKit
 
-class CategorySectionFooterView: UITableViewHeaderFooterView, TableViewRegisterable {
+final class CategorySectionFooterView: UITableViewHeaderFooterView, TableViewRegisterable {
   static let preferredHeight: CGFloat = 44
   static let identifier = String(describing: CategorySectionFooterView.self)
 

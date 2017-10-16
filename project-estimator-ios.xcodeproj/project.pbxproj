@@ -28,6 +28,9 @@
 		CDDF49BF1F94298A00EFD357 /* ItemActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49BE1F94298A00EFD357 /* ItemActions.swift */; };
 		CDDF49C11F942B0D00EFD357 /* ItemReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C01F942B0D00EFD357 /* ItemReducer.swift */; };
 		CDDF49C31F94435E00EFD357 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C21F94435E00EFD357 /* AppReducer.swift */; };
+		CDDF49C61F9446E700EFD357 /* CategorySelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C51F9446E700EFD357 /* CategorySelectors.swift */; };
+		CDDF49C81F944A8D00EFD357 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C71F944A8D00EFD357 /* ItemTableViewCell.swift */; };
+		CDDF49CA1F944B1100EFD357 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDF49C91F944B1100EFD357 /* ItemTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		CDDF49BE1F94298A00EFD357 /* ItemActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemActions.swift; sourceTree = "<group>"; };
 		CDDF49C01F942B0D00EFD357 /* ItemReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemReducer.swift; sourceTree = "<group>"; };
 		CDDF49C21F94435E00EFD357 /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		CDDF49C51F9446E700EFD357 /* CategorySelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectors.swift; sourceTree = "<group>"; };
+		CDDF49C71F944A8D00EFD357 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		CDDF49C91F944B1100EFD357 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 		CD780D141F5DE5CA0007A37D /* project-estimator-ios */ = {
 			isa = PBXGroup;
 			children = (
+				CDDF49C41F94463800EFD357 /* Selectors */,
 				CD11C7DE1F92BA00000D0DB1 /* Reducers */,
 				CD11C7DD1F92B9F8000D0DB1 /* Actions */,
 				CD11C7DC1F92B9F1000D0DB1 /* State */,
@@ -167,7 +174,7 @@
 		CD780D331F5E1EB30007A37D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CDDF49BD1F9426B500EFD357 /* New Group */,
+				CDDF49BD1F9426B500EFD357 /* ItemTableViewCell */,
 				CDDF49B81F941C0200EFD357 /* CategorySectionFooterView */,
 				CDDF49B71F93C99700EFD357 /* CategorySectionHeaderView */,
 			);
@@ -218,11 +225,21 @@
 			name = CategorySectionFooterView;
 			sourceTree = "<group>";
 		};
-		CDDF49BD1F9426B500EFD357 /* New Group */ = {
+		CDDF49BD1F9426B500EFD357 /* ItemTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				CDDF49C71F944A8D00EFD357 /* ItemTableViewCell.swift */,
+				CDDF49C91F944B1100EFD357 /* ItemTableViewCell.xib */,
 			);
-			name = "New Group";
+			name = ItemTableViewCell;
+			sourceTree = "<group>";
+		};
+		CDDF49C41F94463800EFD357 /* Selectors */ = {
+			isa = PBXGroup;
+			children = (
+				CDDF49C51F9446E700EFD357 /* CategorySelectors.swift */,
+			);
+			name = Selectors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +308,7 @@
 				CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */,
 				CD780D1B1F5DE5CA0007A37D /* Main.storyboard in Resources */,
 				CDDF49BA1F941C1900EFD357 /* CategorySectionFooterView.xib in Resources */,
+				CDDF49CA1F944B1100EFD357 /* ItemTableViewCell.xib in Resources */,
 				CDDF49B61F93C99000EFD357 /* CategorySectionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD11C7E51F92BC23000D0DB1 /* CategoryActions.swift in Sources */,
+				CDDF49C61F9446E700EFD357 /* CategorySelectors.swift in Sources */,
 				CDDF49C11F942B0D00EFD357 /* ItemReducer.swift in Sources */,
 				CD11C7E91F92D5D0000D0DB1 /* Category.swift in Sources */,
 				CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */,
@@ -348,6 +367,7 @@
 				CD11C7ED1F92EB36000D0DB1 /* Array.swift in Sources */,
 				CD11C7EF1F92F289000D0DB1 /* IdEquatable.swift in Sources */,
 				CD11C7E31F92BA7E000D0DB1 /* CategoryReducer.swift in Sources */,
+				CDDF49C81F944A8D00EFD357 /* ItemTableViewCell.swift in Sources */,
 				CD780D371F5E1EE50007A37D /* CategorySectionHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

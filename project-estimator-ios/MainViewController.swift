@@ -5,6 +5,7 @@ import ReSwift
 
 final class MainViewController: UIViewController, StoreSubscriber {
   var categories: [Category] = []
+  var items: [Item] = []
   var toolbar: UIToolbar!
 
   @IBOutlet weak var tableView: UITableView!
@@ -31,6 +32,7 @@ final class MainViewController: UIViewController, StoreSubscriber {
 
     CategorySectionHeaderView.register(tableView: tableView, forIdentifierType: .headerFooterView)
     CategorySectionFooterView.register(tableView: tableView, forIdentifierType: .headerFooterView)
+    ItemTableViewCell.register(tableView: tableView)
 
     toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 30))
 
@@ -47,6 +49,7 @@ final class MainViewController: UIViewController, StoreSubscriber {
 
   func newState(state: AppState) {
     categories = state.categories
+    items = state.items
 
     tableView.reloadData()
   }
@@ -76,19 +79,19 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     return header
   }
 
+  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return CategorySectionHeaderView.preferredHeight
+  }
+
   func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
     // swiftlint:disable:next force_cast line_length
     let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: CategorySectionFooterView.identifier) as! CategorySectionFooterView
 
     footer.actionPressed = {
-      mainStore.dispatch(addCategory())
+      mainStore.dispatch(addItem(categoryId: self.categories[section].id))
     }
 
     return footer
-  }
-
-  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return CategorySectionHeaderView.preferredHeight
   }
 
   func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -96,12 +99,21 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 0
+    return categoryItems(items: items, categoryId: categories[section].id).count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+    // swiftlint:disable:next force_cast line_length
+    let cell = tableView.dequeueReusableCell(withIdentifier: ItemTableViewCell.identifier) as! ItemTableViewCell
+    let categoryId = categories[indexPath.section].id
+    let filteredItems = categoryItems(items: items, categoryId: categoryId)
 
-    return cell!
+    cell.titleLabel.text = filteredItems[indexPath.row].id
+
+    return cell
+  }
+
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return ItemTableViewCell.preferredHeight
   }
 }

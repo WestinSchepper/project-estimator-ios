@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ItemTableViewCell" customModule="project_estimator_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agA-3U-etw">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMS-ko-meS">
+                            <rect key="frame" x="8" y="12" width="235" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="eRb-Et-PuE"/>
+                                <constraint firstAttribute="width" constant="235" id="kLa-QW-Jf9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="uMS-ko-meS" firstAttribute="centerY" secondItem="agA-3U-etw" secondAttribute="centerY" id="wEU-xK-6wP"/>
+                        <constraint firstItem="uMS-ko-meS" firstAttribute="leading" secondItem="agA-3U-etw" secondAttribute="leading" constant="8" id="xHD-0x-ZLw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="agA-3U-etw" secondAttribute="bottom" id="Dzr-4l-Wc7"/>
+                <constraint firstItem="agA-3U-etw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="muU-MT-vuU"/>
+                <constraint firstAttribute="trailing" secondItem="agA-3U-etw" secondAttribute="trailing" id="na1-UZ-kvQ"/>
+                <constraint firstItem="agA-3U-etw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ulP-A4-EC9"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleLabel" destination="uMS-ko-meS" id="wWE-Co-EYs"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="182"/>
+        </view>
+    </objects>
+</document>
