@@ -18,21 +18,39 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agA-3U-etw">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMS-ko-meS">
-                            <rect key="frame" x="8" y="12" width="235" height="21"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sUx-67-mn3">
+                            <rect key="frame" x="8" y="7" width="281" height="30"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="21" id="eRb-Et-PuE"/>
-                                <constraint firstAttribute="width" constant="235" id="kLa-QW-Jf9"/>
+                                <constraint firstAttribute="height" constant="30" id="gvz-sH-Ztg"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="titleFieldDidChange:" destination="iN0-l3-epB" eventType="editingChanged" id="7j4-Ya-kdv"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="40" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="11Q-Sf-fhj">
+                            <rect key="frame" x="297" y="7" width="70" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="CrX-Zq-imQ"/>
+                                <constraint firstAttribute="height" constant="30" id="Fob-4B-I5W"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="estimateFieldDidChange:" destination="iN0-l3-epB" eventType="editingChanged" id="VOn-dJ-Ar8"/>
+                            </connections>
+                        </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="uMS-ko-meS" firstAttribute="centerY" secondItem="agA-3U-etw" secondAttribute="centerY" id="wEU-xK-6wP"/>
-                        <constraint firstItem="uMS-ko-meS" firstAttribute="leading" secondItem="agA-3U-etw" secondAttribute="leading" constant="8" id="xHD-0x-ZLw"/>
+                        <constraint firstItem="11Q-Sf-fhj" firstAttribute="centerY" secondItem="agA-3U-etw" secondAttribute="centerY" id="2M1-JZ-Z3E"/>
+                        <constraint firstItem="11Q-Sf-fhj" firstAttribute="leading" secondItem="sUx-67-mn3" secondAttribute="trailing" constant="8" id="aRY-Ge-SYa"/>
+                        <constraint firstItem="sUx-67-mn3" firstAttribute="centerY" secondItem="agA-3U-etw" secondAttribute="centerY" id="g4Q-uE-Ygh"/>
+                        <constraint firstItem="sUx-67-mn3" firstAttribute="leading" secondItem="agA-3U-etw" secondAttribute="leading" constant="8" id="rjv-xk-PsU"/>
+                        <constraint firstAttribute="trailing" secondItem="11Q-Sf-fhj" secondAttribute="trailing" constant="8" id="zL9-JB-npU"/>
                     </constraints>
                 </view>
             </subviews>
@@ -45,7 +63,8 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="titleLabel" destination="uMS-ko-meS" id="wWE-Co-EYs"/>
+                <outlet property="estimateField" destination="11Q-Sf-fhj" id="JpZ-Ws-x7f"/>
+                <outlet property="titleField" destination="sUx-67-mn3" id="KIA-Ql-HIx"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="182"/>
         </view>

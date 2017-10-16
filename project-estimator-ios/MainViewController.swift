@@ -51,6 +51,7 @@ final class MainViewController: UIViewController, StoreSubscriber {
     categories = state.categories
     items = state.items
 
+    // FIXME: This causes the keyboard to dismiss when editing an item row.
     tableView.reloadData()
   }
 }
@@ -107,8 +108,23 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: ItemTableViewCell.identifier) as! ItemTableViewCell
     let categoryId = categories[indexPath.section].id
     let filteredItems = categoryItems(items: items, categoryId: categoryId)
+    var item = filteredItems[indexPath.row]
 
-    cell.titleLabel.text = filteredItems[indexPath.row].id
+    cell.title = item.title
+    cell.estimate = item.estimate
+
+    cell.titleField.inputAccessoryView = toolbar
+    cell.estimateField.inputAccessoryView = toolbar
+
+    cell.titleDidUpdate = { title in
+      item.title = title
+      mainStore.dispatch(updateItem(item))
+    }
+
+    cell.estimateDidUpdate = { estimate in
+      item.estimate = estimate
+      mainStore.dispatch(updateItem(item))
+    }
 
     return cell
   }
