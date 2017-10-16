@@ -34,8 +34,8 @@ final class MainViewController: UIViewController, StoreSubscriber {
 
     toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 30))
 
-    // swiftlint:disable:next line_length
     let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+    // swiftlint:disable:next line_length
     let doneBtn: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
     toolbar.setItems([flexSpace, doneBtn], animated: false)
     toolbar.sizeToFit()

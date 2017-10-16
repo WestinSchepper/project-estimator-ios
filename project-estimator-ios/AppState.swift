@@ -4,4 +4,5 @@ import ReSwift
 
 struct AppState: StateType {
   var categories: [Category] = []
+  var items: [Item] = []
 }

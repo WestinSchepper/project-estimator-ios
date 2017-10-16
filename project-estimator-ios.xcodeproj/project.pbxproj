@@ -25,6 +25,9 @@
 		CDDF49B61F93C99000EFD357 /* CategorySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDF49B51F93C99000EFD357 /* CategorySectionHeaderView.xib */; };
 		CDDF49BA1F941C1900EFD357 /* CategorySectionFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDF49B91F941C1900EFD357 /* CategorySectionFooterView.xib */; };
 		CDDF49BC1F941CA900EFD357 /* CategorySectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49BB1F941CA900EFD357 /* CategorySectionFooterView.swift */; };
+		CDDF49BF1F94298A00EFD357 /* ItemActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49BE1F94298A00EFD357 /* ItemActions.swift */; };
+		CDDF49C11F942B0D00EFD357 /* ItemReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C01F942B0D00EFD357 /* ItemReducer.swift */; };
+		CDDF49C31F94435E00EFD357 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C21F94435E00EFD357 /* AppReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		CDDF49B51F93C99000EFD357 /* CategorySectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySectionHeaderView.xib; sourceTree = "<group>"; };
 		CDDF49B91F941C1900EFD357 /* CategorySectionFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySectionFooterView.xib; sourceTree = "<group>"; };
 		CDDF49BB1F941CA900EFD357 /* CategorySectionFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySectionFooterView.swift; sourceTree = "<group>"; };
+		CDDF49BE1F94298A00EFD357 /* ItemActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemActions.swift; sourceTree = "<group>"; };
+		CDDF49C01F942B0D00EFD357 /* ItemReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemReducer.swift; sourceTree = "<group>"; };
+		CDDF49C21F94435E00EFD357 /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				CD11C7E41F92BC23000D0DB1 /* CategoryActions.swift */,
+				CDDF49BE1F94298A00EFD357 /* ItemActions.swift */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -90,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				CD11C7E21F92BA7E000D0DB1 /* CategoryReducer.swift */,
+				CDDF49C01F942B0D00EFD357 /* ItemReducer.swift */,
+				CDDF49C21F94435E00EFD357 /* AppReducer.swift */,
 			);
 			name = Reducers;
 			sourceTree = "<group>";
@@ -158,6 +167,7 @@
 		CD780D331F5E1EB30007A37D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CDDF49BD1F9426B500EFD357 /* New Group */,
 				CDDF49B81F941C0200EFD357 /* CategorySectionFooterView */,
 				CDDF49B71F93C99700EFD357 /* CategorySectionHeaderView */,
 			);
@@ -206,6 +216,13 @@
 				CDDF49B91F941C1900EFD357 /* CategorySectionFooterView.xib */,
 			);
 			name = CategorySectionFooterView;
+			sourceTree = "<group>";
+		};
+		CDDF49BD1F9426B500EFD357 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD11C7E51F92BC23000D0DB1 /* CategoryActions.swift in Sources */,
+				CDDF49C11F942B0D00EFD357 /* ItemReducer.swift in Sources */,
 				CD11C7E91F92D5D0000D0DB1 /* Category.swift in Sources */,
 				CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */,
 				CD780D2D1F5DE9960007A37D /* MainViewController.swift in Sources */,
@@ -325,6 +343,8 @@
 				CDDF49BC1F941CA900EFD357 /* CategorySectionFooterView.swift in Sources */,
 				CD11C7EB1F92D654000D0DB1 /* Item.swift in Sources */,
 				CD780D3C1F5E1F7F0007A37D /* TableViewRegisterable.swift in Sources */,
+				CDDF49C31F94435E00EFD357 /* AppReducer.swift in Sources */,
+				CDDF49BF1F94298A00EFD357 /* ItemActions.swift in Sources */,
 				CD11C7ED1F92EB36000D0DB1 /* Array.swift in Sources */,
 				CD11C7EF1F92F289000D0DB1 /* IdEquatable.swift in Sources */,
 				CD11C7E31F92BA7E000D0DB1 /* CategoryReducer.swift in Sources */,

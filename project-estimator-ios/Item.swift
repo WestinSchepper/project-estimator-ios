@@ -2,16 +2,13 @@
 
 import Foundation
 
-struct Item {
-  let id: String
+struct Item: IdEquatable {
+  let id: String = UUID().uuidString
   let categoryId: String
-  var title: String
-  var estimate: Int
+  var title: String = ""
+  var estimate: Int = 0
 
-  init(id: String = UUID().uuidString, categoryId: String, title: String, estimate: Int) {
-    self.id = id
+  init (categoryId: String) {
     self.categoryId = categoryId
-    self.title = title
-    self.estimate = estimate
   }
 }
