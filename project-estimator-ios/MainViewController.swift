@@ -51,7 +51,6 @@ final class MainViewController: UIViewController, StoreSubscriber {
     categories = state.categories
     items = state.items
 
-    // FIXME: This causes the keyboard to dismiss when editing an item row.
     tableView.reloadData()
   }
 }
@@ -162,7 +161,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         mainStore.dispatch(updateItem(item))
       })
 
-      editAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+      editAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel) {_ in
+        self.tableView.reloadData()
+      })
 
       self.present(editAlert, animated: true, completion: nil)
     })

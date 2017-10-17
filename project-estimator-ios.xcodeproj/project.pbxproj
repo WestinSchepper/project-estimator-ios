@@ -15,6 +15,7 @@
 		CD11C7EB1F92D654000D0DB1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7EA1F92D654000D0DB1 /* Item.swift */; };
 		CD11C7ED1F92EB36000D0DB1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7EC1F92EB36000D0DB1 /* Array.swift */; };
 		CD11C7EF1F92F289000D0DB1 /* IdEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7EE1F92F289000D0DB1 /* IdEquatable.swift */; };
+		CD1B68AE1F95B87A006C68F4 /* ItemSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B68AD1F95B87A006C68F4 /* ItemSelectors.swift */; };
 		CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D151F5DE5CA0007A37D /* AppDelegate.swift */; };
 		CD780D1B1F5DE5CA0007A37D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD780D191F5DE5CA0007A37D /* Main.storyboard */; };
 		CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD780D1C1F5DE5CA0007A37D /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		CD11C7EA1F92D654000D0DB1 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CD11C7EC1F92EB36000D0DB1 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		CD11C7EE1F92F289000D0DB1 /* IdEquatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdEquatable.swift; sourceTree = "<group>"; };
+		CD1B68AD1F95B87A006C68F4 /* ItemSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSelectors.swift; sourceTree = "<group>"; };
 		CD780D121F5DE5CA0007A37D /* project-estimator-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-estimator-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD780D151F5DE5CA0007A37D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD780D1A1F5DE5CA0007A37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				CDDF49C51F9446E700EFD357 /* CategorySelectors.swift */,
+				CD1B68AD1F95B87A006C68F4 /* ItemSelectors.swift */,
 			);
 			name = Selectors;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				CDDF49C11F942B0D00EFD357 /* ItemReducer.swift in Sources */,
 				CD11C7E91F92D5D0000D0DB1 /* Category.swift in Sources */,
 				CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */,
+				CD1B68AE1F95B87A006C68F4 /* ItemSelectors.swift in Sources */,
 				CD780D2D1F5DE9960007A37D /* MainViewController.swift in Sources */,
 				CD11C7E01F92BA10000D0DB1 /* AppState.swift in Sources */,
 				CDDF49BC1F941CA900EFD357 /* CategorySectionFooterView.swift in Sources */,
