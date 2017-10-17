@@ -3,5 +3,6 @@
 import ReSwift
 
 struct AppState: StateType {
-  var counter: Int = 0
+  var categories: [Category] = []
+  var items: [Item] = []
 }
