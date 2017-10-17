@@ -132,4 +132,49 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return ItemTableViewCell.preferredHeight
   }
+
+  func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    let categoryId = categories[indexPath.section].id
+    let filteredItems = categoryItems(items: items, categoryId: categoryId)
+    var item = filteredItems[indexPath.row]
+
+    let editAction = UITableViewRowAction(style: .normal, title: "Edit", handler: { _, _ in
+      var titleTextField: UITextField?
+      var estimateTextField: UITextField?
+
+      let editAlert = UIAlertController(title: "Edit Item", message: "What would you like to change the title of this item to?", preferredStyle: .alert)
+
+      editAlert.addTextField(configurationHandler: { textField in
+        textField.placeholder = "Title"
+
+        titleTextField = textField
+      })
+
+      editAlert.addTextField(configurationHandler: { textField in
+        textField.placeholder = "Estimate"
+
+        estimateTextField = textField
+      })
+
+      editAlert.addAction(UIAlertAction(title: "Save", style: .default) { _ in
+        item.title = titleTextField?.text ?? item.title
+        item.estimate = estimateTextField?.text != nil ? Int(estimateTextField!.text!)! : item.estimate
+        mainStore.dispatch(updateItem(item))
+      })
+
+      editAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+      self.present(editAlert, animated: true, completion: nil)
+    })
+
+    let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete", handler: { _, _ in
+      mainStore.dispatch(removeItem(item))
+    })
+
+    return [deleteAction, editAction]
+  }
+
+  func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    return true
+  }
 }
