@@ -20,6 +20,8 @@
 		CD2C715E1F96C9E6004954B6 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C715D1F96C9E6004954B6 /* Setting.swift */; };
 		CD2C71601F96D105004954B6 /* ProjectActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C715F1F96D105004954B6 /* ProjectActions.swift */; };
 		CD2C71621F96D26C004954B6 /* SettingActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C71611F96D26C004954B6 /* SettingActions.swift */; };
+		CD2C71641F96D40C004954B6 /* SettingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C71631F96D40C004954B6 /* SettingReducer.swift */; };
+		CD2C71661F96D48A004954B6 /* ProjectReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C71651F96D48A004954B6 /* ProjectReducer.swift */; };
 		CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D151F5DE5CA0007A37D /* AppDelegate.swift */; };
 		CD780D1B1F5DE5CA0007A37D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD780D191F5DE5CA0007A37D /* Main.storyboard */; };
 		CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD780D1C1F5DE5CA0007A37D /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		CD2C715D1F96C9E6004954B6 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		CD2C715F1F96D105004954B6 /* ProjectActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectActions.swift; sourceTree = "<group>"; };
 		CD2C71611F96D26C004954B6 /* SettingActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingActions.swift; sourceTree = "<group>"; };
+		CD2C71631F96D40C004954B6 /* SettingReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingReducer.swift; sourceTree = "<group>"; };
+		CD2C71651F96D48A004954B6 /* ProjectReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectReducer.swift; sourceTree = "<group>"; };
 		CD780D121F5DE5CA0007A37D /* project-estimator-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-estimator-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD780D151F5DE5CA0007A37D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD780D1A1F5DE5CA0007A37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				CD11C7E21F92BA7E000D0DB1 /* CategoryReducer.swift */,
 				CDDF49C01F942B0D00EFD357 /* ItemReducer.swift */,
 				CDDF49C21F94435E00EFD357 /* AppReducer.swift */,
+				CD2C71631F96D40C004954B6 /* SettingReducer.swift */,
+				CD2C71651F96D48A004954B6 /* ProjectReducer.swift */,
 			);
 			name = Reducers;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD2C71661F96D48A004954B6 /* ProjectReducer.swift in Sources */,
 				CD11C7E51F92BC23000D0DB1 /* CategoryActions.swift in Sources */,
 				CDDF49C61F9446E700EFD357 /* CategorySelectors.swift in Sources */,
 				CD2C71601F96D105004954B6 /* ProjectActions.swift in Sources */,
@@ -386,6 +393,7 @@
 				CDDF49BF1F94298A00EFD357 /* ItemActions.swift in Sources */,
 				CD11C7ED1F92EB36000D0DB1 /* Array.swift in Sources */,
 				CD11C7EF1F92F289000D0DB1 /* IdEquatable.swift in Sources */,
+				CD2C71641F96D40C004954B6 /* SettingReducer.swift in Sources */,
 				CD11C7E31F92BA7E000D0DB1 /* CategoryReducer.swift in Sources */,
 				CDDF49C81F944A8D00EFD357 /* ItemTableViewCell.swift in Sources */,
 				CD780D371F5E1EE50007A37D /* CategorySectionHeaderView.swift in Sources */,

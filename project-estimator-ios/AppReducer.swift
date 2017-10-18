@@ -24,7 +24,25 @@ func appReducer(action: Action, state: AppState?) -> AppState {
 
   case let action as UpdateCategoryAction:
     state.categories.replace(action.category)
-  
+
+  case let action as AddProjectAction:
+    state.projects.append(action.project)
+
+  case let action as RemoveProjectAction:
+    state.projects.remove(action.project)
+
+  case let action as UpdateProjectAction:
+    state.projects.replace(action.project)
+
+  case let action as AddSettingAction:
+    state.settings.append(action.setting)
+
+  case let action as RemoveSettingAction:
+    state.settings.remove(action.setting)
+
+  case let action as UpdateSettingAction:
+    state.settings.replace(action.setting)
+
   default:
     break
   }
