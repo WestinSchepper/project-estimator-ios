@@ -8,9 +8,22 @@ struct Setting: IdEquatable {
   var hourlyRate: Int = 0
   var paddingPercentage: Double = 0.0
   var meetingHoursPerPerson: Int = 0
-  var sprintHoursPerPersion: Int = 0
+  var sprintHoursPerPerson: Int = 0
 
   init (projectId: String) {
     self.projectId = projectId
+  }
+
+  init (
+    hourlyRate: Int,
+    paddingPercentage: Double,
+    meetingHoursPerPerson: Int,
+    sprintHoursPerPerson: Int
+  ) {
+    self.init(projectId: "default")
+    self.hourlyRate = hourlyRate
+    self.paddingPercentage = paddingPercentage
+    self.meetingHoursPerPerson = meetingHoursPerPerson
+    self.sprintHoursPerPerson = sprintHoursPerPerson
   }
 }

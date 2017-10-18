@@ -7,4 +7,10 @@ struct AppState: StateType {
   var categories: [Category] = []
   var items: [Item] = []
   var settings: [Setting] = []
+  var defaultSetting: Setting = Setting(
+    hourlyRate: 160,
+    paddingPercentage: 0.1,
+    meetingHoursPerPerson: 3,
+    sprintHoursPerPerson: 80
+  )
 }

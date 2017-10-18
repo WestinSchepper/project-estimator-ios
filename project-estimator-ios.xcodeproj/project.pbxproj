@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD11C7DA1F92B66E000D0DB1 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD11C7D91F92B66E000D0DB1 /* ReSwift.framework */; };
 		CD11C7E01F92BA10000D0DB1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7DF1F92BA10000D0DB1 /* AppState.swift */; };
 		CD11C7E31F92BA7E000D0DB1 /* CategoryReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7E21F92BA7E000D0DB1 /* CategoryReducer.swift */; };
 		CD11C7E51F92BC23000D0DB1 /* CategoryActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7E41F92BC23000D0DB1 /* CategoryActions.swift */; };
@@ -29,6 +28,9 @@
 		CD780D2D1F5DE9960007A37D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D2C1F5DE9960007A37D /* MainViewController.swift */; };
 		CD780D371F5E1EE50007A37D /* CategorySectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D351F5E1EE50007A37D /* CategorySectionHeaderView.swift */; };
 		CD780D3C1F5E1F7F0007A37D /* TableViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D3B1F5E1F7F0007A37D /* TableViewRegisterable.swift */; };
+		CDC92E061F96F8D400AC8061 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC92E051F96F8D400AC8061 /* ReSwift.framework */; };
+		CDC92E081F97090E00AC8061 /* ProjectSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E071F97090E00AC8061 /* ProjectSelectors.swift */; };
+		CDC92E0A1F9709D300AC8061 /* SettingSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E091F9709D300AC8061 /* SettingSelectors.swift */; };
 		CDDF49B61F93C99000EFD357 /* CategorySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDF49B51F93C99000EFD357 /* CategorySectionHeaderView.xib */; };
 		CDDF49BA1F941C1900EFD357 /* CategorySectionFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDF49B91F941C1900EFD357 /* CategorySectionFooterView.xib */; };
 		CDDF49BC1F941CA900EFD357 /* CategorySectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49BB1F941CA900EFD357 /* CategorySectionFooterView.swift */; };
@@ -41,7 +43,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CD11C7D91F92B66E000D0DB1 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		CD11C7DF1F92BA10000D0DB1 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		CD11C7E21F92BA7E000D0DB1 /* CategoryReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryReducer.swift; sourceTree = "<group>"; };
 		CD11C7E41F92BC23000D0DB1 /* CategoryActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryActions.swift; sourceTree = "<group>"; };
@@ -65,6 +66,9 @@
 		CD780D2C1F5DE9960007A37D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CD780D351F5E1EE50007A37D /* CategorySectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySectionHeaderView.swift; sourceTree = "<group>"; };
 		CD780D3B1F5E1F7F0007A37D /* TableViewRegisterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewRegisterable.swift; sourceTree = "<group>"; };
+		CDC92E051F96F8D400AC8061 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
+		CDC92E071F97090E00AC8061 /* ProjectSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSelectors.swift; sourceTree = "<group>"; };
+		CDC92E091F9709D300AC8061 /* SettingSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingSelectors.swift; sourceTree = "<group>"; };
 		CDDF49B51F93C99000EFD357 /* CategorySectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySectionHeaderView.xib; sourceTree = "<group>"; };
 		CDDF49B91F941C1900EFD357 /* CategorySectionFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySectionFooterView.xib; sourceTree = "<group>"; };
 		CDDF49BB1F941CA900EFD357 /* CategorySectionFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySectionFooterView.swift; sourceTree = "<group>"; };
@@ -81,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD11C7DA1F92B66E000D0DB1 /* ReSwift.framework in Frameworks */,
+				CDC92E061F96F8D400AC8061 /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +95,7 @@
 		CD11C7D81F92B66D000D0DB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CD11C7D91F92B66E000D0DB1 /* ReSwift.framework */,
+				CDC92E051F96F8D400AC8061 /* ReSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -259,6 +263,8 @@
 			children = (
 				CDDF49C51F9446E700EFD357 /* CategorySelectors.swift */,
 				CD1B68AD1F95B87A006C68F4 /* ItemSelectors.swift */,
+				CDC92E071F97090E00AC8061 /* ProjectSelectors.swift */,
+				CDC92E091F9709D300AC8061 /* SettingSelectors.swift */,
 			);
 			name = Selectors;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 				CD1B68AE1F95B87A006C68F4 /* ItemSelectors.swift in Sources */,
 				CD2C715C1F96C959004954B6 /* Project.swift in Sources */,
 				CD780D2D1F5DE9960007A37D /* MainViewController.swift in Sources */,
+				CDC92E0A1F9709D300AC8061 /* SettingSelectors.swift in Sources */,
 				CD11C7E01F92BA10000D0DB1 /* AppState.swift in Sources */,
 				CDDF49BC1F941CA900EFD357 /* CategorySectionFooterView.swift in Sources */,
 				CD2C715E1F96C9E6004954B6 /* Setting.swift in Sources */,
@@ -393,6 +400,7 @@
 				CDDF49BF1F94298A00EFD357 /* ItemActions.swift in Sources */,
 				CD11C7ED1F92EB36000D0DB1 /* Array.swift in Sources */,
 				CD11C7EF1F92F289000D0DB1 /* IdEquatable.swift in Sources */,
+				CDC92E081F97090E00AC8061 /* ProjectSelectors.swift in Sources */,
 				CD2C71641F96D40C004954B6 /* SettingReducer.swift in Sources */,
 				CD11C7E31F92BA7E000D0DB1 /* CategoryReducer.swift in Sources */,
 				CDDF49C81F944A8D00EFD357 /* ItemTableViewCell.swift in Sources */,
