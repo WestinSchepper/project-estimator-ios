@@ -3,6 +3,8 @@
 import ReSwift
 
 struct AppState: StateType {
+  var projects: [Project] = []
   var categories: [Category] = []
   var items: [Item] = []
+  var settings: [Setting] = []
 }
