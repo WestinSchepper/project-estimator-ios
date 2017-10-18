@@ -7,6 +7,7 @@ struct Item: IdEquatable {
   let categoryId: String
   var title: String = ""
   var estimate: Int = 0
+  let createdAt: Date = Date()
 
   init (categoryId: String) {
     self.categoryId = categoryId
