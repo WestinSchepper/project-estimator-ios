@@ -18,6 +18,7 @@
 		CD1B68AE1F95B87A006C68F4 /* ItemSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B68AD1F95B87A006C68F4 /* ItemSelectors.swift */; };
 		CD2C715C1F96C959004954B6 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C715B1F96C959004954B6 /* Project.swift */; };
 		CD2C715E1F96C9E6004954B6 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C715D1F96C9E6004954B6 /* Setting.swift */; };
+		CD2C71601F96D105004954B6 /* ProjectActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C715F1F96D105004954B6 /* ProjectActions.swift */; };
 		CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D151F5DE5CA0007A37D /* AppDelegate.swift */; };
 		CD780D1B1F5DE5CA0007A37D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD780D191F5DE5CA0007A37D /* Main.storyboard */; };
 		CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD780D1C1F5DE5CA0007A37D /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		CD1B68AD1F95B87A006C68F4 /* ItemSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSelectors.swift; sourceTree = "<group>"; };
 		CD2C715B1F96C959004954B6 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		CD2C715D1F96C9E6004954B6 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		CD2C715F1F96D105004954B6 /* ProjectActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectActions.swift; sourceTree = "<group>"; };
 		CD780D121F5DE5CA0007A37D /* project-estimator-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-estimator-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD780D151F5DE5CA0007A37D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD780D1A1F5DE5CA0007A37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				CD11C7E41F92BC23000D0DB1 /* CategoryActions.swift */,
 				CDDF49BE1F94298A00EFD357 /* ItemActions.swift */,
+				CD2C715F1F96D105004954B6 /* ProjectActions.swift */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 			files = (
 				CD11C7E51F92BC23000D0DB1 /* CategoryActions.swift in Sources */,
 				CDDF49C61F9446E700EFD357 /* CategorySelectors.swift in Sources */,
+				CD2C71601F96D105004954B6 /* ProjectActions.swift in Sources */,
 				CDDF49C11F942B0D00EFD357 /* ItemReducer.swift in Sources */,
 				CD11C7E91F92D5D0000D0DB1 /* Category.swift in Sources */,
 				CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */,
