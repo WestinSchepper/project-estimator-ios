@@ -16,8 +16,8 @@ struct UpdateCategoryAction: Action {
 }
 
 // Action Creators
-func addCategory () -> Action {
-  let category = Category()
+func addCategory (projectId: String) -> Action {
+  let category = Category(projectId: projectId)
 
   return AddCategoryAction(category: category)
 }
