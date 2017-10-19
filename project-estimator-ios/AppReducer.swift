@@ -43,6 +43,9 @@ func appReducer(action: Action, state: AppState?) -> AppState {
   case let action as UpdateSettingAction:
     state.settings.replace(action.setting)
 
+  case let action as UpdateDefaultSettingAction:
+    state.defaultSetting = action.defaultSetting
+
   default:
     break
   }

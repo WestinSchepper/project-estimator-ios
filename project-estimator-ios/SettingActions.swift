@@ -15,6 +15,10 @@ struct UpdateSettingAction: Action {
   let setting: Setting
 }
 
+struct UpdateDefaultSettingAction: Action {
+  let defaultSetting: Setting
+}
+
 // Action Creators
 func addSetting (projectId: String) -> Action {
   let setting = Setting(projectId: projectId)
@@ -28,4 +32,8 @@ func removeSetting (_ setting: Setting) -> Action {
 
 func updateSetting (_ setting: Setting) -> Action {
   return UpdateSettingAction(setting: setting)
+}
+
+func updateDefaultSetting (_ defaultSetting: Setting) -> Action {
+  return UpdateDefaultSettingAction(defaultSetting: defaultSetting)
 }

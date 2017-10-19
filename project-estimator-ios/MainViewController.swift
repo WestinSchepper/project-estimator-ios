@@ -11,7 +11,7 @@ final class MainViewController: UIViewController, StoreSubscriber {
   @IBOutlet weak var tableView: UITableView!
 
   @IBAction func addNewCategory (_ sender: UIButton) {
-    mainStore.dispatch(addCategory())
+    mainStore.dispatch(addCategory(projectId: "0"))
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -99,14 +99,14 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return categoryItems(items: items, categoryId: categories[section].id).count
+    return getCategoryItems(items, categoryId: categories[section].id).count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     // swiftlint:disable:next force_cast line_length
     let cell = tableView.dequeueReusableCell(withIdentifier: ItemTableViewCell.identifier) as! ItemTableViewCell
     let categoryId = categories[indexPath.section].id
-    let filteredItems = categoryItems(items: items, categoryId: categoryId)
+    let filteredItems = getCategoryItems(items, categoryId: categoryId)
     var item = filteredItems[indexPath.row]
 
     cell.title = item.title
@@ -134,7 +134,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
     let categoryId = categories[indexPath.section].id
-    let filteredItems = categoryItems(items: items, categoryId: categoryId)
+    let filteredItems = getCategoryItems(items, categoryId: categoryId)
     var item = filteredItems[indexPath.row]
 
     let editAction = UITableViewRowAction(style: .normal, title: "Edit", handler: { _, _ in
