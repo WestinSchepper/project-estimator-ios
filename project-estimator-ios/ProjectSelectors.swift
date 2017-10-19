@@ -17,3 +17,15 @@ func getProjectCategories (_ state: AppState, projectId: String) -> [Category] {
 func getProjectCategories (_ categories: [Category], projectId: String) -> [Category] {
   return categories.filter { $0.projectId == projectId }
 }
+
+func getProjectSetting (_ state: AppState, projectId: String) -> Setting {
+  return state.settings.first { $0.id == projectId }!
+}
+
+func getProjectEstimate (_ state: AppState, projectId: String) -> Int {
+  let projectCategories = getProjectCategories(state, projectId: projectId)
+
+  return projectCategories.reduce(0) {
+    $0 + getCategoryEstimate(state, categoryId: $1.id)
+  }
+}

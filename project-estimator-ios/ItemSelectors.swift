@@ -9,7 +9,3 @@ func getItems (_ state: AppState) -> [Item] {
 func getItem (_ state: AppState, itemId: String) -> Item {
   return state.items.first { $0.id == itemId }!
 }
-
-func sumEstimates (fromItems items: [Item]) -> Int {
-  return items.reduce(0) { $0 + $1.estimate }
-}

@@ -2,10 +2,6 @@
 
 import ReSwift
 
-func getSettings (_ state: AppState) -> [Setting] {
-  return state.settings
-}
-
 func getSetting (_ state: AppState, settingId: String) -> Setting {
   return state.settings.first { $0.id == settingId }!
 }
