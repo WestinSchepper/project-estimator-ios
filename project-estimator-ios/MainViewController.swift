@@ -87,7 +87,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     // swiftlint:disable:next force_cast line_length
     let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: CategorySectionFooterView.identifier) as! CategorySectionFooterView
 
-    footer.actionPressed = {
+    footer.actionPressed = { [unowned self] in
       mainStore.dispatch(addItem(categoryId: self.categories[section].id))
     }
 
