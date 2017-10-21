@@ -21,17 +21,21 @@ final class CategorySectionHeaderView: UITableViewHeaderFooterView, TableViewReg
     actionPressed()
   }
 
-  @IBAction func titleTextFieldDidChange(_ sender: UITextField) {
-    guard let newTitle = sender.text else { return }
-
-    titleDidUpdate(newTitle)
-  }
-
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
 
   override func awakeFromNib() {
     super.awakeFromNib()
+
+    titleField.delegate = self
+  }
+}
+
+extension CategorySectionHeaderView: UITextFieldDelegate {
+  func textFieldDidEndEditing(_ textField: UITextField) {
+    guard let newTitle = textField.text else { return }
+
+    self.titleDidUpdate(newTitle)
   }
 }

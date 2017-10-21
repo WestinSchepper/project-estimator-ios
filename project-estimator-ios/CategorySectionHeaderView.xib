@@ -34,9 +34,6 @@
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
-                            <connections>
-                                <action selector="titleTextFieldDidChange:" destination="iN0-l3-epB" eventType="editingChanged" id="VFc-iC-RbC"/>
-                            </connections>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" red="0.89713541666666652" green="0.89713541666666652" blue="0.89713541666666652" alpha="1" colorSpace="calibratedRGB"/>
