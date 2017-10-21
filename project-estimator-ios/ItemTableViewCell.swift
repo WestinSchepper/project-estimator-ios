@@ -24,18 +24,31 @@ final class ItemTableViewCell: UITableViewCell, TableViewRegisterable {
   @IBOutlet weak var titleField: UITextField!
   @IBOutlet weak var estimateField: UITextField!
 
-  @IBAction func titleFieldDidChange(_ sender: UITextField) {
-    guard let newTitle = sender.text else { return }
+  override func awakeFromNib() {
+    super.awakeFromNib()
 
-    titleDidUpdate(newTitle)
+    titleField.delegate = self
   }
 
-  @IBAction func estimateFieldDidChange(_ sender: UITextField) {
-    guard
-      let estimateString = sender.text,
-      let newEstimate = Int(estimateString)
-    else { return }
+  func handleTitleUpdate (_ title: String) {
+    titleDidUpdate(title)
+  }
+
+  func handleEstimateUpdate (_ estimate: String) {
+    guard let newEstimate = Int(estimate) else { return }
 
     estimateDidUpdate(newEstimate)
+  }
+}
+
+extension ItemTableViewCell: UITextFieldDelegate {
+  func textFieldDidEndEditing(_ textField: UITextField) {
+    guard let newValue = textField.text else { return }
+
+    switch textField {
+    case titleField: handleTitleUpdate(newValue)
+    case estimateField: handleEstimateUpdate(newValue)
+    default: break
+    }
   }
 }
