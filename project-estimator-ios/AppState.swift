@@ -8,6 +8,7 @@ struct AppState: StateType {
   var items: [Item] = []
   var settings: [Setting] = []
   var defaultSetting: Setting = Setting(
+    projectId: "default",
     hourlyRate: 160,
     paddingPercentage: 0.1,
     meetingHoursPerPerson: 3,
