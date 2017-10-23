@@ -18,14 +18,19 @@ struct UpdateItemAction: Action {
 // Action Creators
 func addItem (categoryId: String) -> Action {
   let item = Item(categoryId: categoryId)
+  item.managedObject.save()
 
   return AddItemAction(item: item)
 }
 
 func removeItem (_ item: Item) -> Action {
+  item.managedObject.remove()
+  
   return RemoveItemAction(item: item)
 }
 
 func updateItem (_ item: Item) -> Action {
+  item.managedObject.update()
+
   return UpdateItemAction(item: item)
 }

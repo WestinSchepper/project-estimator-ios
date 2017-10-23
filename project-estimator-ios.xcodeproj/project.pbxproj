@@ -33,6 +33,9 @@
 		CDAB7F301F9D508E00AC43B2 /* CategoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F2F1F9D508E00AC43B2 /* CategoryObject.swift */; };
 		CDAB7F321F9D555C00AC43B2 /* ItemObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F311F9D555C00AC43B2 /* ItemObject.swift */; };
 		CDAB7F341F9D56B200AC43B2 /* SettingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F331F9D56B200AC43B2 /* SettingObject.swift */; };
+		CDAB7F371F9D6DEB00AC43B2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAB7F351F9D6DEB00AC43B2 /* Realm.framework */; };
+		CDAB7F381F9D6DEB00AC43B2 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAB7F361F9D6DEB00AC43B2 /* RealmSwift.framework */; };
+		CDAB7F3C1F9D75B700AC43B2 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F3B1F9D75B700AC43B2 /* Object.swift */; };
 		CDC92E061F96F8D400AC8061 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC92E051F96F8D400AC8061 /* ReSwift.framework */; };
 		CDC92E081F97090E00AC8061 /* ProjectSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E071F97090E00AC8061 /* ProjectSelectors.swift */; };
 		CDC92E0A1F9709D300AC8061 /* SettingSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E091F9709D300AC8061 /* SettingSelectors.swift */; };
@@ -77,6 +80,9 @@
 		CDAB7F2F1F9D508E00AC43B2 /* CategoryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryObject.swift; sourceTree = "<group>"; };
 		CDAB7F311F9D555C00AC43B2 /* ItemObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemObject.swift; sourceTree = "<group>"; };
 		CDAB7F331F9D56B200AC43B2 /* SettingObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingObject.swift; sourceTree = "<group>"; };
+		CDAB7F351F9D6DEB00AC43B2 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		CDAB7F361F9D6DEB00AC43B2 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		CDAB7F3B1F9D75B700AC43B2 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		CDC92E051F96F8D400AC8061 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		CDC92E071F97090E00AC8061 /* ProjectSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSelectors.swift; sourceTree = "<group>"; };
 		CDC92E091F9709D300AC8061 /* SettingSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingSelectors.swift; sourceTree = "<group>"; };
@@ -98,6 +104,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC92E061F96F8D400AC8061 /* ReSwift.framework in Frameworks */,
+				CDAB7F371F9D6DEB00AC43B2 /* Realm.framework in Frameworks */,
+				CDAB7F381F9D6DEB00AC43B2 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +115,8 @@
 		CD11C7D81F92B66D000D0DB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDAB7F351F9D6DEB00AC43B2 /* Realm.framework */,
+				CDAB7F361F9D6DEB00AC43B2 /* RealmSwift.framework */,
 				CDC92E051F96F8D400AC8061 /* ReSwift.framework */,
 			);
 			name = Frameworks;
@@ -230,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				CD11C7EC1F92EB36000D0DB1 /* Array.swift */,
+				CDAB7F3B1F9D75B700AC43B2 /* Object.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -391,6 +402,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/ReSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -434,6 +446,7 @@
 				CD11C7ED1F92EB36000D0DB1 /* Array.swift in Sources */,
 				CD11C7EF1F92F289000D0DB1 /* IdEquatable.swift in Sources */,
 				CDC92E081F97090E00AC8061 /* ProjectSelectors.swift in Sources */,
+				CDAB7F3C1F9D75B700AC43B2 /* Object.swift in Sources */,
 				CD2C71641F96D40C004954B6 /* SettingReducer.swift in Sources */,
 				CD11C7E31F92BA7E000D0DB1 /* CategoryReducer.swift in Sources */,
 				CDDF49C81F944A8D00EFD357 /* ItemTableViewCell.swift in Sources */,

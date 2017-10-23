@@ -22,18 +22,25 @@ struct UpdateDefaultSettingAction: Action {
 // Action Creators
 func addSetting (projectId: String) -> Action {
   let setting = Setting(projectId: projectId)
+  setting.managedObject.save()
 
   return AddSettingAction(setting: setting)
 }
 
 func removeSetting (_ setting: Setting) -> Action {
+  setting.managedObject.remove()
+
   return RemoveSettingAction(setting: setting)
 }
 
 func updateSetting (_ setting: Setting) -> Action {
+  setting.managedObject.update()
+
   return UpdateSettingAction(setting: setting)
 }
 
 func updateDefaultSetting (_ defaultSetting: Setting) -> Action {
+  defaultSetting.managedObject.update()
+  
   return UpdateDefaultSettingAction(defaultSetting: defaultSetting)
 }

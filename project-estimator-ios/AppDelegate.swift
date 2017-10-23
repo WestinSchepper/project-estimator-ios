@@ -11,7 +11,7 @@ import ReSwift
 
 let mainStore = Store<AppState>(
   reducer: appReducer,
-  state: AppState(),
+  state: AppState.hydrate(),
   middleware: [loggerMiddleware]
 )
 
