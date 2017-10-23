@@ -16,6 +16,11 @@ extension Object {
     let realm = try! Realm()
 
     try! realm.write {
+      /* FIXME: This crashes the app with the following error:
+       *
+       * Terminating app due to uncaught exception 'RLMException',
+       * reason: 'Can only delete an object from the Realm it belongs to.'
+       */
       realm.delete(self)
     }
   }
