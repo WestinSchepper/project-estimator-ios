@@ -2,6 +2,7 @@
 
 import ReSwift
 
+//swiftlint:disable:next cyclomatic_complexity
 func appReducer(action: Action, state: AppState?) -> AppState {
   var state = state ?? AppState()
 
