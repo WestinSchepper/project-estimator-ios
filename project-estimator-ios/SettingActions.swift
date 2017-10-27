@@ -28,7 +28,8 @@ func addSetting (projectId: String) -> Action {
 }
 
 func removeSetting (_ setting: Setting) -> Action {
-  setting.managedObject.remove()
+  // TODO: Fix this implementation
+  setting.managedObject.remove(objectType: SettingObject.self, withId: setting.id)
 
   return RemoveSettingAction(setting: setting)
 }

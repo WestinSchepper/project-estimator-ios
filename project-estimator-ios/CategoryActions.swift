@@ -25,7 +25,9 @@ func addCategory (projectId: String) -> Action {
 }
 
 func removeCategory (_ category: Category) -> Action {
-  category.managedObject.remove()
+  // TODO: Fix this implementation
+  category.managedObject.remove(objectType: CategoryObject.self, withId: category.id)
+
 
   return RemoveCategoryAction(category: category)
 }

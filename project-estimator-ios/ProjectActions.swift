@@ -24,7 +24,8 @@ func addProject () -> Action {
 }
 
 func removeProject (_ project: Project) -> Action {
-  project.managedObject.remove()
+  // TODO: Fix this implementation
+  project.managedObject.remove(objectType: ProjectObject.self, withId: project.id)
 
   return RemoveProjectAction(project: project)
 }

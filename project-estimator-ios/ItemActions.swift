@@ -24,7 +24,8 @@ func addItem (categoryId: String) -> Action {
 }
 
 func removeItem (_ item: Item) -> Action {
-  item.managedObject.remove()
+  // TODO: Fix this implementation
+  item.managedObject.remove(objectType: ItemObject.self, withId: item.id)
   
   return RemoveItemAction(item: item)
 }
