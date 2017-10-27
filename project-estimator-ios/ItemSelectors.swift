@@ -2,10 +2,10 @@
 
 import ReSwift
 
-func getItems (_ state: AppState) -> [Item] {
+func getItems (_ state: AppState) -> [String: Item] {
   return state.items
 }
 
 func getItem (_ state: AppState, itemId: String) -> Item {
-  return state.items.first { $0.id == itemId }!
+  return state.items[itemId]!
 }

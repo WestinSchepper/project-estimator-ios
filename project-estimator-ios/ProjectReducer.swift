@@ -8,13 +8,13 @@ func projectReducer(action: Action, state: AppState?) -> AppState {
   switch action {
 
   case let action as AddProjectAction:
-    state.projects.append(action.project)
+    state.projects[action.project.id] = action.project
 
   case let action as RemoveProjectAction:
-    state.projects.remove(action.project)
+    state.projects.removeValue(forKey: action.project.id)
 
   case let action as UpdateProjectAction:
-    state.projects.replace(action.project)
+    state.projects[action.project.id] = action.project
 
   default:
     break

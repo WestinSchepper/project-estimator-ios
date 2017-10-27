@@ -4,10 +4,10 @@ import ReSwift
 import RealmSwift
 
 struct AppState: StateType {
-  var projects: [Project] = []
-  var categories: [Category] = []
-  var items: [Item] = []
-  var settings: [Setting] = []
+  var projects: [String: Project] = [:]
+  var categories: [String: Category] = [:]
+  var items: [String: Item] = [:]
+  var settings: [String: Setting] = [:]
   var defaultSetting: Setting = Setting(
     projectId: "default",
     hourlyRate: 160,
@@ -21,24 +21,21 @@ extension AppState {
   static func hydrate() -> AppState {
     var state = AppState()
 
-    state.projects = loadPersistedData(ProjectObject.self, asModel: Project.self)
-    state.categories = loadPersistedData(CategoryObject.self, asModel: Category.self)
-    state.items = loadPersistedData(ItemObject.self, asModel: Item.self)
-    state.settings = loadPersistedData(SettingObject.self, asModel: Setting.self)
+    let projects = loadPersistedData(ProjectObject.self, asModel: Project.self)
+    let categories = loadPersistedData(CategoryObject.self, asModel: Category.self)
+    let items = loadPersistedData(ItemObject.self, asModel: Item.self)
+    let settings = loadPersistedData(SettingObject.self, asModel: Setting.self)
+
+    let projectsHash = createHashMap(projects)
+    let categoriesHash = createHashMap(categories)
+    let itemsHash = createHashMap(items)
+    let settingsHash = createHashMap(settings)
+
+    state.projects = projectsHash
+    state.categories = categoriesHash
+    state.items = itemsHash
+    state.settings = settingsHash
 
     return state
   }
-}
-
-func loadPersistedData<T: Object, S: Persistable>(_: T.Type, asModel newModel: S.Type) -> [S] {
-  //swiftlint:disable:next force_try
-  let realm = try! Realm()
-  let realmResult = realm.objects(T.self)
-
-  let mappedResult = Array(realmResult).map {
-    //swiftlint:disable:next force_cast
-    newModel.init(managedObject: $0 as! S.ManagedObject)
-  }
-
-  return mappedResult
 }

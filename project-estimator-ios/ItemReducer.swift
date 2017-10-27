@@ -8,13 +8,13 @@ func itemReducer(action: Action, state: AppState?) -> AppState {
   switch action {
 
   case let action as AddItemAction:
-    state.items.append(action.item)
+    state.items[action.item.id] = action.item
 
   case let action as RemoveItemAction:
-    state.items.remove(action.item)
+    state.items.removeValue(forKey: action.item.id)
 
   case let action as UpdateItemAction:
-    state.items.replace(action.item)
+    state.items[action.item.id] = action.item
 
   default:
     break

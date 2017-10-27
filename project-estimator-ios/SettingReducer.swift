@@ -8,13 +8,13 @@ func settingReducer(action: Action, state: AppState?) -> AppState {
   switch action {
 
   case let action as AddSettingAction:
-    state.settings.append(action.setting)
+    state.settings[action.setting.id] = action.setting
 
   case let action as RemoveSettingAction:
-    state.settings.remove(action.setting)
+    state.settings.removeValue(forKey: action.setting.id)
 
   case let action as UpdateSettingAction:
-    state.settings.replace(action.setting)
+    state.settings[action.setting.id] = action.setting
 
   case let action as UpdateDefaultSettingAction:
     state.defaultSetting = action.defaultSetting

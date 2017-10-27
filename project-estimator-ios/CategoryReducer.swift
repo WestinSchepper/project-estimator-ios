@@ -8,13 +8,13 @@ func categoryReducer(action: Action, state: AppState?) -> AppState {
   switch action {
 
   case let action as AddCategoryAction:
-    state.categories.append(action.category)
+    state.categories[action.category.id] = action.category
 
   case let action as RemoveCategoryAction:
-    state.categories.remove(action.category)
+    state.categories.removeValue(forKey: action.category.id)
 
   case let action as UpdateCategoryAction:
-    state.categories.replace(action.category)
+    state.categories[action.category.id] = action.category
 
   default:
     break

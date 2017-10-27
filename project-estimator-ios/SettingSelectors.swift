@@ -3,7 +3,7 @@
 import ReSwift
 
 func getSetting (_ state: AppState, settingId: String) -> Setting {
-  return state.settings.first { $0.id == settingId }!
+  return state.settings[settingId]!
 }
 
 func getDefaultSetting (_ state: AppState) -> Setting {

@@ -40,6 +40,9 @@
 		CDC92E081F97090E00AC8061 /* ProjectSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E071F97090E00AC8061 /* ProjectSelectors.swift */; };
 		CDC92E0A1F9709D300AC8061 /* SettingSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E091F9709D300AC8061 /* SettingSelectors.swift */; };
 		CDC92E0D1F98237A00AC8061 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E0C1F98237A00AC8061 /* Logger.swift */; };
+		CDC9A8301FA2DC9A00400C49 /* LoadPersistedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9A82F1FA2DC9A00400C49 /* LoadPersistedData.swift */; };
+		CDC9A8321FA2DCD600400C49 /* CreateHashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9A8311FA2DCD600400C49 /* CreateHashMap.swift */; };
+		CDC9A8361FA2E8BC00400C49 /* CreateArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9A8351FA2E8BC00400C49 /* CreateArray.swift */; };
 		CDDF49B61F93C99000EFD357 /* CategorySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDF49B51F93C99000EFD357 /* CategorySectionHeaderView.xib */; };
 		CDDF49BA1F941C1900EFD357 /* CategorySectionFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDF49B91F941C1900EFD357 /* CategorySectionFooterView.xib */; };
 		CDDF49BC1F941CA900EFD357 /* CategorySectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49BB1F941CA900EFD357 /* CategorySectionFooterView.swift */; };
@@ -87,6 +90,9 @@
 		CDC92E071F97090E00AC8061 /* ProjectSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSelectors.swift; sourceTree = "<group>"; };
 		CDC92E091F9709D300AC8061 /* SettingSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingSelectors.swift; sourceTree = "<group>"; };
 		CDC92E0C1F98237A00AC8061 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		CDC9A82F1FA2DC9A00400C49 /* LoadPersistedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadPersistedData.swift; sourceTree = "<group>"; };
+		CDC9A8311FA2DCD600400C49 /* CreateHashMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHashMap.swift; sourceTree = "<group>"; };
+		CDC9A8351FA2E8BC00400C49 /* CreateArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateArray.swift; sourceTree = "<group>"; };
 		CDDF49B51F93C99000EFD357 /* CategorySectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySectionHeaderView.xib; sourceTree = "<group>"; };
 		CDDF49B91F941C1900EFD357 /* CategorySectionFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySectionFooterView.xib; sourceTree = "<group>"; };
 		CDDF49BB1F941CA900EFD357 /* CategorySectionFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySectionFooterView.swift; sourceTree = "<group>"; };
@@ -144,11 +150,11 @@
 		CD11C7DE1F92BA00000D0DB1 /* Reducers */ = {
 			isa = PBXGroup;
 			children = (
+				CDDF49C21F94435E00EFD357 /* AppReducer.swift */,
+				CD2C71651F96D48A004954B6 /* ProjectReducer.swift */,
 				CD11C7E21F92BA7E000D0DB1 /* CategoryReducer.swift */,
 				CDDF49C01F942B0D00EFD357 /* ItemReducer.swift */,
-				CDDF49C21F94435E00EFD357 /* AppReducer.swift */,
 				CD2C71631F96D40C004954B6 /* SettingReducer.swift */,
-				CD2C71651F96D48A004954B6 /* ProjectReducer.swift */,
 			);
 			name = Reducers;
 			sourceTree = "<group>";
@@ -173,6 +179,7 @@
 		CD780D141F5DE5CA0007A37D /* project-estimator-ios */ = {
 			isa = PBXGroup;
 			children = (
+				CDC9A82E1FA2DC6100400C49 /* Helpers */,
 				CDC92E0B1F98235100AC8061 /* Middleware */,
 				CDDF49C41F94463800EFD357 /* Selectors */,
 				CD11C7DE1F92BA00000D0DB1 /* Reducers */,
@@ -266,6 +273,16 @@
 				CDC92E0C1F98237A00AC8061 /* Logger.swift */,
 			);
 			name = Middleware;
+			sourceTree = "<group>";
+		};
+		CDC9A82E1FA2DC6100400C49 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CDC9A82F1FA2DC9A00400C49 /* LoadPersistedData.swift */,
+				CDC9A8311FA2DCD600400C49 /* CreateHashMap.swift */,
+				CDC9A8351FA2E8BC00400C49 /* CreateArray.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		CDDF49B71F93C99700EFD357 /* CategorySectionHeaderView */ = {
@@ -419,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD2C71661F96D48A004954B6 /* ProjectReducer.swift in Sources */,
+				CDC9A8301FA2DC9A00400C49 /* LoadPersistedData.swift in Sources */,
 				CD11C7E51F92BC23000D0DB1 /* CategoryActions.swift in Sources */,
 				CDAB7F2C1F9C0AA100AC43B2 /* Persistable.swift in Sources */,
 				CDAB7F341F9D56B200AC43B2 /* SettingObject.swift in Sources */,
@@ -437,8 +455,10 @@
 				CD11C7E01F92BA10000D0DB1 /* AppState.swift in Sources */,
 				CDDF49BC1F941CA900EFD357 /* CategorySectionFooterView.swift in Sources */,
 				CD2C715E1F96C9E6004954B6 /* Setting.swift in Sources */,
+				CDC9A8321FA2DCD600400C49 /* CreateHashMap.swift in Sources */,
 				CD11C7EB1F92D654000D0DB1 /* Item.swift in Sources */,
 				CD780D3C1F5E1F7F0007A37D /* TableViewRegisterable.swift in Sources */,
+				CDC9A8361FA2E8BC00400C49 /* CreateArray.swift in Sources */,
 				CDDF49C31F94435E00EFD357 /* AppReducer.swift in Sources */,
 				CDAB7F2E1F9D4EAB00AC43B2 /* ProjectObject.swift in Sources */,
 				CDAB7F321F9D555C00AC43B2 /* ItemObject.swift in Sources */,
