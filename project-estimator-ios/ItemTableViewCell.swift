@@ -28,6 +28,7 @@ final class ItemTableViewCell: UITableViewCell, TableViewRegisterable {
     super.awakeFromNib()
 
     titleField.delegate = self
+    estimateField.delegate = self
   }
 
   func handleTitleUpdate (_ title: String) {

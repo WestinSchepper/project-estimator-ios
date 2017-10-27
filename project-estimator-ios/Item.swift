@@ -3,13 +3,35 @@
 import Foundation
 
 struct Item: IdEquatable {
-  let id: String = UUID().uuidString
-  let categoryId: String
+  var id: String = UUID().uuidString
+  var categoryId: String
   var title: String = ""
   var estimate: Int = 0
-  let createdAt: Date = Date()
+  var createdAt: Date = Date()
 
   init (categoryId: String) {
     self.categoryId = categoryId
+  }
+}
+
+extension Item: Persistable {
+  init(managedObject: ManagedObject) {
+    id = managedObject.id
+    categoryId = managedObject.categoryId
+    title = managedObject.title
+    estimate = managedObject.estimate
+    createdAt = managedObject.createdAt
+  }
+
+  var managedObject: ItemObject {
+    let item = ItemObject()
+
+    item.id = id
+    item.categoryId = categoryId
+    item.title = title
+    item.estimate = estimate
+    item.createdAt = createdAt
+
+    return item
   }
 }

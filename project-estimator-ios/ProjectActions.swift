@@ -18,14 +18,20 @@ struct UpdateProjectAction: Action {
 // Action Creators
 func addProject () -> Action {
   let project = Project()
+  project.managedObject.save()
 
   return AddProjectAction(project: project)
 }
 
 func removeProject (_ project: Project) -> Action {
+  // TODO: Fix this implementation
+  project.managedObject.remove(objectType: ProjectObject.self, withId: project.id)
+
   return RemoveProjectAction(project: project)
 }
 
 func updateProject (_ project: Project) -> Action {
+  project.managedObject.update()
+
   return UpdateProjectAction(project: project)
 }

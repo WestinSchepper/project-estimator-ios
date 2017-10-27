@@ -141,7 +141,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
       var titleTextField: UITextField?
       var estimateTextField: UITextField?
 
-      let editAlert = UIAlertController(title: "Edit Item", message: "What would you like to change the title of this item to?", preferredStyle: .alert)
+      let editAlert = UIAlertController(
+        title: "Edit Item",
+        message: "What would you like to change the title of this item to?",
+        preferredStyle: .alert
+      )
 
       editAlert.addTextField(configurationHandler: { textField in
         textField.placeholder = "Title"
@@ -157,6 +161,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
       editAlert.addAction(UIAlertAction(title: "Save", style: .default) { _ in
         item.title = titleTextField?.text ?? item.title
+        //swiftlint:disable:next line_length
         item.estimate = estimateTextField?.text != nil ? Int(estimateTextField!.text!)! : item.estimate
         mainStore.dispatch(updateItem(item))
       })
