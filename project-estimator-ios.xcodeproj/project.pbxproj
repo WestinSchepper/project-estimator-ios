@@ -28,6 +28,8 @@
 		CD780D2D1F5DE9960007A37D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D2C1F5DE9960007A37D /* MainViewController.swift */; };
 		CD780D371F5E1EE50007A37D /* CategorySectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D351F5E1EE50007A37D /* CategorySectionHeaderView.swift */; };
 		CD780D3C1F5E1F7F0007A37D /* TableViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D3B1F5E1F7F0007A37D /* TableViewRegisterable.swift */; };
+		CD8E86F71FAC0F0E00F6FA44 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8E86F61FAC0F0E00F6FA44 /* BasicCell.swift */; };
+		CD8E86F91FAC0F2F00F6FA44 /* BasicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8E86F81FAC0F2F00F6FA44 /* BasicCell.xib */; };
 		CDAB7F2C1F9C0AA100AC43B2 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F2B1F9C0AA100AC43B2 /* Persistable.swift */; };
 		CDAB7F2E1F9D4EAB00AC43B2 /* ProjectObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F2D1F9D4EAB00AC43B2 /* ProjectObject.swift */; };
 		CDAB7F301F9D508E00AC43B2 /* CategoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F2F1F9D508E00AC43B2 /* CategoryObject.swift */; };
@@ -50,6 +52,8 @@
 		CDDF49C81F944A8D00EFD357 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C71F944A8D00EFD357 /* ItemTableViewCell.swift */; };
 		CDDF49CA1F944B1100EFD357 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDF49C91F944B1100EFD357 /* ItemTableViewCell.xib */; };
 		CDEF41BF1FABFEAB00391BF2 /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEF41BE1FABFEAB00391BF2 /* Hero.framework */; };
+		CDEF41C11FABFF8E00391BF2 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEF41C01FABFF8E00391BF2 /* ExampleViewController.swift */; };
+		CDEF41C31FABFFDB00391BF2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEF41C21FABFFDB00391BF2 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +80,8 @@
 		CD780D2C1F5DE9960007A37D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CD780D351F5E1EE50007A37D /* CategorySectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySectionHeaderView.swift; sourceTree = "<group>"; };
 		CD780D3B1F5E1F7F0007A37D /* TableViewRegisterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewRegisterable.swift; sourceTree = "<group>"; };
+		CD8E86F61FAC0F0E00F6FA44 /* BasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
+		CD8E86F81FAC0F2F00F6FA44 /* BasicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicCell.xib; sourceTree = "<group>"; };
 		CDAB7F2B1F9C0AA100AC43B2 /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
 		CDAB7F2D1F9D4EAB00AC43B2 /* ProjectObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectObject.swift; sourceTree = "<group>"; };
 		CDAB7F2F1F9D508E00AC43B2 /* CategoryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryObject.swift; sourceTree = "<group>"; };
@@ -98,6 +104,8 @@
 		CDDF49C71F944A8D00EFD357 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		CDDF49C91F944B1100EFD357 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
 		CDEF41BE1FABFEAB00391BF2 /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = Carthage/Build/iOS/Hero.framework; sourceTree = "<group>"; };
+		CDEF41C01FABFF8E00391BF2 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		CDEF41C21FABFFDB00391BF2 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				CD780D2C1F5DE9960007A37D /* MainViewController.swift */,
+				CDEF41C01FABFF8E00391BF2 /* ExampleViewController.swift */,
+				CDEF41C21FABFFDB00391BF2 /* TestViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -223,6 +233,7 @@
 		CD780D331F5E1EB30007A37D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CD8E86F51FAC0EFD00F6FA44 /* BasicCell */,
 				CDDF49BD1F9426B500EFD357 /* ItemTableViewCell */,
 				CDDF49B81F941C0200EFD357 /* CategorySectionFooterView */,
 				CDDF49B71F93C99700EFD357 /* CategorySectionHeaderView */,
@@ -262,6 +273,15 @@
 				CDAB7F331F9D56B200AC43B2 /* SettingObject.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		CD8E86F51FAC0EFD00F6FA44 /* BasicCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD8E86F61FAC0F0E00F6FA44 /* BasicCell.swift */,
+				CD8E86F81FAC0F2F00F6FA44 /* BasicCell.xib */,
+			);
+			name = BasicCell;
 			sourceTree = "<group>";
 		};
 		CDC92E0B1F98235100AC8061 /* Middleware */ = {
@@ -376,6 +396,7 @@
 				CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */,
 				CD780D1B1F5DE5CA0007A37D /* Main.storyboard in Resources */,
 				CDDF49BA1F941C1900EFD357 /* CategorySectionFooterView.xib in Resources */,
+				CD8E86F91FAC0F2F00F6FA44 /* BasicCell.xib in Resources */,
 				CDDF49CA1F944B1100EFD357 /* ItemTableViewCell.xib in Resources */,
 				CDDF49B61F93C99000EFD357 /* CategorySectionHeaderView.xib in Resources */,
 			);
@@ -423,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDEF41C31FABFFDB00391BF2 /* TestViewController.swift in Sources */,
 				CD2C71661F96D48A004954B6 /* ProjectReducer.swift in Sources */,
 				CD11C7E51F92BC23000D0DB1 /* CategoryActions.swift in Sources */,
 				CDAB7F2C1F9C0AA100AC43B2 /* Persistable.swift in Sources */,
@@ -436,6 +458,7 @@
 				CD11C7E91F92D5D0000D0DB1 /* Category.swift in Sources */,
 				CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */,
 				CD1B68AE1F95B87A006C68F4 /* ItemSelectors.swift in Sources */,
+				CDEF41C11FABFF8E00391BF2 /* ExampleViewController.swift in Sources */,
 				CD2C715C1F96C959004954B6 /* Project.swift in Sources */,
 				CD780D2D1F5DE9960007A37D /* MainViewController.swift in Sources */,
 				CDC92E0A1F9709D300AC8061 /* SettingSelectors.swift in Sources */,
@@ -449,6 +472,7 @@
 				CDAB7F321F9D555C00AC43B2 /* ItemObject.swift in Sources */,
 				CDDF49BF1F94298A00EFD357 /* ItemActions.swift in Sources */,
 				CD11C7ED1F92EB36000D0DB1 /* Array.swift in Sources */,
+				CD8E86F71FAC0F0E00F6FA44 /* BasicCell.swift in Sources */,
 				CD11C7EF1F92F289000D0DB1 /* IdEquatable.swift in Sources */,
 				CDC92E081F97090E00AC8061 /* ProjectSelectors.swift in Sources */,
 				CDAB7F3C1F9D75B700AC43B2 /* Object.swift in Sources */,
@@ -584,6 +608,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "project-estimator-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.westinschepper.project-estimator-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -601,6 +626,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "project-estimator-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.westinschepper.project-estimator-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
