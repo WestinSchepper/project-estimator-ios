@@ -49,6 +49,7 @@
 		CDDF49C61F9446E700EFD357 /* CategorySelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C51F9446E700EFD357 /* CategorySelectors.swift */; };
 		CDDF49C81F944A8D00EFD357 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C71F944A8D00EFD357 /* ItemTableViewCell.swift */; };
 		CDDF49CA1F944B1100EFD357 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDF49C91F944B1100EFD357 /* ItemTableViewCell.xib */; };
+		CDEF41BF1FABFEAB00391BF2 /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEF41BE1FABFEAB00391BF2 /* Hero.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		CDDF49C51F9446E700EFD357 /* CategorySelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectors.swift; sourceTree = "<group>"; };
 		CDDF49C71F944A8D00EFD357 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		CDDF49C91F944B1100EFD357 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
+		CDEF41BE1FABFEAB00391BF2 /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = Carthage/Build/iOS/Hero.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				CDC92E061F96F8D400AC8061 /* ReSwift.framework in Frameworks */,
 				CDAB7F371F9D6DEB00AC43B2 /* Realm.framework in Frameworks */,
 				CDAB7F381F9D6DEB00AC43B2 /* RealmSwift.framework in Frameworks */,
+				CDEF41BF1FABFEAB00391BF2 /* Hero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +118,7 @@
 		CD11C7D81F92B66D000D0DB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDEF41BE1FABFEAB00391BF2 /* Hero.framework */,
 				CDAB7F351F9D6DEB00AC43B2 /* Realm.framework */,
 				CDAB7F361F9D6DEB00AC43B2 /* RealmSwift.framework */,
 				CDC92E051F96F8D400AC8061 /* ReSwift.framework */,
@@ -403,6 +407,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ReSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Hero.framework",
 			);
 			name = Carthage;
 			outputPaths = (
