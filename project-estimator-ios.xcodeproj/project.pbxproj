@@ -36,6 +36,8 @@
 		CDAB7F371F9D6DEB00AC43B2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAB7F351F9D6DEB00AC43B2 /* Realm.framework */; };
 		CDAB7F381F9D6DEB00AC43B2 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAB7F361F9D6DEB00AC43B2 /* RealmSwift.framework */; };
 		CDAB7F3C1F9D75B700AC43B2 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F3B1F9D75B700AC43B2 /* Object.swift */; };
+		CDC7140B1FAE805E00EE2859 /* ProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC7140A1FAE805E00EE2859 /* ProjectsViewController.xib */; };
+		CDC7140D1FAE807A00EE2859 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */; };
 		CDC92E061F96F8D400AC8061 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC92E051F96F8D400AC8061 /* ReSwift.framework */; };
 		CDC92E081F97090E00AC8061 /* ProjectSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E071F97090E00AC8061 /* ProjectSelectors.swift */; };
 		CDC92E0A1F9709D300AC8061 /* SettingSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E091F9709D300AC8061 /* SettingSelectors.swift */; };
@@ -84,6 +86,8 @@
 		CDAB7F351F9D6DEB00AC43B2 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		CDAB7F361F9D6DEB00AC43B2 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		CDAB7F3B1F9D75B700AC43B2 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		CDC7140A1FAE805E00EE2859 /* ProjectsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsViewController.xib; sourceTree = "<group>"; };
+		CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProjectsViewController.swift; path = ../ProjectsViewController.swift; sourceTree = "<group>"; };
 		CDC92E051F96F8D400AC8061 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		CDC92E071F97090E00AC8061 /* ProjectSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSelectors.swift; sourceTree = "<group>"; };
 		CDC92E091F9709D300AC8061 /* SettingSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingSelectors.swift; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 		CD780D271F5DE8790007A37D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CDC714081FAE804400EE2859 /* Projects */,
 				CD780D2C1F5DE9960007A37D /* MainViewController.swift */,
 			);
 			name = ViewControllers;
@@ -262,6 +267,15 @@
 				CDAB7F331F9D56B200AC43B2 /* SettingObject.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		CDC714081FAE804400EE2859 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */,
+				CDC7140A1FAE805E00EE2859 /* ProjectsViewController.xib */,
+			);
+			name = Projects;
 			sourceTree = "<group>";
 		};
 		CDC92E0B1F98235100AC8061 /* Middleware */ = {
@@ -374,6 +388,7 @@
 			files = (
 				CD780D201F5DE5CA0007A37D /* LaunchScreen.storyboard in Resources */,
 				CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */,
+				CDC7140B1FAE805E00EE2859 /* ProjectsViewController.xib in Resources */,
 				CD780D1B1F5DE5CA0007A37D /* Main.storyboard in Resources */,
 				CDDF49BA1F941C1900EFD357 /* CategorySectionFooterView.xib in Resources */,
 				CDDF49CA1F944B1100EFD357 /* ItemTableViewCell.xib in Resources */,
@@ -441,6 +456,7 @@
 				CDC92E0A1F9709D300AC8061 /* SettingSelectors.swift in Sources */,
 				CD11C7E01F92BA10000D0DB1 /* AppState.swift in Sources */,
 				CDDF49BC1F941CA900EFD357 /* CategorySectionFooterView.swift in Sources */,
+				CDC7140D1FAE807A00EE2859 /* ProjectsViewController.swift in Sources */,
 				CD2C715E1F96C9E6004954B6 /* Setting.swift in Sources */,
 				CD11C7EB1F92D654000D0DB1 /* Item.swift in Sources */,
 				CD780D3C1F5E1F7F0007A37D /* TableViewRegisterable.swift in Sources */,
