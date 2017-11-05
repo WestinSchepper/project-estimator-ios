@@ -24,7 +24,7 @@
 		CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D151F5DE5CA0007A37D /* AppDelegate.swift */; };
 		CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD780D1C1F5DE5CA0007A37D /* Assets.xcassets */; };
 		CD780D201F5DE5CA0007A37D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD780D1E1F5DE5CA0007A37D /* LaunchScreen.storyboard */; };
-		CD780D3C1F5E1F7F0007A37D /* TableViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D3B1F5E1F7F0007A37D /* TableViewRegisterable.swift */; };
+		CD780D3C1F5E1F7F0007A37D /* Registerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D3B1F5E1F7F0007A37D /* Registerable.swift */; };
 		CDAB7F2C1F9C0AA100AC43B2 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F2B1F9C0AA100AC43B2 /* Persistable.swift */; };
 		CDAB7F2E1F9D4EAB00AC43B2 /* ProjectObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F2D1F9D4EAB00AC43B2 /* ProjectObject.swift */; };
 		CDAB7F301F9D508E00AC43B2 /* CategoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F2F1F9D508E00AC43B2 /* CategoryObject.swift */; };
@@ -68,7 +68,7 @@
 		CD780D1C1F5DE5CA0007A37D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD780D1F1F5DE5CA0007A37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD780D211F5DE5CA0007A37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD780D3B1F5E1F7F0007A37D /* TableViewRegisterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewRegisterable.swift; sourceTree = "<group>"; };
+		CD780D3B1F5E1F7F0007A37D /* Registerable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registerable.swift; sourceTree = "<group>"; };
 		CDAB7F2B1F9C0AA100AC43B2 /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
 		CDAB7F2D1F9D4EAB00AC43B2 /* ProjectObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectObject.swift; sourceTree = "<group>"; };
 		CDAB7F2F1F9D508E00AC43B2 /* CategoryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryObject.swift; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 		CD780D391F5E1F670007A37D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				CD780D3B1F5E1F7F0007A37D /* TableViewRegisterable.swift */,
+				CD780D3B1F5E1F7F0007A37D /* Registerable.swift */,
 				CD11C7EE1F92F289000D0DB1 /* IdEquatable.swift */,
 				CDAB7F2B1F9C0AA100AC43B2 /* Persistable.swift */,
 			);
@@ -413,7 +413,7 @@
 				CDC7140D1FAE807A00EE2859 /* ProjectsViewController.swift in Sources */,
 				CD2C715E1F96C9E6004954B6 /* Setting.swift in Sources */,
 				CD11C7EB1F92D654000D0DB1 /* Item.swift in Sources */,
-				CD780D3C1F5E1F7F0007A37D /* TableViewRegisterable.swift in Sources */,
+				CD780D3C1F5E1F7F0007A37D /* Registerable.swift in Sources */,
 				CDDF49C31F94435E00EFD357 /* AppReducer.swift in Sources */,
 				CDAB7F2E1F9D4EAB00AC43B2 /* ProjectObject.swift in Sources */,
 				CDAB7F321F9D555C00AC43B2 /* ItemObject.swift in Sources */,
