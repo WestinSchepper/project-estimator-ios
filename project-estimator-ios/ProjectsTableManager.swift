@@ -5,6 +5,7 @@ import ReSwift
 
 final class ProjectsTableManager: NSObject {
   weak var tableView: UITableView!
+  // TODO: Remove these hardcoded projects when the Add Project functionality is implemented
   var projects: [Project] = [
     Project(id: "One", title: UUID().uuidString, createdAt: Date()),
     Project(id: "Two", title: UUID().uuidString, createdAt: Date()),
@@ -59,7 +60,8 @@ final class ProjectsTableManager: NSObject {
 
 extension ProjectsTableManager: StoreSubscriber {
   func newState(state: [Project]) {
-//    projects = state
+    // TODO: Uncomment this when the Add Project functionality is implemented
+    // projects = state
 
     tableView.reloadData()
   }
