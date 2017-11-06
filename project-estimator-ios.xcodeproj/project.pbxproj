@@ -35,8 +35,11 @@
 		CDAB7F3C1F9D75B700AC43B2 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F3B1F9D75B700AC43B2 /* Object.swift */; };
 		CDC7140B1FAE805E00EE2859 /* ProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC7140A1FAE805E00EE2859 /* ProjectsViewController.xib */; };
 		CDC7140D1FAE807A00EE2859 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */; };
-		CDC714101FAEBA9A00EE2859 /* ProjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC7140F1FAEBA9A00EE2859 /* ProjectCollectionViewCell.swift */; };
-		CDC714121FAEBAA700EE2859 /* ProjectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC714111FAEBAA700EE2859 /* ProjectCollectionViewCell.xib */; };
+		CDC714101FAEBA9A00EE2859 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC7140F1FAEBA9A00EE2859 /* ProjectTableViewCell.swift */; };
+		CDC714121FAEBAA700EE2859 /* ProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC714111FAEBAA700EE2859 /* ProjectTableViewCell.xib */; };
+		CDC714151FAFEBEE00EE2859 /* ProjectsTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC714141FAFEBEE00EE2859 /* ProjectsTableManager.swift */; };
+		CDC714171FB0044F00EE2859 /* AddButtonTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC714161FB0044F00EE2859 /* AddButtonTableFooterView.xib */; };
+		CDC714191FB0047600EE2859 /* AddButtonTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC714181FB0047600EE2859 /* AddButtonTableFooterView.swift */; };
 		CDC92E061F96F8D400AC8061 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC92E051F96F8D400AC8061 /* ReSwift.framework */; };
 		CDC92E081F97090E00AC8061 /* ProjectSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E071F97090E00AC8061 /* ProjectSelectors.swift */; };
 		CDC92E0A1F9709D300AC8061 /* SettingSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E091F9709D300AC8061 /* SettingSelectors.swift */; };
@@ -79,8 +82,11 @@
 		CDAB7F3B1F9D75B700AC43B2 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		CDC7140A1FAE805E00EE2859 /* ProjectsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsViewController.xib; sourceTree = "<group>"; };
 		CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProjectsViewController.swift; path = ../ProjectsViewController.swift; sourceTree = "<group>"; };
-		CDC7140F1FAEBA9A00EE2859 /* ProjectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCollectionViewCell.swift; sourceTree = "<group>"; };
-		CDC714111FAEBAA700EE2859 /* ProjectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectCollectionViewCell.xib; sourceTree = "<group>"; };
+		CDC7140F1FAEBA9A00EE2859 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
+		CDC714111FAEBAA700EE2859 /* ProjectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectTableViewCell.xib; sourceTree = "<group>"; };
+		CDC714141FAFEBEE00EE2859 /* ProjectsTableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableManager.swift; sourceTree = "<group>"; };
+		CDC714161FB0044F00EE2859 /* AddButtonTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddButtonTableFooterView.xib; sourceTree = "<group>"; };
+		CDC714181FB0047600EE2859 /* AddButtonTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonTableFooterView.swift; sourceTree = "<group>"; };
 		CDC92E051F96F8D400AC8061 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		CDC92E071F97090E00AC8061 /* ProjectSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSelectors.swift; sourceTree = "<group>"; };
 		CDC92E091F9709D300AC8061 /* SettingSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingSelectors.swift; sourceTree = "<group>"; };
@@ -169,6 +175,7 @@
 		CD780D141F5DE5CA0007A37D /* project-estimator-ios */ = {
 			isa = PBXGroup;
 			children = (
+				CDC714131FAFEBCC00EE2859 /* Manager */,
 				CDC92E0B1F98235100AC8061 /* Middleware */,
 				CDDF49C41F94463800EFD357 /* Selectors */,
 				CD11C7DE1F92BA00000D0DB1 /* Reducers */,
@@ -206,7 +213,8 @@
 		CD780D331F5E1EB30007A37D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CDC7140E1FAEBA7B00EE2859 /* ProjectCollectionViewCell */,
+				CDC7141A1FB004AF00EE2859 /* AddButtonTableFooterView */,
+				CDC7140E1FAEBA7B00EE2859 /* ProjectTableViewCell */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -254,13 +262,30 @@
 			name = Projects;
 			sourceTree = "<group>";
 		};
-		CDC7140E1FAEBA7B00EE2859 /* ProjectCollectionViewCell */ = {
+		CDC7140E1FAEBA7B00EE2859 /* ProjectTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				CDC7140F1FAEBA9A00EE2859 /* ProjectCollectionViewCell.swift */,
-				CDC714111FAEBAA700EE2859 /* ProjectCollectionViewCell.xib */,
+				CDC7140F1FAEBA9A00EE2859 /* ProjectTableViewCell.swift */,
+				CDC714111FAEBAA700EE2859 /* ProjectTableViewCell.xib */,
 			);
-			name = ProjectCollectionViewCell;
+			name = ProjectTableViewCell;
+			sourceTree = "<group>";
+		};
+		CDC714131FAFEBCC00EE2859 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CDC714141FAFEBEE00EE2859 /* ProjectsTableManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		CDC7141A1FB004AF00EE2859 /* AddButtonTableFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				CDC714181FB0047600EE2859 /* AddButtonTableFooterView.swift */,
+				CDC714161FB0044F00EE2859 /* AddButtonTableFooterView.xib */,
+			);
+			name = AddButtonTableFooterView;
 			sourceTree = "<group>";
 		};
 		CDC92E0B1F98235100AC8061 /* Middleware */ = {
@@ -344,10 +369,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDC714171FB0044F00EE2859 /* AddButtonTableFooterView.xib in Resources */,
 				CD780D201F5DE5CA0007A37D /* LaunchScreen.storyboard in Resources */,
 				CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */,
 				CDC7140B1FAE805E00EE2859 /* ProjectsViewController.xib in Resources */,
-				CDC714121FAEBAA700EE2859 /* ProjectCollectionViewCell.xib in Resources */,
+				CDC714121FAEBAA700EE2859 /* ProjectTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,8 +419,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDC714101FAEBA9A00EE2859 /* ProjectCollectionViewCell.swift in Sources */,
+				CDC714101FAEBA9A00EE2859 /* ProjectTableViewCell.swift in Sources */,
 				CD2C71661F96D48A004954B6 /* ProjectReducer.swift in Sources */,
+				CDC714151FAFEBEE00EE2859 /* ProjectsTableManager.swift in Sources */,
 				CD11C7E51F92BC23000D0DB1 /* CategoryActions.swift in Sources */,
 				CDAB7F2C1F9C0AA100AC43B2 /* Persistable.swift in Sources */,
 				CDAB7F341F9D56B200AC43B2 /* SettingObject.swift in Sources */,
@@ -422,6 +449,7 @@
 				CD11C7EF1F92F289000D0DB1 /* IdEquatable.swift in Sources */,
 				CDC92E081F97090E00AC8061 /* ProjectSelectors.swift in Sources */,
 				CDAB7F3C1F9D75B700AC43B2 /* Object.swift in Sources */,
+				CDC714191FB0047600EE2859 /* AddButtonTableFooterView.swift in Sources */,
 				CD2C71641F96D40C004954B6 /* SettingReducer.swift in Sources */,
 				CD11C7E31F92BA7E000D0DB1 /* CategoryReducer.swift in Sources */,
 			);

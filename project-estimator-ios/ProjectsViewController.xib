@@ -12,8 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProjectsViewController" customModule="project_estimator_ios" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="bEs-Zq-Jyr" id="5dO-fQ-IB9"/>
                 <outlet property="projectsLabel" destination="NJV-kJ-AxR" id="fNn-sB-Spp"/>
+                <outlet property="tableView" destination="rHH-R7-CCJ" id="YYa-I9-kwl"/>
                 <outlet property="view" destination="iN0-l3-epB" id="nM3-xE-Pva"/>
             </connections>
         </placeholder>
@@ -42,27 +42,21 @@
                         <action selector="handleSettingsTapped:" destination="-1" eventType="touchUpInside" id="xmG-fh-iO8"/>
                     </connections>
                 </button>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bEs-Zq-Jyr">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rHH-R7-CCJ">
                     <rect key="frame" x="0.0" y="84" width="375" height="583"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="qWy-PS-XlD">
-                        <size key="itemSize" width="50" height="50"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="NJV-kJ-AxR" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="6pG-ir-M4N"/>
+                <constraint firstItem="rHH-R7-CCJ" firstAttribute="top" secondItem="NJV-kJ-AxR" secondAttribute="bottom" constant="16" id="8Eh-2x-biT"/>
                 <constraint firstItem="NJV-kJ-AxR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="EfG-qz-eky"/>
-                <constraint firstItem="bEs-Zq-Jyr" firstAttribute="top" secondItem="NJV-kJ-AxR" secondAttribute="bottom" constant="16" id="Wtl-FG-ctc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rHH-R7-CCJ" secondAttribute="bottom" id="Eky-SD-ir5"/>
+                <constraint firstItem="rHH-R7-CCJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="OOm-fp-GGe"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5Gy-Ve-Kiz" secondAttribute="trailing" constant="16" id="as7-5D-cJa"/>
-                <constraint firstItem="bEs-Zq-Jyr" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="daw-MD-ywG"/>
-                <constraint firstItem="bEs-Zq-Jyr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fyX-V2-3E5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rHH-R7-CCJ" secondAttribute="trailing" id="ifZ-4e-dQq"/>
                 <constraint firstItem="5Gy-Ve-Kiz" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="18" id="p5K-WE-wqZ"/>
-                <constraint firstItem="bEs-Zq-Jyr" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="yvi-bw-R2b"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="33.5" y="292.5"/>
