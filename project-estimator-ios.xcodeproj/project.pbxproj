@@ -22,12 +22,9 @@
 		CD2C71641F96D40C004954B6 /* SettingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C71631F96D40C004954B6 /* SettingReducer.swift */; };
 		CD2C71661F96D48A004954B6 /* ProjectReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C71651F96D48A004954B6 /* ProjectReducer.swift */; };
 		CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D151F5DE5CA0007A37D /* AppDelegate.swift */; };
-		CD780D1B1F5DE5CA0007A37D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD780D191F5DE5CA0007A37D /* Main.storyboard */; };
 		CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD780D1C1F5DE5CA0007A37D /* Assets.xcassets */; };
 		CD780D201F5DE5CA0007A37D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD780D1E1F5DE5CA0007A37D /* LaunchScreen.storyboard */; };
-		CD780D2D1F5DE9960007A37D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D2C1F5DE9960007A37D /* MainViewController.swift */; };
-		CD780D371F5E1EE50007A37D /* CategorySectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D351F5E1EE50007A37D /* CategorySectionHeaderView.swift */; };
-		CD780D3C1F5E1F7F0007A37D /* TableViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D3B1F5E1F7F0007A37D /* TableViewRegisterable.swift */; };
+		CD780D3C1F5E1F7F0007A37D /* Registerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D3B1F5E1F7F0007A37D /* Registerable.swift */; };
 		CDAB7F2C1F9C0AA100AC43B2 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F2B1F9C0AA100AC43B2 /* Persistable.swift */; };
 		CDAB7F2E1F9D4EAB00AC43B2 /* ProjectObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F2D1F9D4EAB00AC43B2 /* ProjectObject.swift */; };
 		CDAB7F301F9D508E00AC43B2 /* CategoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F2F1F9D508E00AC43B2 /* CategoryObject.swift */; };
@@ -38,19 +35,19 @@
 		CDAB7F3C1F9D75B700AC43B2 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F3B1F9D75B700AC43B2 /* Object.swift */; };
 		CDC7140B1FAE805E00EE2859 /* ProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC7140A1FAE805E00EE2859 /* ProjectsViewController.xib */; };
 		CDC7140D1FAE807A00EE2859 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */; };
+		CDC714101FAEBA9A00EE2859 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC7140F1FAEBA9A00EE2859 /* ProjectTableViewCell.swift */; };
+		CDC714121FAEBAA700EE2859 /* ProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC714111FAEBAA700EE2859 /* ProjectTableViewCell.xib */; };
+		CDC714151FAFEBEE00EE2859 /* ProjectsTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC714141FAFEBEE00EE2859 /* ProjectsTableManager.swift */; };
+		CDC714171FB0044F00EE2859 /* AddButtonTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC714161FB0044F00EE2859 /* AddButtonTableFooterView.xib */; };
+		CDC714191FB0047600EE2859 /* AddButtonTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC714181FB0047600EE2859 /* AddButtonTableFooterView.swift */; };
 		CDC92E061F96F8D400AC8061 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC92E051F96F8D400AC8061 /* ReSwift.framework */; };
 		CDC92E081F97090E00AC8061 /* ProjectSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E071F97090E00AC8061 /* ProjectSelectors.swift */; };
 		CDC92E0A1F9709D300AC8061 /* SettingSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E091F9709D300AC8061 /* SettingSelectors.swift */; };
 		CDC92E0D1F98237A00AC8061 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E0C1F98237A00AC8061 /* Logger.swift */; };
-		CDDF49B61F93C99000EFD357 /* CategorySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDF49B51F93C99000EFD357 /* CategorySectionHeaderView.xib */; };
-		CDDF49BA1F941C1900EFD357 /* CategorySectionFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDF49B91F941C1900EFD357 /* CategorySectionFooterView.xib */; };
-		CDDF49BC1F941CA900EFD357 /* CategorySectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49BB1F941CA900EFD357 /* CategorySectionFooterView.swift */; };
 		CDDF49BF1F94298A00EFD357 /* ItemActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49BE1F94298A00EFD357 /* ItemActions.swift */; };
 		CDDF49C11F942B0D00EFD357 /* ItemReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C01F942B0D00EFD357 /* ItemReducer.swift */; };
 		CDDF49C31F94435E00EFD357 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C21F94435E00EFD357 /* AppReducer.swift */; };
 		CDDF49C61F9446E700EFD357 /* CategorySelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C51F9446E700EFD357 /* CategorySelectors.swift */; };
-		CDDF49C81F944A8D00EFD357 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C71F944A8D00EFD357 /* ItemTableViewCell.swift */; };
-		CDDF49CA1F944B1100EFD357 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDF49C91F944B1100EFD357 /* ItemTableViewCell.xib */; };
 		CDEF41BF1FABFEAB00391BF2 /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEF41BE1FABFEAB00391BF2 /* Hero.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,13 +68,10 @@
 		CD2C71651F96D48A004954B6 /* ProjectReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectReducer.swift; sourceTree = "<group>"; };
 		CD780D121F5DE5CA0007A37D /* project-estimator-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-estimator-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD780D151F5DE5CA0007A37D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD780D1A1F5DE5CA0007A37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD780D1C1F5DE5CA0007A37D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD780D1F1F5DE5CA0007A37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD780D211F5DE5CA0007A37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD780D2C1F5DE9960007A37D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		CD780D351F5E1EE50007A37D /* CategorySectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySectionHeaderView.swift; sourceTree = "<group>"; };
-		CD780D3B1F5E1F7F0007A37D /* TableViewRegisterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewRegisterable.swift; sourceTree = "<group>"; };
+		CD780D3B1F5E1F7F0007A37D /* Registerable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registerable.swift; sourceTree = "<group>"; };
 		CDAB7F2B1F9C0AA100AC43B2 /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
 		CDAB7F2D1F9D4EAB00AC43B2 /* ProjectObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectObject.swift; sourceTree = "<group>"; };
 		CDAB7F2F1F9D508E00AC43B2 /* CategoryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryObject.swift; sourceTree = "<group>"; };
@@ -88,19 +82,19 @@
 		CDAB7F3B1F9D75B700AC43B2 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		CDC7140A1FAE805E00EE2859 /* ProjectsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsViewController.xib; sourceTree = "<group>"; };
 		CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProjectsViewController.swift; path = ../ProjectsViewController.swift; sourceTree = "<group>"; };
+		CDC7140F1FAEBA9A00EE2859 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
+		CDC714111FAEBAA700EE2859 /* ProjectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectTableViewCell.xib; sourceTree = "<group>"; };
+		CDC714141FAFEBEE00EE2859 /* ProjectsTableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableManager.swift; sourceTree = "<group>"; };
+		CDC714161FB0044F00EE2859 /* AddButtonTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddButtonTableFooterView.xib; sourceTree = "<group>"; };
+		CDC714181FB0047600EE2859 /* AddButtonTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonTableFooterView.swift; sourceTree = "<group>"; };
 		CDC92E051F96F8D400AC8061 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		CDC92E071F97090E00AC8061 /* ProjectSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSelectors.swift; sourceTree = "<group>"; };
 		CDC92E091F9709D300AC8061 /* SettingSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingSelectors.swift; sourceTree = "<group>"; };
 		CDC92E0C1F98237A00AC8061 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		CDDF49B51F93C99000EFD357 /* CategorySectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySectionHeaderView.xib; sourceTree = "<group>"; };
-		CDDF49B91F941C1900EFD357 /* CategorySectionFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySectionFooterView.xib; sourceTree = "<group>"; };
-		CDDF49BB1F941CA900EFD357 /* CategorySectionFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySectionFooterView.swift; sourceTree = "<group>"; };
 		CDDF49BE1F94298A00EFD357 /* ItemActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemActions.swift; sourceTree = "<group>"; };
 		CDDF49C01F942B0D00EFD357 /* ItemReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemReducer.swift; sourceTree = "<group>"; };
 		CDDF49C21F94435E00EFD357 /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		CDDF49C51F9446E700EFD357 /* CategorySelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectors.swift; sourceTree = "<group>"; };
-		CDDF49C71F944A8D00EFD357 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
-		CDDF49C91F944B1100EFD357 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
 		CDEF41BE1FABFEAB00391BF2 /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = Carthage/Build/iOS/Hero.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +175,7 @@
 		CD780D141F5DE5CA0007A37D /* project-estimator-ios */ = {
 			isa = PBXGroup;
 			children = (
+				CDC714131FAFEBCC00EE2859 /* Manager */,
 				CDC92E0B1F98235100AC8061 /* Middleware */,
 				CDDF49C41F94463800EFD357 /* Selectors */,
 				CD11C7DE1F92BA00000D0DB1 /* Reducers */,
@@ -190,10 +185,10 @@
 				CD780D3A1F5E1F6E0007A37D /* Extensions */,
 				CD780D391F5E1F670007A37D /* Protocols */,
 				CD780D331F5E1EB30007A37D /* Views */,
-				CD780D2E1F5DEA4E0007A37D /* Storyboards */,
 				CD780D271F5DE8790007A37D /* ViewControllers */,
 				CD780D2F1F5DEA820007A37D /* Resources */,
 				CD780D151F5DE5CA0007A37D /* AppDelegate.swift */,
+				CD780D1E1F5DE5CA0007A37D /* LaunchScreen.storyboard */,
 			);
 			path = "project-estimator-ios";
 			sourceTree = "<group>";
@@ -202,18 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				CDC714081FAE804400EE2859 /* Projects */,
-				CD780D2C1F5DE9960007A37D /* MainViewController.swift */,
 			);
 			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		CD780D2E1F5DEA4E0007A37D /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				CD780D1E1F5DE5CA0007A37D /* LaunchScreen.storyboard */,
-				CD780D191F5DE5CA0007A37D /* Main.storyboard */,
-			);
-			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		CD780D2F1F5DEA820007A37D /* Resources */ = {
@@ -228,9 +213,8 @@
 		CD780D331F5E1EB30007A37D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CDDF49BD1F9426B500EFD357 /* ItemTableViewCell */,
-				CDDF49B81F941C0200EFD357 /* CategorySectionFooterView */,
-				CDDF49B71F93C99700EFD357 /* CategorySectionHeaderView */,
+				CDC7141A1FB004AF00EE2859 /* AddButtonTableFooterView */,
+				CDC7140E1FAEBA7B00EE2859 /* ProjectTableViewCell */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -238,7 +222,7 @@
 		CD780D391F5E1F670007A37D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				CD780D3B1F5E1F7F0007A37D /* TableViewRegisterable.swift */,
+				CD780D3B1F5E1F7F0007A37D /* Registerable.swift */,
 				CD11C7EE1F92F289000D0DB1 /* IdEquatable.swift */,
 				CDAB7F2B1F9C0AA100AC43B2 /* Persistable.swift */,
 			);
@@ -278,39 +262,38 @@
 			name = Projects;
 			sourceTree = "<group>";
 		};
+		CDC7140E1FAEBA7B00EE2859 /* ProjectTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CDC7140F1FAEBA9A00EE2859 /* ProjectTableViewCell.swift */,
+				CDC714111FAEBAA700EE2859 /* ProjectTableViewCell.xib */,
+			);
+			name = ProjectTableViewCell;
+			sourceTree = "<group>";
+		};
+		CDC714131FAFEBCC00EE2859 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CDC714141FAFEBEE00EE2859 /* ProjectsTableManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		CDC7141A1FB004AF00EE2859 /* AddButtonTableFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				CDC714181FB0047600EE2859 /* AddButtonTableFooterView.swift */,
+				CDC714161FB0044F00EE2859 /* AddButtonTableFooterView.xib */,
+			);
+			name = AddButtonTableFooterView;
+			sourceTree = "<group>";
+		};
 		CDC92E0B1F98235100AC8061 /* Middleware */ = {
 			isa = PBXGroup;
 			children = (
 				CDC92E0C1F98237A00AC8061 /* Logger.swift */,
 			);
 			name = Middleware;
-			sourceTree = "<group>";
-		};
-		CDDF49B71F93C99700EFD357 /* CategorySectionHeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				CD780D351F5E1EE50007A37D /* CategorySectionHeaderView.swift */,
-				CDDF49B51F93C99000EFD357 /* CategorySectionHeaderView.xib */,
-			);
-			name = CategorySectionHeaderView;
-			sourceTree = "<group>";
-		};
-		CDDF49B81F941C0200EFD357 /* CategorySectionFooterView */ = {
-			isa = PBXGroup;
-			children = (
-				CDDF49BB1F941CA900EFD357 /* CategorySectionFooterView.swift */,
-				CDDF49B91F941C1900EFD357 /* CategorySectionFooterView.xib */,
-			);
-			name = CategorySectionFooterView;
-			sourceTree = "<group>";
-		};
-		CDDF49BD1F9426B500EFD357 /* ItemTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				CDDF49C71F944A8D00EFD357 /* ItemTableViewCell.swift */,
-				CDDF49C91F944B1100EFD357 /* ItemTableViewCell.xib */,
-			);
-			name = ItemTableViewCell;
 			sourceTree = "<group>";
 		};
 		CDDF49C41F94463800EFD357 /* Selectors */ = {
@@ -386,13 +369,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDC714171FB0044F00EE2859 /* AddButtonTableFooterView.xib in Resources */,
 				CD780D201F5DE5CA0007A37D /* LaunchScreen.storyboard in Resources */,
 				CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */,
 				CDC7140B1FAE805E00EE2859 /* ProjectsViewController.xib in Resources */,
-				CD780D1B1F5DE5CA0007A37D /* Main.storyboard in Resources */,
-				CDDF49BA1F941C1900EFD357 /* CategorySectionFooterView.xib in Resources */,
-				CDDF49CA1F944B1100EFD357 /* ItemTableViewCell.xib in Resources */,
-				CDDF49B61F93C99000EFD357 /* CategorySectionHeaderView.xib in Resources */,
+				CDC714121FAEBAA700EE2859 /* ProjectTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +419,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDC714101FAEBA9A00EE2859 /* ProjectTableViewCell.swift in Sources */,
 				CD2C71661F96D48A004954B6 /* ProjectReducer.swift in Sources */,
+				CDC714151FAFEBEE00EE2859 /* ProjectsTableManager.swift in Sources */,
 				CD11C7E51F92BC23000D0DB1 /* CategoryActions.swift in Sources */,
 				CDAB7F2C1F9C0AA100AC43B2 /* Persistable.swift in Sources */,
 				CDAB7F341F9D56B200AC43B2 /* SettingObject.swift in Sources */,
@@ -452,14 +435,12 @@
 				CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */,
 				CD1B68AE1F95B87A006C68F4 /* ItemSelectors.swift in Sources */,
 				CD2C715C1F96C959004954B6 /* Project.swift in Sources */,
-				CD780D2D1F5DE9960007A37D /* MainViewController.swift in Sources */,
 				CDC92E0A1F9709D300AC8061 /* SettingSelectors.swift in Sources */,
 				CD11C7E01F92BA10000D0DB1 /* AppState.swift in Sources */,
-				CDDF49BC1F941CA900EFD357 /* CategorySectionFooterView.swift in Sources */,
 				CDC7140D1FAE807A00EE2859 /* ProjectsViewController.swift in Sources */,
 				CD2C715E1F96C9E6004954B6 /* Setting.swift in Sources */,
 				CD11C7EB1F92D654000D0DB1 /* Item.swift in Sources */,
-				CD780D3C1F5E1F7F0007A37D /* TableViewRegisterable.swift in Sources */,
+				CD780D3C1F5E1F7F0007A37D /* Registerable.swift in Sources */,
 				CDDF49C31F94435E00EFD357 /* AppReducer.swift in Sources */,
 				CDAB7F2E1F9D4EAB00AC43B2 /* ProjectObject.swift in Sources */,
 				CDAB7F321F9D555C00AC43B2 /* ItemObject.swift in Sources */,
@@ -468,24 +449,15 @@
 				CD11C7EF1F92F289000D0DB1 /* IdEquatable.swift in Sources */,
 				CDC92E081F97090E00AC8061 /* ProjectSelectors.swift in Sources */,
 				CDAB7F3C1F9D75B700AC43B2 /* Object.swift in Sources */,
+				CDC714191FB0047600EE2859 /* AddButtonTableFooterView.swift in Sources */,
 				CD2C71641F96D40C004954B6 /* SettingReducer.swift in Sources */,
 				CD11C7E31F92BA7E000D0DB1 /* CategoryReducer.swift in Sources */,
-				CDDF49C81F944A8D00EFD357 /* ItemTableViewCell.swift in Sources */,
-				CD780D371F5E1EE50007A37D /* CategorySectionHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CD780D191F5DE5CA0007A37D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CD780D1A1F5DE5CA0007A37D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CD780D1E1F5DE5CA0007A37D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -604,6 +576,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.westinschepper.project-estimator-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -621,6 +594,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.westinschepper.project-estimator-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
