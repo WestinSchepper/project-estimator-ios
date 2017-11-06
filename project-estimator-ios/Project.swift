@@ -1,7 +1,6 @@
 //  Created by Westin Schepper on 10/17/17.
 
 import Foundation
-import ReSwift
 
 struct Project: IdEquatable {
   var id: String = UUID().uuidString
