@@ -27,6 +27,12 @@ extension Registerable where Self: UITableViewCell {
 
     return cell
   }
+
+  static func cell(forTable table: UITableView, atIndexPath indexPath: IndexPath) -> Self {
+    let cell = table.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! Self
+    
+    return cell
+  }
 }
 
 extension Registerable where Self: UICollectionViewCell {

@@ -16,8 +16,7 @@ struct UpdateProjectAction: Action {
 }
 
 // Action Creators
-func addProject () -> Action {
-  let project = Project()
+func addProject (_ project: Project) -> Action {
   project.managedObject.save()
 
   return AddProjectAction(project: project)
