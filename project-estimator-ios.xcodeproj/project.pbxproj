@@ -44,10 +44,17 @@
 		CDC92E081F97090E00AC8061 /* ProjectSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E071F97090E00AC8061 /* ProjectSelectors.swift */; };
 		CDC92E0A1F9709D300AC8061 /* SettingSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E091F9709D300AC8061 /* SettingSelectors.swift */; };
 		CDC92E0D1F98237A00AC8061 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC92E0C1F98237A00AC8061 /* Logger.swift */; };
+		CDD572D11FB805B000135EAB /* FormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD572D01FB805B000135EAB /* FormViewController.xib */; };
+		CDD572D31FB805BB00135EAB /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD572D21FB805BB00135EAB /* FormViewController.swift */; };
+		CDD572D91FB80A4100135EAB /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD572D81FB80A4100135EAB /* Form.swift */; };
+		CDD572DB1FB80A5900135EAB /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD572DA1FB80A5900135EAB /* FormField.swift */; };
 		CDDF49BF1F94298A00EFD357 /* ItemActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49BE1F94298A00EFD357 /* ItemActions.swift */; };
 		CDDF49C11F942B0D00EFD357 /* ItemReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C01F942B0D00EFD357 /* ItemReducer.swift */; };
 		CDDF49C31F94435E00EFD357 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C21F94435E00EFD357 /* AppReducer.swift */; };
 		CDDF49C61F9446E700EFD357 /* CategorySelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C51F9446E700EFD357 /* CategorySelectors.swift */; };
+		CDE9056A1FB7F6AF00D67787 /* FormTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE905691FB7F6AF00D67787 /* FormTableManager.swift */; };
+		CDE9056E1FB7FE5900D67787 /* FormFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9056D1FB7FE5900D67787 /* FormFieldTableViewCell.swift */; };
+		CDE905701FB7FF4900D67787 /* FormFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE9056F1FB7FF4900D67787 /* FormFieldTableViewCell.xib */; };
 		CDEF41BF1FABFEAB00391BF2 /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEF41BE1FABFEAB00391BF2 /* Hero.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,10 +98,17 @@
 		CDC92E071F97090E00AC8061 /* ProjectSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSelectors.swift; sourceTree = "<group>"; };
 		CDC92E091F9709D300AC8061 /* SettingSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingSelectors.swift; sourceTree = "<group>"; };
 		CDC92E0C1F98237A00AC8061 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		CDD572D01FB805B000135EAB /* FormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormViewController.xib; sourceTree = "<group>"; };
+		CDD572D21FB805BB00135EAB /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		CDD572D81FB80A4100135EAB /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
+		CDD572DA1FB80A5900135EAB /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		CDDF49BE1F94298A00EFD357 /* ItemActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemActions.swift; sourceTree = "<group>"; };
 		CDDF49C01F942B0D00EFD357 /* ItemReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemReducer.swift; sourceTree = "<group>"; };
 		CDDF49C21F94435E00EFD357 /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		CDDF49C51F9446E700EFD357 /* CategorySelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectors.swift; sourceTree = "<group>"; };
+		CDE905691FB7F6AF00D67787 /* FormTableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableManager.swift; sourceTree = "<group>"; };
+		CDE9056D1FB7FE5900D67787 /* FormFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldTableViewCell.swift; sourceTree = "<group>"; };
+		CDE9056F1FB7FF4900D67787 /* FormFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormFieldTableViewCell.xib; sourceTree = "<group>"; };
 		CDEF41BE1FABFEAB00391BF2 /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = Carthage/Build/iOS/Hero.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +189,7 @@
 		CD780D141F5DE5CA0007A37D /* project-estimator-ios */ = {
 			isa = PBXGroup;
 			children = (
+				CDD572D71FB809BD00135EAB /* Form */,
 				CDC714131FAFEBCC00EE2859 /* Manager */,
 				CDC92E0B1F98235100AC8061 /* Middleware */,
 				CDDF49C41F94463800EFD357 /* Selectors */,
@@ -196,6 +211,7 @@
 		CD780D271F5DE8790007A37D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CDD572CF1FB8059E00135EAB /* FormViewController */,
 				CDC714081FAE804400EE2859 /* Projects */,
 			);
 			name = ViewControllers;
@@ -213,6 +229,7 @@
 		CD780D331F5E1EB30007A37D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CDE9056C1FB7FE1F00D67787 /* FormFieldTableViewCell */,
 				CDC7141A1FB004AF00EE2859 /* AddButtonTableFooterView */,
 				CDC7140E1FAEBA7B00EE2859 /* ProjectTableViewCell */,
 			);
@@ -274,6 +291,7 @@
 		CDC714131FAFEBCC00EE2859 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				CDE905691FB7F6AF00D67787 /* FormTableManager.swift */,
 				CDC714141FAFEBEE00EE2859 /* ProjectsTableManager.swift */,
 			);
 			name = Manager;
@@ -296,6 +314,24 @@
 			name = Middleware;
 			sourceTree = "<group>";
 		};
+		CDD572CF1FB8059E00135EAB /* FormViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CDD572D21FB805BB00135EAB /* FormViewController.swift */,
+				CDD572D01FB805B000135EAB /* FormViewController.xib */,
+			);
+			name = FormViewController;
+			sourceTree = "<group>";
+		};
+		CDD572D71FB809BD00135EAB /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				CDD572D81FB80A4100135EAB /* Form.swift */,
+				CDD572DA1FB80A5900135EAB /* FormField.swift */,
+			);
+			name = Form;
+			sourceTree = "<group>";
+		};
 		CDDF49C41F94463800EFD357 /* Selectors */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +341,15 @@
 				CDC92E091F9709D300AC8061 /* SettingSelectors.swift */,
 			);
 			name = Selectors;
+			sourceTree = "<group>";
+		};
+		CDE9056C1FB7FE1F00D67787 /* FormFieldTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CDE9056D1FB7FE5900D67787 /* FormFieldTableViewCell.swift */,
+				CDE9056F1FB7FF4900D67787 /* FormFieldTableViewCell.xib */,
+			);
+			name = FormFieldTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,8 +414,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD572D11FB805B000135EAB /* FormViewController.xib in Resources */,
 				CDC714171FB0044F00EE2859 /* AddButtonTableFooterView.xib in Resources */,
 				CD780D201F5DE5CA0007A37D /* LaunchScreen.storyboard in Resources */,
+				CDE905701FB7FF4900D67787 /* FormFieldTableViewCell.xib in Resources */,
 				CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */,
 				CDC7140B1FAE805E00EE2859 /* ProjectsViewController.xib in Resources */,
 				CDC714121FAEBAA700EE2859 /* ProjectTableViewCell.xib in Resources */,
@@ -427,7 +474,9 @@
 				CDAB7F341F9D56B200AC43B2 /* SettingObject.swift in Sources */,
 				CDDF49C61F9446E700EFD357 /* CategorySelectors.swift in Sources */,
 				CDAB7F301F9D508E00AC43B2 /* CategoryObject.swift in Sources */,
+				CDE9056E1FB7FE5900D67787 /* FormFieldTableViewCell.swift in Sources */,
 				CD2C71601F96D105004954B6 /* ProjectActions.swift in Sources */,
+				CDD572DB1FB80A5900135EAB /* FormField.swift in Sources */,
 				CDC92E0D1F98237A00AC8061 /* Logger.swift in Sources */,
 				CDDF49C11F942B0D00EFD357 /* ItemReducer.swift in Sources */,
 				CD2C71621F96D26C004954B6 /* SettingActions.swift in Sources */,
@@ -435,7 +484,9 @@
 				CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */,
 				CD1B68AE1F95B87A006C68F4 /* ItemSelectors.swift in Sources */,
 				CD2C715C1F96C959004954B6 /* Project.swift in Sources */,
+				CDD572D91FB80A4100135EAB /* Form.swift in Sources */,
 				CDC92E0A1F9709D300AC8061 /* SettingSelectors.swift in Sources */,
+				CDD572D31FB805BB00135EAB /* FormViewController.swift in Sources */,
 				CD11C7E01F92BA10000D0DB1 /* AppState.swift in Sources */,
 				CDC7140D1FAE807A00EE2859 /* ProjectsViewController.swift in Sources */,
 				CD2C715E1F96C9E6004954B6 /* Setting.swift in Sources */,
@@ -451,6 +502,7 @@
 				CDAB7F3C1F9D75B700AC43B2 /* Object.swift in Sources */,
 				CDC714191FB0047600EE2859 /* AddButtonTableFooterView.swift in Sources */,
 				CD2C71641F96D40C004954B6 /* SettingReducer.swift in Sources */,
+				CDE9056A1FB7F6AF00D67787 /* FormTableManager.swift in Sources */,
 				CD11C7E31F92BA7E000D0DB1 /* CategoryReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
