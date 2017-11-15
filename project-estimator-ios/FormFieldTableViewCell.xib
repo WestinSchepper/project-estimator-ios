@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FormFieldTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MAa-Rr-qjq" customClass="FormFieldTableViewCell" customModule="project_estimator_ios" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FormFieldTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="86" id="MAa-Rr-qjq" customClass="FormFieldTableViewCell" customModule="project_estimator_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MAa-Rr-qjq" id="RL9-qK-7jj">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="85.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qBt-pu-Lrk">
-                        <rect key="frame" x="16" y="0.0" width="343" height="79.5"/>
+                        <rect key="frame" x="16" y="32" width="343" height="43"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                         <textInputTraits key="textInputTraits"/>
@@ -27,18 +28,27 @@
                             <action selector="textFieldDidChange:" destination="MAa-Rr-qjq" eventType="editingChanged" id="Sad-YF-nLY"/>
                         </connections>
                     </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Field Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpV-p5-Bw4">
+                        <rect key="frame" x="16" y="11" width="110.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="qBt-pu-Lrk" secondAttribute="bottom" id="1hV-yw-X8u"/>
-                    <constraint firstAttribute="trailing" secondItem="qBt-pu-Lrk" secondAttribute="trailing" constant="16" id="hqG-mi-oBb"/>
-                    <constraint firstItem="qBt-pu-Lrk" firstAttribute="top" secondItem="RL9-qK-7jj" secondAttribute="top" id="iAw-Hd-Vkc"/>
-                    <constraint firstItem="qBt-pu-Lrk" firstAttribute="leading" secondItem="RL9-qK-7jj" secondAttribute="leading" constant="16" id="xej-XH-r5Y"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qBt-pu-Lrk" secondAttribute="bottom" id="FS3-Lg-lR7"/>
+                    <constraint firstItem="qBt-pu-Lrk" firstAttribute="top" secondItem="NpV-p5-Bw4" secondAttribute="bottom" id="aG9-gd-ciZ"/>
+                    <constraint firstItem="NpV-p5-Bw4" firstAttribute="top" secondItem="RL9-qK-7jj" secondAttribute="topMargin" id="bmb-J4-PWi"/>
+                    <constraint firstItem="NpV-p5-Bw4" firstAttribute="leading" secondItem="RL9-qK-7jj" secondAttribute="leadingMargin" id="bnj-yI-eYY"/>
+                    <constraint firstItem="qBt-pu-Lrk" firstAttribute="trailing" secondItem="RL9-qK-7jj" secondAttribute="trailingMargin" id="daQ-cE-czJ"/>
+                    <constraint firstItem="qBt-pu-Lrk" firstAttribute="leading" secondItem="RL9-qK-7jj" secondAttribute="leadingMargin" id="rwr-oY-uJD"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="textField" destination="qBt-pu-Lrk" id="SJ9-ke-szl"/>
+                <outlet property="textFieldTitle" destination="NpV-p5-Bw4" id="Ubd-ZJ-Fy6"/>
             </connections>
-            <point key="canvasLocation" x="-5" y="-346"/>
+            <point key="canvasLocation" x="-5.5" y="-336"/>
         </tableViewCell>
     </objects>
 </document>

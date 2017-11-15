@@ -48,6 +48,7 @@
 		CDD572D31FB805BB00135EAB /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD572D21FB805BB00135EAB /* FormViewController.swift */; };
 		CDD572D91FB80A4100135EAB /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD572D81FB80A4100135EAB /* Form.swift */; };
 		CDD572DB1FB80A5900135EAB /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD572DA1FB80A5900135EAB /* FormField.swift */; };
+		CDDEF2E21FBBD0C30027857A /* AddProjectForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEF2E11FBBD0C30027857A /* AddProjectForm.swift */; };
 		CDDF49BF1F94298A00EFD357 /* ItemActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49BE1F94298A00EFD357 /* ItemActions.swift */; };
 		CDDF49C11F942B0D00EFD357 /* ItemReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C01F942B0D00EFD357 /* ItemReducer.swift */; };
 		CDDF49C31F94435E00EFD357 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49C21F94435E00EFD357 /* AppReducer.swift */; };
@@ -102,6 +103,7 @@
 		CDD572D21FB805BB00135EAB /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		CDD572D81FB80A4100135EAB /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		CDD572DA1FB80A5900135EAB /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
+		CDDEF2E11FBBD0C30027857A /* AddProjectForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectForm.swift; sourceTree = "<group>"; };
 		CDDF49BE1F94298A00EFD357 /* ItemActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemActions.swift; sourceTree = "<group>"; };
 		CDDF49C01F942B0D00EFD357 /* ItemReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemReducer.swift; sourceTree = "<group>"; };
 		CDDF49C21F94435E00EFD357 /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
@@ -189,7 +191,8 @@
 		CD780D141F5DE5CA0007A37D /* project-estimator-ios */ = {
 			isa = PBXGroup;
 			children = (
-				CDD572D71FB809BD00135EAB /* Form */,
+				CDDEF2E01FBBD0B40027857A /* Forms */,
+				CDDEF2DF1FBBD0A20027857A /* Classes */,
 				CDC714131FAFEBCC00EE2859 /* Manager */,
 				CDC92E0B1F98235100AC8061 /* Middleware */,
 				CDDF49C41F94463800EFD357 /* Selectors */,
@@ -332,6 +335,22 @@
 			name = Form;
 			sourceTree = "<group>";
 		};
+		CDDEF2DF1FBBD0A20027857A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CDD572D71FB809BD00135EAB /* Form */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		CDDEF2E01FBBD0B40027857A /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				CDDEF2E11FBBD0C30027857A /* AddProjectForm.swift */,
+			);
+			name = Forms;
+			sourceTree = "<group>";
+		};
 		CDDF49C41F94463800EFD357 /* Selectors */ = {
 			isa = PBXGroup;
 			children = (
@@ -467,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC714101FAEBA9A00EE2859 /* ProjectTableViewCell.swift in Sources */,
+				CDDEF2E21FBBD0C30027857A /* AddProjectForm.swift in Sources */,
 				CD2C71661F96D48A004954B6 /* ProjectReducer.swift in Sources */,
 				CDC714151FAFEBEE00EE2859 /* ProjectsTableManager.swift in Sources */,
 				CD11C7E51F92BC23000D0DB1 /* CategoryActions.swift in Sources */,

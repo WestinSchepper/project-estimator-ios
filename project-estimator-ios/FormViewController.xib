@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormViewController" customModule="project_estimator_ios" customModuleProvider="target">
             <connections>
+                <outlet property="formTitle" destination="dZz-4H-k0d" id="fOO-mU-tA1"/>
                 <outlet property="tableView" destination="L4K-eh-o5T" id="79g-yX-11S"/>
                 <outlet property="view" destination="iN0-l3-epB" id="9F4-zn-cpn"/>
             </connections>
@@ -47,11 +48,21 @@
                     <rect key="frame" x="0.0" y="62" width="375" height="605"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZz-4H-k0d">
+                    <rect key="frame" x="166" y="30" width="44.5" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bcX-Q0-hjs" secondAttribute="trailing" constant="16" id="8fS-1G-xGI"/>
+                <constraint firstItem="bcX-Q0-hjs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dZz-4H-k0d" secondAttribute="trailing" constant="12" id="9wC-aW-JgC"/>
+                <constraint firstItem="dZz-4H-k0d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ao1-A3-NWb" secondAttribute="trailing" constant="12" id="DAx-5H-mgn"/>
                 <constraint firstItem="L4K-eh-o5T" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FUb-yK-6wc"/>
+                <constraint firstItem="dZz-4H-k0d" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GDx-CY-eLE"/>
+                <constraint firstItem="dZz-4H-k0d" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="Qfh-fH-YhX"/>
                 <constraint firstItem="bcX-Q0-hjs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="YGF-DZ-y8O"/>
                 <constraint firstItem="L4K-eh-o5T" firstAttribute="top" secondItem="bcX-Q0-hjs" secondAttribute="bottom" constant="8" id="g3W-FH-Y4q"/>
                 <constraint firstItem="L4K-eh-o5T" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ijj-lp-QCb"/>

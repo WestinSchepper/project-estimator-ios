@@ -3,6 +3,7 @@
 import UIKit
 
 final class FormViewController: UIViewController {
+  @IBOutlet weak var formTitle: UILabel!
   @IBOutlet weak var tableView: UITableView!
 
   var form: Form!
@@ -38,6 +39,12 @@ final class FormViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    setupFormUI()
+  }
+
+  func setupFormUI() {
+    formTitle.text = form.title
 
     tableManager.start()
   }

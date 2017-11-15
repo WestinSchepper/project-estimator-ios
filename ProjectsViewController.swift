@@ -35,17 +35,8 @@ final class ProjectsViewController: UIViewController {
   }
 
   private func presentAddProject() {
-    let form = Form(fields: FormField(key: "title", placeholder: "Project Name"))
-    let addProjectViewController = FormViewController(withForm: form)
+    let addProjectViewController = AddProjectForm()
 
-    addProjectViewController.onSave = {
-      var project = Project()
-      project.title = form.dictionaryForm["title"]!
-
-      mainStore.dispatch(addProject(project))
-      return true
-    }
-
-    self.present(addProjectViewController, animated: true)
+    self.present(addProjectViewController.viewController, animated: true)
   }
 }
