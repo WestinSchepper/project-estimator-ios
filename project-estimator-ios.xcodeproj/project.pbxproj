@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD11ABD11FBBEB4A00D1A81A /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11ABD01FBBEB4A00D1A81A /* ProjectViewController.swift */; };
+		CD11ABD31FBBEB5500D1A81A /* ProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD11ABD21FBBEB5500D1A81A /* ProjectViewController.xib */; };
 		CD11C7E01F92BA10000D0DB1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7DF1F92BA10000D0DB1 /* AppState.swift */; };
 		CD11C7E31F92BA7E000D0DB1 /* CategoryReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7E21F92BA7E000D0DB1 /* CategoryReducer.swift */; };
 		CD11C7E51F92BC23000D0DB1 /* CategoryActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7E41F92BC23000D0DB1 /* CategoryActions.swift */; };
@@ -61,6 +63,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD11ABD01FBBEB4A00D1A81A /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		CD11ABD21FBBEB5500D1A81A /* ProjectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProjectViewController.xib; path = ../ProjectViewController.xib; sourceTree = "<group>"; };
 		CD11C7DF1F92BA10000D0DB1 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		CD11C7E21F92BA7E000D0DB1 /* CategoryReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryReducer.swift; sourceTree = "<group>"; };
 		CD11C7E41F92BC23000D0DB1 /* CategoryActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryActions.swift; sourceTree = "<group>"; };
@@ -131,6 +135,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD11ABCF1FBBEAFB00D1A81A /* ProjectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CD11ABD01FBBEB4A00D1A81A /* ProjectViewController.swift */,
+				CD11ABD21FBBEB5500D1A81A /* ProjectViewController.xib */,
+			);
+			name = ProjectViewController;
+			sourceTree = "<group>";
+		};
 		CD11C7D81F92B66D000D0DB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,7 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				CDD572CF1FB8059E00135EAB /* FormViewController */,
-				CDC714081FAE804400EE2859 /* Projects */,
+				CDC714081FAE804400EE2859 /* ProjectsViewController */,
+				CD11ABCF1FBBEAFB00D1A81A /* ProjectViewController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -275,13 +289,13 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		CDC714081FAE804400EE2859 /* Projects */ = {
+		CDC714081FAE804400EE2859 /* ProjectsViewController */ = {
 			isa = PBXGroup;
 			children = (
 				CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */,
 				CDC7140A1FAE805E00EE2859 /* ProjectsViewController.xib */,
 			);
-			name = Projects;
+			name = ProjectsViewController;
 			sourceTree = "<group>";
 		};
 		CDC7140E1FAEBA7B00EE2859 /* ProjectTableViewCell */ = {
@@ -436,6 +450,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD11ABD31FBBEB5500D1A81A /* ProjectViewController.xib in Resources */,
 				CDD572D11FB805B000135EAB /* FormViewController.xib in Resources */,
 				CDC714171FB0044F00EE2859 /* AddButtonTableFooterView.xib in Resources */,
 				CD780D201F5DE5CA0007A37D /* LaunchScreen.storyboard in Resources */,
@@ -497,6 +512,7 @@
 				CDAB7F341F9D56B200AC43B2 /* SettingObject.swift in Sources */,
 				CDDF49C61F9446E700EFD357 /* CategorySelectors.swift in Sources */,
 				CDAB7F301F9D508E00AC43B2 /* CategoryObject.swift in Sources */,
+				CD11ABD11FBBEB4A00D1A81A /* ProjectViewController.swift in Sources */,
 				CDE9056E1FB7FE5900D67787 /* FormFieldTableViewCell.swift in Sources */,
 				CD2C71601F96D105004954B6 /* ProjectActions.swift in Sources */,
 				CDD572DB1FB80A5900135EAB /* FormField.swift in Sources */,
