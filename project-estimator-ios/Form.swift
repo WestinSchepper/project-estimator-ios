@@ -1,9 +1,11 @@
 //  Created by Westin Schepper on 11/11/17.
 
 final class Form {
+  var title: String
   var fields: [FormField] = []
 
-  init(fields: FormField...) {
+  init(title: String = "", fields: FormField...) {
+    self.title = title
     self.fields = fields
   }
 

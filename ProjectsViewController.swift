@@ -35,7 +35,7 @@ final class ProjectsViewController: UIViewController {
   }
 
   private func presentAddProject() {
-    let form = Form(fields: FormField(key: "title", placeholder: "Project Name"))
+    let form = Form(title: "Add Project", fields: FormField(key: "title", placeholder: "Project Name"))
     let addProjectViewController = FormViewController(withForm: form)
 
     addProjectViewController.onSave = {
