@@ -9,6 +9,11 @@ final class FormField {
   let initialValue: String
   var keyboardType: UIKeyboardType
   var value: String
+  var valid: Bool {
+    return validation(self)
+  }
+
+  var validation: (_ formField: FormField) -> Bool = { _ in return false }
 
   init(key: String, title: String = "", placeholder: String, initialValue: String, keyboardType: UIKeyboardType = .default) {
     self.key = key
