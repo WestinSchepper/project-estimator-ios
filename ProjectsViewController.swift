@@ -3,14 +3,6 @@
 import UIKit
 import RealmSwift
 
-func deleteAll() {
-  let realm = try! Realm()
-
-  try! realm.write {
-    realm.deleteAll()
-  }
-}
-
 final class ProjectsViewController: UIViewController {
   @IBOutlet weak var projectsLabel: UILabel!
   @IBOutlet weak var tableView: UITableView!
@@ -25,7 +17,10 @@ final class ProjectsViewController: UIViewController {
   }()
 
   @IBAction func handleSettingsTapped(_ sender: UIButton) {
-    deleteAll()
+    let defaultSetting = getDefaultSetting(mainStore.state)
+    let editSettingsForm = EditSettingForm(withSetting: defaultSetting, isDefault: true)
+
+    self.present(editSettingsForm.viewController, animated: true)
   }
 
   override func viewDidLoad() {

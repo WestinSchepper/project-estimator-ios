@@ -10,13 +10,10 @@ final class AddProjectForm: Form {
   }
 
   private func setupFormFields() {
-    let field = FormField(key: "title", placeholder: "Project Name")
+    let projectName = FormField(key: "projectName", placeholder: "Project Name")
+    projectName.validation = { !$0.value.isEmpty }
 
-    field.validation = { formField in
-      return !formField.value.isEmpty
-    }
-
-    fields = [field]
+    fields = [projectName]
   }
 
   private func setupViewController() {
@@ -24,7 +21,7 @@ final class AddProjectForm: Form {
       guard self.valid == true else { return false }
 
       var project = Project()
-      project.title = self.dictionaryForm["title"]!
+      project.title = self.dictionaryForm["projectName"]!
 
       mainStore.dispatch(addProject(project))
       return true
