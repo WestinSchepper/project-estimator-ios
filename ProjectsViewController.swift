@@ -21,6 +21,10 @@ final class ProjectsViewController: UIViewController {
       self.presentAddProject()
     }
 
+    manager.projectSelected = { [unowned self] project in
+      self.presentProject(project)
+    }
+
     return manager
   }()
 
@@ -38,5 +42,9 @@ final class ProjectsViewController: UIViewController {
     let addProjectViewController = AddProjectForm()
 
     self.present(addProjectViewController.viewController, animated: true)
+  }
+
+  private func presentProject(_ project: Project) {
+    
   }
 }

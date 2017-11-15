@@ -8,6 +8,7 @@ final class ProjectsTableManager: NSObject {
 
   var projects: [Project] = []
   var addProjectPressed: () -> Void = {}
+  var projectSelected: (_ project: Project) -> Void = { _ in }
 
   init(withTableView tableView: UITableView) {
     self.tableView = tableView
@@ -61,7 +62,8 @@ extension ProjectsTableManager: StoreSubscriber {
 
 extension ProjectsTableManager: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+    let project = projects[indexPath.row]
+    projectSelected(project)
   }
 }
 
