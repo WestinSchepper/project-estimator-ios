@@ -24,7 +24,7 @@ final class ProjectsViewController: UIViewController {
     let defaultSetting = getDefaultSetting(mainStore.state)
     let editSettingsForm = EditSettingForm(withSetting: defaultSetting, isDefault: true)
 
-    self.present(editSettingsForm.viewController, animated: true)
+    present(editSettingsForm.viewController, animated: true)
   }
 
   override func viewDidLoad() {
@@ -40,6 +40,8 @@ final class ProjectsViewController: UIViewController {
   }
 
   private func presentProject(_ project: Project) {
-    
+    let projectViewController = ProjectViewController(withProject: project)
+
+    present(projectViewController, animated: true)
   }
 }

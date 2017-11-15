@@ -64,6 +64,8 @@ extension ProjectsTableManager: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let project = projects[indexPath.row]
     projectSelected(project)
+
+    tableView.deselectRow(at: indexPath, animated: false)
   }
 }
 
