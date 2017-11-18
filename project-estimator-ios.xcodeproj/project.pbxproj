@@ -36,6 +36,7 @@
 		CDAB7F381F9D6DEB00AC43B2 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAB7F361F9D6DEB00AC43B2 /* RealmSwift.framework */; };
 		CDAB7F3C1F9D75B700AC43B2 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F3B1F9D75B700AC43B2 /* Object.swift */; };
 		CDC0711E1FC0D91800E07AB1 /* EditProjectForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0711D1FC0D91800E07AB1 /* EditProjectForm.swift */; };
+		CDC071221FC0E35000E07AB1 /* AddProjectMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC071211FC0E35000E07AB1 /* AddProjectMiddleware.swift */; };
 		CDC7140B1FAE805E00EE2859 /* ProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC7140A1FAE805E00EE2859 /* ProjectsViewController.xib */; };
 		CDC7140D1FAE807A00EE2859 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */; };
 		CDC714101FAEBA9A00EE2859 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC7140F1FAEBA9A00EE2859 /* ProjectTableViewCell.swift */; };
@@ -95,6 +96,7 @@
 		CDAB7F361F9D6DEB00AC43B2 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		CDAB7F3B1F9D75B700AC43B2 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		CDC0711D1FC0D91800E07AB1 /* EditProjectForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectForm.swift; sourceTree = "<group>"; };
+		CDC071211FC0E35000E07AB1 /* AddProjectMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectMiddleware.swift; sourceTree = "<group>"; };
 		CDC7140A1FAE805E00EE2859 /* ProjectsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsViewController.xib; sourceTree = "<group>"; };
 		CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProjectsViewController.swift; path = ../ProjectsViewController.swift; sourceTree = "<group>"; };
 		CDC7140F1FAEBA9A00EE2859 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				CDC92E0C1F98237A00AC8061 /* Logger.swift */,
+				CDC071211FC0E35000E07AB1 /* AddProjectMiddleware.swift */,
 			);
 			name = Middleware;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				CDAB7F321F9D555C00AC43B2 /* ItemObject.swift in Sources */,
 				CDDF49BF1F94298A00EFD357 /* ItemActions.swift in Sources */,
 				CD11C7ED1F92EB36000D0DB1 /* Array.swift in Sources */,
+				CDC071221FC0E35000E07AB1 /* AddProjectMiddleware.swift in Sources */,
 				CD11C7EF1F92F289000D0DB1 /* IdEquatable.swift in Sources */,
 				CDC92E081F97090E00AC8061 /* ProjectSelectors.swift in Sources */,
 				CDAB7F3C1F9D75B700AC43B2 /* Object.swift in Sources */,
