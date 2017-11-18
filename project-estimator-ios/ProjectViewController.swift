@@ -15,7 +15,7 @@ final class ProjectViewController: UIViewController {
   }
 
   @IBAction func more(_ sender: UIButton) {
-
+    presentActions()
   }
 
   @IBAction func expand(_ sender: UIButton) {
@@ -58,5 +58,32 @@ final class ProjectViewController: UIViewController {
 
   func setupViewUI() {
     projectTitle.text = project.title
+  }
+
+  func presentActions() {
+    let actionController = UIAlertController(title: "Actions", message: nil, preferredStyle: .actionSheet)
+    let delete = UIAlertAction(title: "Delete", style: .destructive) { [unowned self] _ in
+      mainStore.dispatch(removeProject(self.project))
+      self.dismiss(animated: true)
+    }
+
+    let edit = UIAlertAction(title: "Edit", style: .default) { [unowned self] _ in
+      let form = EditProjectForm(withProject: self.project)
+
+      self.present(form.viewController, animated: true)
+    }
+
+    let settings = UIAlertAction(title: "Settings", style: .default) { _ in
+
+    }
+
+    let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+
+    actionController.addAction(delete)
+    actionController.addAction(edit)
+    actionController.addAction(settings)
+    actionController.addAction(cancel)
+
+    present(actionController, animated: true)
   }
 }
