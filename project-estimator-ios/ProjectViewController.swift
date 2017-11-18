@@ -66,24 +66,27 @@ final class ProjectViewController: UIViewController {
       mainStore.dispatch(removeProject(self.project))
       self.dismiss(animated: true)
     }
-
+    
     let edit = UIAlertAction(title: "Edit", style: .default) { [unowned self] _ in
       let form = EditProjectForm(withProject: self.project)
+      
+      self.present(form.viewController, animated: true)
+    }
+    
+    let settings = UIAlertAction(title: "Settings", style: .default) { _ in
+      let projectSettings = getProjectSetting(mainStore.state, projectId: self.project.id)
+      let form = EditSettingForm(withSetting: projectSettings)
 
       self.present(form.viewController, animated: true)
     }
-
-    let settings = UIAlertAction(title: "Settings", style: .default) { _ in
-
-    }
-
+    
     let cancel = UIAlertAction(title: "Cancel", style: .cancel)
-
+    
     actionController.addAction(delete)
     actionController.addAction(edit)
     actionController.addAction(settings)
     actionController.addAction(cancel)
-
+    
     present(actionController, animated: true)
   }
 }

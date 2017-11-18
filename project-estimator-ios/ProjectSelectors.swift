@@ -19,7 +19,7 @@ func getProjectCategories (_ categories: [Category], projectId: String) -> [Cate
 }
 
 func getProjectSetting (_ state: AppState, projectId: String) -> Setting {
-  return state.settings.first { $0.id == projectId }!
+  return state.settings.first { $0.projectId == projectId }!
 }
 
 func getProjectEstimate (_ state: AppState, projectId: String) -> Int {
