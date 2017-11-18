@@ -102,7 +102,6 @@
                         <constraint firstItem="qJX-a6-jmX" firstAttribute="leading" secondItem="XiM-Ca-FuK" secondAttribute="leading" constant="16" id="Wk3-KA-RGI"/>
                         <constraint firstAttribute="bottom" secondItem="Bff-X8-bq0" secondAttribute="bottom" constant="12" id="ZpV-Il-BbB"/>
                         <constraint firstAttribute="trailing" secondItem="mCC-Mb-8OS" secondAttribute="trailing" constant="16" id="ctr-Zq-88D"/>
-                        <constraint firstAttribute="height" constant="168" id="oO6-37-T5F"/>
                         <constraint firstItem="Bff-X8-bq0" firstAttribute="centerX" secondItem="XiM-Ca-FuK" secondAttribute="centerX" id="s3L-GL-SOt"/>
                         <constraint firstItem="bxS-U3-Mig" firstAttribute="centerX" secondItem="XiM-Ca-FuK" secondAttribute="centerX" id="tcC-FW-bo5"/>
                         <constraint firstItem="bxS-U3-Mig" firstAttribute="top" secondItem="Wlh-bK-GDh" secondAttribute="bottom" constant="4" id="yT2-L5-OAF"/>
@@ -121,6 +120,7 @@
                 <constraint firstItem="h9T-yc-2yj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Bza-Pr-5zI"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XiM-Ca-FuK" secondAttribute="trailing" id="NJw-7S-waT"/>
                 <constraint firstItem="XiM-Ca-FuK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PUo-0f-Q7D"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="XiM-Ca-FuK" secondAttribute="bottom" constant="-148" id="Wki-Xa-ioV"/>
                 <constraint firstItem="XiM-Ca-FuK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tlo-e8-RT8"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
