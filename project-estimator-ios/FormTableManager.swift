@@ -25,6 +25,14 @@ final class FormTableManager: NSObject {
 
     FormFieldTableViewCell.register(tableView: tableView)
   }
+
+  func becomeFirstResponder(atIndex index: IndexPath) {
+    guard let cell = tableView.cellForRow(at: index) as? FormFieldTableViewCell else {
+      return
+    }
+
+    cell.textField.becomeFirstResponder()
+  }
 }
 
 extension FormTableManager: UITableViewDataSource, UITableViewDelegate {

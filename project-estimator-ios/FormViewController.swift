@@ -43,6 +43,13 @@ final class FormViewController: UIViewController {
     setupFormUI()
   }
 
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+
+    guard let index = form.firstResponderIndex else { return }
+    tableManager.becomeFirstResponder(atIndex: index)
+  }
+
   func setupFormUI() {
     formTitle.text = form.title
 

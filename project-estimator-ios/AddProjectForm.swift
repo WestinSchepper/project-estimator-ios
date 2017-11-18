@@ -11,6 +11,8 @@ final class AddProjectForm: Form {
 
   private func setupFormFields() {
     let projectName = FormField(key: "projectName", placeholder: "Project Name")
+
+    projectName.shouldBecomeFirstResponder = true
     projectName.validation = { !$0.value.isEmpty }
 
     fields = [projectName]
