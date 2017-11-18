@@ -13,6 +13,8 @@ final class FormField {
     return validation(self)
   }
 
+  var shouldBecomeFirstResponder: Bool = false
+
   var validation: (_ formField: FormField) -> Bool = { _ in return false }
 
   init(key: String, title: String = "", placeholder: String, initialValue: String, keyboardType: UIKeyboardType = .default) {
