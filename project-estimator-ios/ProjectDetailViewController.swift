@@ -3,7 +3,8 @@
 import UIKit
 
 final class ProjectDetailViewController: UIViewController {
-  @IBOutlet weak var headerContainer: UIView!
+  @IBOutlet weak var contentContainer: UIView!
+  @IBOutlet weak var contentContainerBackground: UIView!
   @IBOutlet weak var projectTitle: UILabel!
   @IBOutlet weak var priceLabel: UILabel!
   @IBOutlet weak var hoursLabel: UILabel!
@@ -40,17 +41,10 @@ final class ProjectDetailViewController: UIViewController {
   func setupHero() {
     isHeroEnabled = true
 
-    headerContainer.heroID = "\(project.id)-container"
-    headerContainer.heroModifiers = [.arc(intensity: 0.5)]
-
+    contentContainerBackground.heroID = "\(project.id)-container"
     projectTitle.heroID = "\(project.id)-title"
-    projectTitle.heroModifiers = [.arc(intensity: 0.5)]
-
     priceLabel.heroID = "\(project.id)-price"
-    priceLabel.heroModifiers = [.arc(intensity: 0.5)]
-
     hoursLabel.heroID = "\(project.id)-hours"
-    hoursLabel.heroModifiers = [.arc(intensity: 0.5)]
   }
 
   func setupViewUI() {

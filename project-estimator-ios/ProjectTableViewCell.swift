@@ -28,15 +28,6 @@ final class ProjectTableViewCell: UITableViewCell, Registerable {
 
   func setupHero() {
     containerView.heroID = "\(project.id)-container"
-    containerView.heroModifiers = [.arc(intensity: 0.5)]
-
     titleLabel.heroID = "\(project.id)-title"
-    titleLabel.heroModifiers = [.arc(intensity: 0.5)]
-
-    priceLabel.heroID = "\(project.id)-price"
-    priceLabel.heroModifiers = [.arc(intensity: 0.5)]
-
-    hoursLabel.heroID = "\(project.id)-hours"
-    hoursLabel.heroModifiers = [.arc(intensity: 0.5)]
   }
 }
