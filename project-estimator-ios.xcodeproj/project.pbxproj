@@ -37,6 +37,8 @@
 		CDAB7F3C1F9D75B700AC43B2 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F3B1F9D75B700AC43B2 /* Object.swift */; };
 		CDC0711E1FC0D91800E07AB1 /* EditProjectForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0711D1FC0D91800E07AB1 /* EditProjectForm.swift */; };
 		CDC071221FC0E35000E07AB1 /* AddProjectMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC071211FC0E35000E07AB1 /* AddProjectMiddleware.swift */; };
+		CDC071261FC0FEBE00E07AB1 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC071251FC0FEBE00E07AB1 /* ProjectDetailViewController.swift */; };
+		CDC071281FC0FF4000E07AB1 /* ProjectDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC071271FC0FF4000E07AB1 /* ProjectDetailViewController.xib */; };
 		CDC7140B1FAE805E00EE2859 /* ProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC7140A1FAE805E00EE2859 /* ProjectsViewController.xib */; };
 		CDC7140D1FAE807A00EE2859 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */; };
 		CDC714101FAEBA9A00EE2859 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC7140F1FAEBA9A00EE2859 /* ProjectTableViewCell.swift */; };
@@ -97,6 +99,8 @@
 		CDAB7F3B1F9D75B700AC43B2 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		CDC0711D1FC0D91800E07AB1 /* EditProjectForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectForm.swift; sourceTree = "<group>"; };
 		CDC071211FC0E35000E07AB1 /* AddProjectMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectMiddleware.swift; sourceTree = "<group>"; };
+		CDC071251FC0FEBE00E07AB1 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
+		CDC071271FC0FF4000E07AB1 /* ProjectDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectDetailViewController.xib; sourceTree = "<group>"; };
 		CDC7140A1FAE805E00EE2859 /* ProjectsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsViewController.xib; sourceTree = "<group>"; };
 		CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProjectsViewController.swift; path = ../ProjectsViewController.swift; sourceTree = "<group>"; };
 		CDC7140F1FAEBA9A00EE2859 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 				CDD572CF1FB8059E00135EAB /* FormViewController */,
 				CDC714081FAE804400EE2859 /* ProjectsViewController */,
 				CD11ABCF1FBBEAFB00D1A81A /* ProjectViewController */,
+				CDC071241FC0FE9900E07AB1 /* ProjectDetailViewController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -291,6 +296,15 @@
 				CDAB7F331F9D56B200AC43B2 /* SettingObject.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		CDC071241FC0FE9900E07AB1 /* ProjectDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CDC071251FC0FEBE00E07AB1 /* ProjectDetailViewController.swift */,
+				CDC071271FC0FF4000E07AB1 /* ProjectDetailViewController.xib */,
+			);
+			name = ProjectDetailViewController;
 			sourceTree = "<group>";
 		};
 		CDC714081FAE804400EE2859 /* ProjectsViewController */ = {
@@ -459,6 +473,7 @@
 				CD11ABD31FBBEB5500D1A81A /* ProjectViewController.xib in Resources */,
 				CDD572D11FB805B000135EAB /* FormViewController.xib in Resources */,
 				CDC714171FB0044F00EE2859 /* AddButtonTableFooterView.xib in Resources */,
+				CDC071281FC0FF4000E07AB1 /* ProjectDetailViewController.xib in Resources */,
 				CD780D201F5DE5CA0007A37D /* LaunchScreen.storyboard in Resources */,
 				CDE905701FB7FF4900D67787 /* FormFieldTableViewCell.xib in Resources */,
 				CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */,
@@ -532,6 +547,7 @@
 				CD2C715C1F96C959004954B6 /* Project.swift in Sources */,
 				CDD572D91FB80A4100135EAB /* Form.swift in Sources */,
 				CDDEF2E41FBBD7B90027857A /* EditSettingForm.swift in Sources */,
+				CDC071261FC0FEBE00E07AB1 /* ProjectDetailViewController.swift in Sources */,
 				CDC92E0A1F9709D300AC8061 /* SettingSelectors.swift in Sources */,
 				CDD572D31FB805BB00135EAB /* FormViewController.swift in Sources */,
 				CD11C7E01F92BA10000D0DB1 /* AppState.swift in Sources */,

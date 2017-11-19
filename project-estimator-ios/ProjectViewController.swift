@@ -19,7 +19,9 @@ final class ProjectViewController: UIViewController {
   }
 
   @IBAction func expand(_ sender: UIButton) {
+    let detail = ProjectDetailViewController(withProject: project)
 
+    present(detail, animated: true)
   }
 
   var project: Project!
