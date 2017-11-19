@@ -47,10 +47,10 @@ final class ProjectDetailViewController: UIViewController {
     projectTitle.heroModifiers = [.arc(intensity: 0.5)]
 
     priceLabel.heroID = "\(project.id)-price"
-    priceLabel.heroModifiers = [.delay(0.05), .arc(intensity: 0.5)]
+    priceLabel.heroModifiers = [.arc(intensity: 0.5)]
 
     hoursLabel.heroID = "\(project.id)-hours"
-    hoursLabel.heroModifiers = [.delay(0.1), .arc(intensity: 0.5)]
+    hoursLabel.heroModifiers = [.arc(intensity: 0.5)]
   }
 
   func setupViewUI() {

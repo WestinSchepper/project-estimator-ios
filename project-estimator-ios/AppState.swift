@@ -26,7 +26,22 @@ extension AppState {
     state.items = loadPersistedData(ItemObject.self, asModel: Item.self)
     state.settings = loadPersistedData(SettingObject.self, asModel: Setting.self)
 
+    if let persistedDefaultSettings = loadPersistedDefaultSettings() {
+      state.defaultSetting = persistedDefaultSettings
+    }
+
     return state
+  }
+}
+
+func loadPersistedDefaultSettings() -> Setting? {
+  //swiftlint:disable:next force_try
+  let realm = try! Realm()
+
+  if let result = realm.objects(SettingObject.self).first(where: { $0.projectId == "default" }) {
+    return Setting(managedObject: result)
+  } else {
+    return nil
   }
 }
 
