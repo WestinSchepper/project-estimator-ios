@@ -30,7 +30,7 @@ final class ProjectViewController: UIViewController {
   var project: Project!
 
   lazy var tableManager: CategoriesTableManager = {
-    let manager = CategoriesTableManager(withTableView: self.tableView)
+    let manager = CategoriesTableManager(withTableView: self.tableView, project: self.project)
     manager.addCategoryPressed = { [unowned self] in
       self.presentAddCategory()
     }

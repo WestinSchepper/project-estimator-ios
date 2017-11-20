@@ -6,12 +6,14 @@ import ReSwift
 final class CategoriesTableManager: NSObject {
   weak var tableView: UITableView!
 
+  var project: Project!
   var categories: [Category] = []
   var addCategoryPressed: () -> Void = {}
   var categorySelected: (_ category: Category) -> Void = { _ in }
 
-  init(withTableView tableView: UITableView) {
+  init(withTableView tableView: UITableView, project: Project) {
     self.tableView = tableView
+    self.project = project
     super.init()
   }
 
@@ -54,7 +56,7 @@ final class CategoriesTableManager: NSObject {
 
 extension CategoriesTableManager: StoreSubscriber {
   func newState(state: [Category]) {
-    categories = state
+    categories = getProjectCategories(state, projectId: project.id)
 
     tableView.reloadData()
   }
