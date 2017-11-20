@@ -10,7 +10,7 @@ final class EditSettingForm: Form {
     self.setting = setting
     super.init()
 
-    title = "Settings"
+    title = isDefault ? "Default Settings" : "Settings"
     setupFormFields()
     setupViewController()
   }

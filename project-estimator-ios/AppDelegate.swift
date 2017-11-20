@@ -12,7 +12,7 @@ import ReSwift
 let mainStore = Store<AppState>(
   reducer: appReducer,
   state: AppState.hydrate(),
-  middleware: [loggerMiddleware]
+  middleware: [loggerMiddleware, addProjectMiddleware]
 )
 
 @UIApplicationMain

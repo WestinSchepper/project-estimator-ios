@@ -21,7 +21,15 @@ struct UpdateDefaultSettingAction: Action {
 
 // Action Creators
 func addSetting (projectId: String) -> Action {
-  let setting = Setting(projectId: projectId)
+  let defaultSettings = getDefaultSetting(mainStore.state)
+  let setting = Setting(
+    projectId: projectId,
+    hourlyRate: defaultSettings.hourlyRate,
+    paddingPercentage: defaultSettings.paddingPercentage,
+    meetingHoursPerPerson: defaultSettings.meetingHoursPerPerson,
+    sprintHoursPerPerson: defaultSettings.sprintHoursPerPerson
+  )
+
   setting.managedObject.save()
 
   return AddSettingAction(setting: setting)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD11ABD11FBBEB4A00D1A81A /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11ABD01FBBEB4A00D1A81A /* ProjectViewController.swift */; };
+		CD11ABD31FBBEB5500D1A81A /* ProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD11ABD21FBBEB5500D1A81A /* ProjectViewController.xib */; };
 		CD11C7E01F92BA10000D0DB1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7DF1F92BA10000D0DB1 /* AppState.swift */; };
 		CD11C7E31F92BA7E000D0DB1 /* CategoryReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7E21F92BA7E000D0DB1 /* CategoryReducer.swift */; };
 		CD11C7E51F92BC23000D0DB1 /* CategoryActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7E41F92BC23000D0DB1 /* CategoryActions.swift */; };
@@ -15,6 +17,9 @@
 		CD11C7ED1F92EB36000D0DB1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7EC1F92EB36000D0DB1 /* Array.swift */; };
 		CD11C7EF1F92F289000D0DB1 /* IdEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11C7EE1F92F289000D0DB1 /* IdEquatable.swift */; };
 		CD1B68AE1F95B87A006C68F4 /* ItemSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B68AD1F95B87A006C68F4 /* ItemSelectors.swift */; };
+		CD22666F1FC27BF50000A0E2 /* CategoriesTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD22666E1FC27BF50000A0E2 /* CategoriesTableManager.swift */; };
+		CD2266721FC27D3F0000A0E2 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2266711FC27D3F0000A0E2 /* CategoryTableViewCell.swift */; };
+		CD2266741FC27EF10000A0E2 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2266731FC27EF10000A0E2 /* CategoryTableViewCell.xib */; };
 		CD2C715C1F96C959004954B6 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C715B1F96C959004954B6 /* Project.swift */; };
 		CD2C715E1F96C9E6004954B6 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C715D1F96C9E6004954B6 /* Setting.swift */; };
 		CD2C71601F96D105004954B6 /* ProjectActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C715F1F96D105004954B6 /* ProjectActions.swift */; };
@@ -33,6 +38,10 @@
 		CDAB7F371F9D6DEB00AC43B2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAB7F351F9D6DEB00AC43B2 /* Realm.framework */; };
 		CDAB7F381F9D6DEB00AC43B2 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAB7F361F9D6DEB00AC43B2 /* RealmSwift.framework */; };
 		CDAB7F3C1F9D75B700AC43B2 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F3B1F9D75B700AC43B2 /* Object.swift */; };
+		CDC0711E1FC0D91800E07AB1 /* EditProjectForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0711D1FC0D91800E07AB1 /* EditProjectForm.swift */; };
+		CDC071221FC0E35000E07AB1 /* AddProjectMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC071211FC0E35000E07AB1 /* AddProjectMiddleware.swift */; };
+		CDC071261FC0FEBE00E07AB1 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC071251FC0FEBE00E07AB1 /* ProjectDetailViewController.swift */; };
+		CDC071281FC0FF4000E07AB1 /* ProjectDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC071271FC0FF4000E07AB1 /* ProjectDetailViewController.xib */; };
 		CDC7140B1FAE805E00EE2859 /* ProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC7140A1FAE805E00EE2859 /* ProjectsViewController.xib */; };
 		CDC7140D1FAE807A00EE2859 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */; };
 		CDC714101FAEBA9A00EE2859 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC7140F1FAEBA9A00EE2859 /* ProjectTableViewCell.swift */; };
@@ -61,6 +70,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD11ABD01FBBEB4A00D1A81A /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		CD11ABD21FBBEB5500D1A81A /* ProjectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProjectViewController.xib; path = ../ProjectViewController.xib; sourceTree = "<group>"; };
 		CD11C7DF1F92BA10000D0DB1 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		CD11C7E21F92BA7E000D0DB1 /* CategoryReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryReducer.swift; sourceTree = "<group>"; };
 		CD11C7E41F92BC23000D0DB1 /* CategoryActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryActions.swift; sourceTree = "<group>"; };
@@ -69,6 +80,9 @@
 		CD11C7EC1F92EB36000D0DB1 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		CD11C7EE1F92F289000D0DB1 /* IdEquatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdEquatable.swift; sourceTree = "<group>"; };
 		CD1B68AD1F95B87A006C68F4 /* ItemSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSelectors.swift; sourceTree = "<group>"; };
+		CD22666E1FC27BF50000A0E2 /* CategoriesTableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableManager.swift; sourceTree = "<group>"; };
+		CD2266711FC27D3F0000A0E2 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		CD2266731FC27EF10000A0E2 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
 		CD2C715B1F96C959004954B6 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		CD2C715D1F96C9E6004954B6 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		CD2C715F1F96D105004954B6 /* ProjectActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectActions.swift; sourceTree = "<group>"; };
@@ -89,6 +103,10 @@
 		CDAB7F351F9D6DEB00AC43B2 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		CDAB7F361F9D6DEB00AC43B2 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		CDAB7F3B1F9D75B700AC43B2 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		CDC0711D1FC0D91800E07AB1 /* EditProjectForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectForm.swift; sourceTree = "<group>"; };
+		CDC071211FC0E35000E07AB1 /* AddProjectMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectMiddleware.swift; sourceTree = "<group>"; };
+		CDC071251FC0FEBE00E07AB1 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
+		CDC071271FC0FF4000E07AB1 /* ProjectDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectDetailViewController.xib; sourceTree = "<group>"; };
 		CDC7140A1FAE805E00EE2859 /* ProjectsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsViewController.xib; sourceTree = "<group>"; };
 		CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProjectsViewController.swift; path = ../ProjectsViewController.swift; sourceTree = "<group>"; };
 		CDC7140F1FAEBA9A00EE2859 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
@@ -131,6 +149,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD11ABCF1FBBEAFB00D1A81A /* ProjectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CD11ABD01FBBEB4A00D1A81A /* ProjectViewController.swift */,
+				CD11ABD21FBBEB5500D1A81A /* ProjectViewController.xib */,
+			);
+			name = ProjectViewController;
+			sourceTree = "<group>";
+		};
 		CD11C7D81F92B66D000D0DB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +198,15 @@
 				CD2C71651F96D48A004954B6 /* ProjectReducer.swift */,
 			);
 			name = Reducers;
+			sourceTree = "<group>";
+		};
+		CD2266701FC27CE80000A0E2 /* CategoryTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD2266711FC27D3F0000A0E2 /* CategoryTableViewCell.swift */,
+				CD2266731FC27EF10000A0E2 /* CategoryTableViewCell.xib */,
+			);
+			name = CategoryTableViewCell;
 			sourceTree = "<group>";
 		};
 		CD780D091F5DE5CA0007A37D = {
@@ -217,7 +253,9 @@
 			isa = PBXGroup;
 			children = (
 				CDD572CF1FB8059E00135EAB /* FormViewController */,
-				CDC714081FAE804400EE2859 /* Projects */,
+				CDC714081FAE804400EE2859 /* ProjectsViewController */,
+				CD11ABCF1FBBEAFB00D1A81A /* ProjectViewController */,
+				CDC071241FC0FE9900E07AB1 /* ProjectDetailViewController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -234,6 +272,7 @@
 		CD780D331F5E1EB30007A37D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CD2266701FC27CE80000A0E2 /* CategoryTableViewCell */,
 				CDE9056C1FB7FE1F00D67787 /* FormFieldTableViewCell */,
 				CDC7141A1FB004AF00EE2859 /* AddButtonTableFooterView */,
 				CDC7140E1FAEBA7B00EE2859 /* ProjectTableViewCell */,
@@ -275,13 +314,22 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		CDC714081FAE804400EE2859 /* Projects */ = {
+		CDC071241FC0FE9900E07AB1 /* ProjectDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CDC071251FC0FEBE00E07AB1 /* ProjectDetailViewController.swift */,
+				CDC071271FC0FF4000E07AB1 /* ProjectDetailViewController.xib */,
+			);
+			name = ProjectDetailViewController;
+			sourceTree = "<group>";
+		};
+		CDC714081FAE804400EE2859 /* ProjectsViewController */ = {
 			isa = PBXGroup;
 			children = (
 				CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */,
 				CDC7140A1FAE805E00EE2859 /* ProjectsViewController.xib */,
 			);
-			name = Projects;
+			name = ProjectsViewController;
 			sourceTree = "<group>";
 		};
 		CDC7140E1FAEBA7B00EE2859 /* ProjectTableViewCell */ = {
@@ -298,6 +346,7 @@
 			children = (
 				CDE905691FB7F6AF00D67787 /* FormTableManager.swift */,
 				CDC714141FAFEBEE00EE2859 /* ProjectsTableManager.swift */,
+				CD22666E1FC27BF50000A0E2 /* CategoriesTableManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -315,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				CDC92E0C1F98237A00AC8061 /* Logger.swift */,
+				CDC071211FC0E35000E07AB1 /* AddProjectMiddleware.swift */,
 			);
 			name = Middleware;
 			sourceTree = "<group>";
@@ -350,6 +400,7 @@
 			children = (
 				CDDEF2E11FBBD0C30027857A /* AddProjectForm.swift */,
 				CDDEF2E31FBBD7B90027857A /* EditSettingForm.swift */,
+				CDC0711D1FC0D91800E07AB1 /* EditProjectForm.swift */,
 			);
 			name = Forms;
 			sourceTree = "<group>";
@@ -436,8 +487,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD11ABD31FBBEB5500D1A81A /* ProjectViewController.xib in Resources */,
+				CD2266741FC27EF10000A0E2 /* CategoryTableViewCell.xib in Resources */,
 				CDD572D11FB805B000135EAB /* FormViewController.xib in Resources */,
 				CDC714171FB0044F00EE2859 /* AddButtonTableFooterView.xib in Resources */,
+				CDC071281FC0FF4000E07AB1 /* ProjectDetailViewController.xib in Resources */,
 				CD780D201F5DE5CA0007A37D /* LaunchScreen.storyboard in Resources */,
 				CDE905701FB7FF4900D67787 /* FormFieldTableViewCell.xib in Resources */,
 				CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */,
@@ -497,11 +551,14 @@
 				CDAB7F341F9D56B200AC43B2 /* SettingObject.swift in Sources */,
 				CDDF49C61F9446E700EFD357 /* CategorySelectors.swift in Sources */,
 				CDAB7F301F9D508E00AC43B2 /* CategoryObject.swift in Sources */,
+				CD11ABD11FBBEB4A00D1A81A /* ProjectViewController.swift in Sources */,
 				CDE9056E1FB7FE5900D67787 /* FormFieldTableViewCell.swift in Sources */,
+				CD22666F1FC27BF50000A0E2 /* CategoriesTableManager.swift in Sources */,
 				CD2C71601F96D105004954B6 /* ProjectActions.swift in Sources */,
 				CDD572DB1FB80A5900135EAB /* FormField.swift in Sources */,
 				CDC92E0D1F98237A00AC8061 /* Logger.swift in Sources */,
 				CDDF49C11F942B0D00EFD357 /* ItemReducer.swift in Sources */,
+				CDC0711E1FC0D91800E07AB1 /* EditProjectForm.swift in Sources */,
 				CD2C71621F96D26C004954B6 /* SettingActions.swift in Sources */,
 				CD11C7E91F92D5D0000D0DB1 /* Category.swift in Sources */,
 				CD780D161F5DE5CA0007A37D /* AppDelegate.swift in Sources */,
@@ -509,6 +566,8 @@
 				CD2C715C1F96C959004954B6 /* Project.swift in Sources */,
 				CDD572D91FB80A4100135EAB /* Form.swift in Sources */,
 				CDDEF2E41FBBD7B90027857A /* EditSettingForm.swift in Sources */,
+				CDC071261FC0FEBE00E07AB1 /* ProjectDetailViewController.swift in Sources */,
+				CD2266721FC27D3F0000A0E2 /* CategoryTableViewCell.swift in Sources */,
 				CDC92E0A1F9709D300AC8061 /* SettingSelectors.swift in Sources */,
 				CDD572D31FB805BB00135EAB /* FormViewController.swift in Sources */,
 				CD11C7E01F92BA10000D0DB1 /* AppState.swift in Sources */,
@@ -521,6 +580,7 @@
 				CDAB7F321F9D555C00AC43B2 /* ItemObject.swift in Sources */,
 				CDDF49BF1F94298A00EFD357 /* ItemActions.swift in Sources */,
 				CD11C7ED1F92EB36000D0DB1 /* Array.swift in Sources */,
+				CDC071221FC0E35000E07AB1 /* AddProjectMiddleware.swift in Sources */,
 				CD11C7EF1F92F289000D0DB1 /* IdEquatable.swift in Sources */,
 				CDC92E081F97090E00AC8061 /* ProjectSelectors.swift in Sources */,
 				CDAB7F3C1F9D75B700AC43B2 /* Object.swift in Sources */,
@@ -648,6 +708,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "project-estimator-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.westinschepper.project-estimator-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -666,6 +727,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "project-estimator-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.westinschepper.project-estimator-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";

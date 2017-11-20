@@ -22,5 +22,12 @@ final class ProjectTableViewCell: UITableViewCell, Registerable {
     selectionStyle = .none
 
     self.project = project
+
+    setupHero()
+  }
+
+  func setupHero() {
+    containerView.heroID = "\(project.id)-container"
+    titleLabel.heroID = "\(project.id)-title"
   }
 }

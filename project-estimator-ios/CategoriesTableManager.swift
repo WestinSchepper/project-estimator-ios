@@ -1,14 +1,14 @@
-//  Created by Westin Schepper on 11/5/17.
+//  Created by Westin Schepper on 11/19/17.
 
 import UIKit
 import ReSwift
 
-final class ProjectsTableManager: NSObject {
+final class CategoriesTableManager: NSObject {
   weak var tableView: UITableView!
 
-  var projects: [Project] = []
-  var addProjectPressed: () -> Void = {}
-  var projectSelected: (_ project: Project) -> Void = { _ in }
+  var categories: [Category] = []
+  var addCategoryPressed: () -> Void = {}
+  var categorySelected: (_ category: Category) -> Void = { _ in }
 
   init(withTableView tableView: UITableView) {
     self.tableView = tableView
@@ -20,17 +20,17 @@ final class ProjectsTableManager: NSObject {
   }
 
   func start() {
-    mainStore.subscribe(self) { $0.select { $0.projects } }
+    mainStore.subscribe(self) { $0.select { $0.categories } }
 
     tableView.delaysContentTouches = false
     tableView.delegate = self
     tableView.dataSource = self
-    tableView.rowHeight = ProjectTableViewCell.preferredHeight
+    tableView.rowHeight = CategoryTableViewCell.preferredHeight
     tableView.separatorStyle = .none
 
     setupTableFooter()
 
-    ProjectTableViewCell.register(tableView: tableView)
+    CategoryTableViewCell.register(tableView: tableView)
 
     tableView.reloadData()
   }
@@ -45,40 +45,40 @@ final class ProjectsTableManager: NSObject {
     let footer = AddButtonTableFooterView(frame: frame)
 
     footer.addButtonPressed = { [unowned self] in
-      self.addProjectPressed()
+      self.addCategoryPressed()
     }
 
     tableView.tableFooterView = footer
   }
 }
 
-extension ProjectsTableManager: StoreSubscriber {
-  func newState(state: [Project]) {
-     projects = state
+extension CategoriesTableManager: StoreSubscriber {
+  func newState(state: [Category]) {
+    categories = state
 
     tableView.reloadData()
   }
 }
 
-extension ProjectsTableManager: UITableViewDelegate {
+extension CategoriesTableManager: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let project = projects[indexPath.row]
-    projectSelected(project)
+    let category = categories[indexPath.row]
+    categorySelected(category)
 
     tableView.deselectRow(at: indexPath, animated: false)
   }
 }
 
-extension ProjectsTableManager: UITableViewDataSource {
+extension CategoriesTableManager: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return projects.count
+    return categories.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = ProjectTableViewCell.cell(forTable: tableView)
-    let project = projects[indexPath.row]
+    let cell = CategoryTableViewCell.cell(forTable: tableView)
+    let category = categories[indexPath.row]
 
-    cell.configure(withProject: project)
+    cell.configure(withCategory: category)
 
     return cell
   }
