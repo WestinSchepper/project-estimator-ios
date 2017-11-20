@@ -21,6 +21,10 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4b-7D-J4u">
                         <rect key="frame" x="16" y="0.0" width="311" height="71.5"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohA-e8-pnS">
+                                <rect key="frame" x="0.0" y="0.0" width="311" height="71.5"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPX-vh-nfQ">
                                 <rect key="frame" x="12" y="9" width="103" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -40,13 +44,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196078431372551" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hkb-ac-b8x" secondAttribute="trailing" constant="12" id="I0F-G9-akH"/>
                             <constraint firstAttribute="bottom" secondItem="sV4-UR-YrB" secondAttribute="bottom" constant="14" id="KZJ-rx-tdS"/>
                             <constraint firstItem="hkb-ac-b8x" firstAttribute="top" secondItem="m4b-7D-J4u" secondAttribute="top" constant="13" id="VXw-TT-ihA"/>
+                            <constraint firstAttribute="trailing" secondItem="ohA-e8-pnS" secondAttribute="trailing" id="XCy-fO-mec"/>
                             <constraint firstItem="tPX-vh-nfQ" firstAttribute="leading" secondItem="m4b-7D-J4u" secondAttribute="leading" constant="12" id="d3g-Bo-fFO"/>
                             <constraint firstAttribute="trailing" secondItem="sV4-UR-YrB" secondAttribute="trailing" constant="12" id="dpH-n2-h4B"/>
+                            <constraint firstItem="ohA-e8-pnS" firstAttribute="leading" secondItem="m4b-7D-J4u" secondAttribute="leading" id="fSz-i7-ega"/>
+                            <constraint firstItem="ohA-e8-pnS" firstAttribute="top" secondItem="m4b-7D-J4u" secondAttribute="top" id="fov-G5-6PM"/>
+                            <constraint firstAttribute="bottom" secondItem="ohA-e8-pnS" secondAttribute="bottom" id="r1E-bc-fXj"/>
                             <constraint firstItem="tPX-vh-nfQ" firstAttribute="top" secondItem="m4b-7D-J4u" secondAttribute="top" constant="9" id="s3C-dU-mvN"/>
                         </constraints>
                     </view>
@@ -60,10 +67,12 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="containerView" destination="m4b-7D-J4u" id="NBr-bK-Rjc"/>
+                <outlet property="containerViewBackground" destination="ohA-e8-pnS" id="I31-jy-OiP"/>
                 <outlet property="hoursLabel" destination="sV4-UR-YrB" id="org-2v-5td"/>
                 <outlet property="priceLabel" destination="hkb-ac-b8x" id="MjM-ct-Cst"/>
                 <outlet property="titleLabel" destination="tPX-vh-nfQ" id="zNk-5N-Mkr"/>
             </connections>
+            <point key="canvasLocation" x="33.5" y="54"/>
         </tableViewCell>
     </objects>
 </document>
