@@ -34,9 +34,9 @@ final class ProjectsViewController: UIViewController {
   }
 
   private func presentAddProject() {
-    let addProjectViewController = AddProjectForm()
+    let addProjectForm = AddProjectForm()
 
-    self.present(addProjectViewController.viewController, animated: true)
+    self.present(addProjectForm.viewController, animated: true)
   }
 
   private func presentProject(_ project: Project) {

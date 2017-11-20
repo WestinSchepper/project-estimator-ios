@@ -20,6 +20,7 @@
 		CD22666F1FC27BF50000A0E2 /* CategoriesTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD22666E1FC27BF50000A0E2 /* CategoriesTableManager.swift */; };
 		CD2266721FC27D3F0000A0E2 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2266711FC27D3F0000A0E2 /* CategoryTableViewCell.swift */; };
 		CD2266741FC27EF10000A0E2 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2266731FC27EF10000A0E2 /* CategoryTableViewCell.xib */; };
+		CD2266761FC289190000A0E2 /* AddCategoryForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2266751FC289190000A0E2 /* AddCategoryForm.swift */; };
 		CD2C715C1F96C959004954B6 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C715B1F96C959004954B6 /* Project.swift */; };
 		CD2C715E1F96C9E6004954B6 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C715D1F96C9E6004954B6 /* Setting.swift */; };
 		CD2C71601F96D105004954B6 /* ProjectActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C715F1F96D105004954B6 /* ProjectActions.swift */; };
@@ -83,6 +84,7 @@
 		CD22666E1FC27BF50000A0E2 /* CategoriesTableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableManager.swift; sourceTree = "<group>"; };
 		CD2266711FC27D3F0000A0E2 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		CD2266731FC27EF10000A0E2 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		CD2266751FC289190000A0E2 /* AddCategoryForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryForm.swift; sourceTree = "<group>"; };
 		CD2C715B1F96C959004954B6 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		CD2C715D1F96C9E6004954B6 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		CD2C715F1F96D105004954B6 /* ProjectActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectActions.swift; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				CDDEF2E11FBBD0C30027857A /* AddProjectForm.swift */,
+				CD2266751FC289190000A0E2 /* AddCategoryForm.swift */,
 				CDDEF2E31FBBD7B90027857A /* EditSettingForm.swift */,
 				CDC0711D1FC0D91800E07AB1 /* EditProjectForm.swift */,
 			);
@@ -556,6 +559,7 @@
 				CD22666F1FC27BF50000A0E2 /* CategoriesTableManager.swift in Sources */,
 				CD2C71601F96D105004954B6 /* ProjectActions.swift in Sources */,
 				CDD572DB1FB80A5900135EAB /* FormField.swift in Sources */,
+				CD2266761FC289190000A0E2 /* AddCategoryForm.swift in Sources */,
 				CDC92E0D1F98237A00AC8061 /* Logger.swift in Sources */,
 				CDDF49C11F942B0D00EFD357 /* ItemReducer.swift in Sources */,
 				CDC0711E1FC0D91800E07AB1 /* EditProjectForm.swift in Sources */,

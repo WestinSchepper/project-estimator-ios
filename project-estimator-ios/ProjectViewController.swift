@@ -117,7 +117,9 @@ final class ProjectViewController: UIViewController {
   }
 
   private func presentAddCategory() {
-    
+    let addCategoryForm = AddCategoryForm(withProjectId: project.id)
+
+    present(addCategoryForm.viewController, animated: true)
   }
 
   private func presentCategory(_ category: Category) {
