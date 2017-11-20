@@ -29,6 +29,19 @@ final class ProjectViewController: UIViewController {
 
   var project: Project!
 
+  lazy var tableManager: CategoriesTableManager = {
+    let manager = CategoriesTableManager(withTableView: self.tableView)
+    manager.addCategoryPressed = { [unowned self] in
+      self.presentAddCategory()
+    }
+
+    manager.categorySelected = { [unowned self] category in
+      self.presentCategory(category)
+    }
+
+    return manager
+  }()
+
   init(withProject project: Project) {
     self.project = project
     super.init(nibName: String(describing: ProjectViewController.self), bundle: nil)
@@ -43,6 +56,8 @@ final class ProjectViewController: UIViewController {
 
     setupHero()
     setupViewUI()
+
+    tableManager.start()
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -98,6 +113,14 @@ final class ProjectViewController: UIViewController {
     actionController.addAction(cancel)
     
     present(actionController, animated: true)
+  }
+
+  private func presentAddCategory() {
+    
+  }
+
+  private func presentCategory(_ category: Category) {
+
   }
 }
 

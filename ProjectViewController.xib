@@ -117,14 +117,14 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h9T-yc-2yj">
-                    <rect key="frame" x="0.0" y="176" width="375" height="491"/>
+                    <rect key="frame" x="0.0" y="192" width="375" height="475"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="h9T-yc-2yj" secondAttribute="bottom" id="04q-tu-hmx"/>
-                <constraint firstItem="h9T-yc-2yj" firstAttribute="top" secondItem="XiM-Ca-FuK" secondAttribute="bottom" id="6sA-zV-ZLE"/>
+                <constraint firstItem="h9T-yc-2yj" firstAttribute="top" secondItem="XiM-Ca-FuK" secondAttribute="bottom" constant="16" id="6sA-zV-ZLE"/>
                 <constraint firstItem="h9T-yc-2yj" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Bbv-fc-z60"/>
                 <constraint firstItem="h9T-yc-2yj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Bza-Pr-5zI"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XiM-Ca-FuK" secondAttribute="trailing" id="NJw-7S-waT"/>
