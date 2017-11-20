@@ -17,8 +17,7 @@ struct UpdateCategoryAction: Action {
 }
 
 // Action Creators
-func addCategory (projectId: String) -> Action {
-  let category = Category(projectId: projectId)
+func addCategory (_ category: Category) -> Action {
   category.managedObject.save()
 
   return AddCategoryAction(category: category)
