@@ -2,6 +2,7 @@
 
 import UIKit
 import Hero
+import ReSwift
 
 final class ProjectViewController: UIViewController {
   @IBOutlet weak var headerContainer: UIView!
@@ -42,6 +43,16 @@ final class ProjectViewController: UIViewController {
 
     setupHero()
     setupViewUI()
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    mainStore.subscribe(self) { $0.select { $0.projects } }
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    mainStore.unsubscribe(self)
   }
 
   func setupHero() {
@@ -87,5 +98,13 @@ final class ProjectViewController: UIViewController {
     actionController.addAction(cancel)
     
     present(actionController, animated: true)
+  }
+}
+
+extension ProjectViewController: StoreSubscriber {
+  func newState(state: [Project]) {
+    project = getProject(state, projectId: project.id)
+
+    setupViewUI()
   }
 }

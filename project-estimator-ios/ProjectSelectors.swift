@@ -10,6 +10,10 @@ func getProject (_ state: AppState, projectId: String) -> Project {
   return state.projects.first { $0.id == projectId }!
 }
 
+func getProject (_ projects: [Project], projectId: String) -> Project {
+  return projects.first { $0.id == projectId }!
+}
+
 func getProjectCategories (_ state: AppState, projectId: String) -> [Category] {
   return state.categories.filter { $0.projectId == projectId }
 }
