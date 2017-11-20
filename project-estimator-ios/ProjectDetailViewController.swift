@@ -5,6 +5,7 @@ import UIKit
 final class ProjectDetailViewController: UIViewController {
   @IBOutlet weak var contentContainer: UIView!
   @IBOutlet weak var contentContainerBackground: UIView!
+  @IBOutlet weak var collapseButton: UIButton!
   @IBOutlet weak var projectTitle: UILabel!
   @IBOutlet weak var priceLabel: UILabel!
   @IBOutlet weak var hoursLabel: UILabel!
@@ -41,10 +42,11 @@ final class ProjectDetailViewController: UIViewController {
   func setupHero() {
     isHeroEnabled = true
 
-    contentContainerBackground.heroID = "\(project.id)-container"
+    contentContainerBackground.heroID = "\(project.id)-container-background"
     projectTitle.heroID = "\(project.id)-title"
     priceLabel.heroID = "\(project.id)-price"
     hoursLabel.heroID = "\(project.id)-hours"
+    collapseButton.heroID = "\(project.id)-details-button"
   }
 
   func setupViewUI() {

@@ -6,6 +6,7 @@ import Hero
 final class ProjectViewController: UIViewController {
   @IBOutlet weak var headerContainer: UIView!
   @IBOutlet weak var headerContainerBackground: UIView!
+  @IBOutlet weak var expandButton: UIButton!
   @IBOutlet weak var projectTitle: UILabel!
   @IBOutlet weak var priceLabel: UILabel!
   @IBOutlet weak var hoursLabel: UILabel!
@@ -46,10 +47,12 @@ final class ProjectViewController: UIViewController {
   func setupHero() {
     isHeroEnabled = true
 
-    headerContainerBackground.heroID = "\(project.id)-container"
+    headerContainer.heroID = "\(project.id)-container"
+    headerContainerBackground.heroID = "\(project.id)-container-background"
     projectTitle.heroID = "\(project.id)-title"
     priceLabel.heroID = "\(project.id)-price"
     hoursLabel.heroID = "\(project.id)-hours"
+    expandButton.heroID = "\(project.id)-details-button"
   }
 
   func setupViewUI() {
