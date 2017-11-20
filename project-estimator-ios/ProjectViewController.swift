@@ -88,6 +88,7 @@ final class ProjectViewController: UIViewController {
   func presentActions() {
     let actionController = UIAlertController(title: "Actions", message: nil, preferredStyle: .actionSheet)
     let delete = UIAlertAction(title: "Delete", style: .destructive) { [unowned self] _ in
+      mainStore.unsubscribe(self)
       mainStore.dispatch(removeProject(self.project))
       self.dismiss(animated: true)
     }
