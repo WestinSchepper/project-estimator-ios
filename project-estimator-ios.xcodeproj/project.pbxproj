@@ -58,6 +58,7 @@
 		CDD572D31FB805BB00135EAB /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD572D21FB805BB00135EAB /* FormViewController.swift */; };
 		CDD572D91FB80A4100135EAB /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD572D81FB80A4100135EAB /* Form.swift */; };
 		CDD572DB1FB80A5900135EAB /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD572DA1FB80A5900135EAB /* FormField.swift */; };
+		CDDDD6E71FC50B8E00731E05 /* EditItemForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDDD6E61FC50B8E00731E05 /* EditItemForm.swift */; };
 		CDDEF2E21FBBD0C30027857A /* AddProjectForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEF2E11FBBD0C30027857A /* AddProjectForm.swift */; };
 		CDDEF2E41FBBD7B90027857A /* EditSettingForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEF2E31FBBD7B90027857A /* EditSettingForm.swift */; };
 		CDDF49BF1F94298A00EFD357 /* ItemActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49BE1F94298A00EFD357 /* ItemActions.swift */; };
@@ -131,6 +132,7 @@
 		CDD572D21FB805BB00135EAB /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		CDD572D81FB80A4100135EAB /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		CDD572DA1FB80A5900135EAB /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
+		CDDDD6E61FC50B8E00731E05 /* EditItemForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemForm.swift; sourceTree = "<group>"; };
 		CDDEF2E11FBBD0C30027857A /* AddProjectForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectForm.swift; sourceTree = "<group>"; };
 		CDDEF2E31FBBD7B90027857A /* EditSettingForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSettingForm.swift; sourceTree = "<group>"; };
 		CDDF49BE1F94298A00EFD357 /* ItemActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemActions.swift; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 				CDFD2BD61FC3B5EF00A3E49A /* AddItemForm.swift */,
 				CDC0711D1FC0D91800E07AB1 /* EditProjectForm.swift */,
 				CDFD2BD81FC3B7FA00A3E49A /* EditCategoryForm.swift */,
+				CDDDD6E61FC50B8E00731E05 /* EditItemForm.swift */,
 				CDDEF2E31FBBD7B90027857A /* EditSettingForm.swift */,
 			);
 			name = Forms;
@@ -626,6 +629,7 @@
 				CDAB7F2E1F9D4EAB00AC43B2 /* ProjectObject.swift in Sources */,
 				CDAB7F321F9D555C00AC43B2 /* ItemObject.swift in Sources */,
 				CDDF49BF1F94298A00EFD357 /* ItemActions.swift in Sources */,
+				CDDDD6E71FC50B8E00731E05 /* EditItemForm.swift in Sources */,
 				CD11C7ED1F92EB36000D0DB1 /* Array.swift in Sources */,
 				CDC071221FC0E35000E07AB1 /* AddProjectMiddleware.swift in Sources */,
 				CD11C7EF1F92F289000D0DB1 /* IdEquatable.swift in Sources */,

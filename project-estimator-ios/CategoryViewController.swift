@@ -31,7 +31,7 @@ final class CategoryViewController: UIViewController {
       }
 
       manager.itemSelected = { [unowned self] item in
-        self.presentItem(item)
+        self.presentItemActions(item)
       }
 
       return manager
@@ -109,8 +109,25 @@ final class CategoryViewController: UIViewController {
     present(form.viewController, animated: true)
   }
 
-  private func presentItem(_ item: Item) {
+  private func presentItemActions(_ item: Item) {
+    let actionController = UIAlertController(title: "\(item.title)", message: nil, preferredStyle: .actionSheet)
+    let delete = UIAlertAction(title: "Delete", style: .destructive) { _ in
+      mainStore.dispatch(removeItem(item))
+    }
 
+    let edit = UIAlertAction(title: "Edit", style: .default) { [unowned self] _ in
+      let form = EditItemForm(withItem: item)
+
+      self.present(form.viewController, animated: true)
+    }
+
+    let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+
+    actionController.addAction(delete)
+    actionController.addAction(edit)
+    actionController.addAction(cancel)
+
+    present(actionController, animated: true)
   }
 }
 
