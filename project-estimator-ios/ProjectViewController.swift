@@ -23,6 +23,7 @@ final class ProjectViewController: UIViewController {
   }
 
   @IBAction func expand(_ sender: UIButton) {
+    setupHeroForProject()
     let detail = ProjectDetailViewController(withProject: project)
 
     present(detail, animated: true)
