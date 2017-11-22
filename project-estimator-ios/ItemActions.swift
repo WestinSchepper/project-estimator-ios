@@ -16,8 +16,7 @@ struct UpdateItemAction: Action {
 }
 
 // Action Creators
-func addItem (categoryId: String) -> Action {
-  let item = Item(categoryId: categoryId)
+func addItem (_ item: Item) -> Action {
   item.managedObject.save()
 
   return AddItemAction(item: item)

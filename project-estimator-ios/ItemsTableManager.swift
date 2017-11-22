@@ -1,19 +1,19 @@
-//  Created by Westin Schepper on 11/19/17.
+//  Created by Westin Schepper on 11/20/17.
 
 import UIKit
 import ReSwift
 
-final class CategoriesTableManager: NSObject {
+final class ItemsTableManager: NSObject {
   weak var tableView: UITableView!
 
-  var project: Project!
-  var categories: [Category] = []
-  var addCategoryPressed: () -> Void = {}
-  var categorySelected: (_ category: Category) -> Void = { _ in }
+  var category: Category!
+  var items: [Item] = []
+  var addItemPressed: () -> Void = {}
+  var itemSelected: (_ item: Item) -> Void = { _ in }
 
-  init(withTableView tableView: UITableView, project: Project) {
+  init(withTableView tableView: UITableView, category: Category) {
     self.tableView = tableView
-    self.project = project
+    self.category = category
     super.init()
   }
 
@@ -22,17 +22,17 @@ final class CategoriesTableManager: NSObject {
   }
 
   func start() {
-    mainStore.subscribe(self) { $0.select { $0.categories } }
+    mainStore.subscribe(self) { $0.select { $0.items } }
 
     tableView.delaysContentTouches = false
     tableView.delegate = self
     tableView.dataSource = self
-    tableView.rowHeight = CategoryTableViewCell.preferredHeight
+    tableView.rowHeight = ItemTableViewCell.preferredHeight
     tableView.separatorStyle = .none
 
     setupTableFooter()
 
-    CategoryTableViewCell.register(tableView: tableView)
+    ItemTableViewCell.register(tableView: tableView)
 
     tableView.reloadData()
   }
@@ -47,40 +47,40 @@ final class CategoriesTableManager: NSObject {
     let footer = AddButtonTableFooterView(frame: frame)
 
     footer.addButtonPressed = { [unowned self] in
-      self.addCategoryPressed()
+      self.addItemPressed()
     }
 
     tableView.tableFooterView = footer
   }
 }
 
-extension CategoriesTableManager: StoreSubscriber {
-  func newState(state: [Category]) {
-    categories = getProjectCategories(state, projectId: project.id)
+extension ItemsTableManager: StoreSubscriber {
+  func newState(state: [Item]) {
+    items = getCategoryItems(state, categoryId: category.id)
 
     tableView.reloadData()
   }
 }
 
-extension CategoriesTableManager: UITableViewDelegate {
+extension ItemsTableManager: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let category = categories[indexPath.row]
-    categorySelected(category)
+    let item = items[indexPath.row]
+    itemSelected(item)
 
     tableView.deselectRow(at: indexPath, animated: false)
   }
 }
 
-extension CategoriesTableManager: UITableViewDataSource {
+extension ItemsTableManager: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return categories.count
+    return items.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = CategoryTableViewCell.cell(forTable: tableView)
-    let category = categories[indexPath.row]
+    let cell = ItemTableViewCell.cell(forTable: tableView)
+    let item = items[indexPath.row]
 
-    cell.configure(withCategory: category)
+    cell.configure(withItem: item)
 
     return cell
   }

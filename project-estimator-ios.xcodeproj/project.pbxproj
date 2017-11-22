@@ -58,6 +58,7 @@
 		CDD572D31FB805BB00135EAB /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD572D21FB805BB00135EAB /* FormViewController.swift */; };
 		CDD572D91FB80A4100135EAB /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD572D81FB80A4100135EAB /* Form.swift */; };
 		CDD572DB1FB80A5900135EAB /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD572DA1FB80A5900135EAB /* FormField.swift */; };
+		CDDDD6E71FC50B8E00731E05 /* EditItemForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDDD6E61FC50B8E00731E05 /* EditItemForm.swift */; };
 		CDDEF2E21FBBD0C30027857A /* AddProjectForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEF2E11FBBD0C30027857A /* AddProjectForm.swift */; };
 		CDDEF2E41FBBD7B90027857A /* EditSettingForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEF2E31FBBD7B90027857A /* EditSettingForm.swift */; };
 		CDDF49BF1F94298A00EFD357 /* ItemActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF49BE1F94298A00EFD357 /* ItemActions.swift */; };
@@ -68,6 +69,13 @@
 		CDE9056E1FB7FE5900D67787 /* FormFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9056D1FB7FE5900D67787 /* FormFieldTableViewCell.swift */; };
 		CDE905701FB7FF4900D67787 /* FormFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE9056F1FB7FF4900D67787 /* FormFieldTableViewCell.xib */; };
 		CDEF41BF1FABFEAB00391BF2 /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEF41BE1FABFEAB00391BF2 /* Hero.framework */; };
+		CDFD2BCC1FC39E0900A3E49A /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFD2BCB1FC39E0900A3E49A /* CategoryViewController.swift */; };
+		CDFD2BCE1FC39F2A00A3E49A /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDFD2BCD1FC39F2A00A3E49A /* CategoryViewController.xib */; };
+		CDFD2BD01FC3B0A200A3E49A /* ItemsTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFD2BCF1FC3B0A200A3E49A /* ItemsTableManager.swift */; };
+		CDFD2BD31FC3B30100A3E49A /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFD2BD21FC3B30100A3E49A /* ItemTableViewCell.swift */; };
+		CDFD2BD51FC3B36900A3E49A /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDFD2BD41FC3B36900A3E49A /* ItemTableViewCell.xib */; };
+		CDFD2BD71FC3B5F000A3E49A /* AddItemForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFD2BD61FC3B5EF00A3E49A /* AddItemForm.swift */; };
+		CDFD2BD91FC3B7FA00A3E49A /* EditCategoryForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFD2BD81FC3B7FA00A3E49A /* EditCategoryForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +132,7 @@
 		CDD572D21FB805BB00135EAB /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		CDD572D81FB80A4100135EAB /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		CDD572DA1FB80A5900135EAB /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
+		CDDDD6E61FC50B8E00731E05 /* EditItemForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemForm.swift; sourceTree = "<group>"; };
 		CDDEF2E11FBBD0C30027857A /* AddProjectForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectForm.swift; sourceTree = "<group>"; };
 		CDDEF2E31FBBD7B90027857A /* EditSettingForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSettingForm.swift; sourceTree = "<group>"; };
 		CDDF49BE1F94298A00EFD357 /* ItemActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemActions.swift; sourceTree = "<group>"; };
@@ -134,6 +143,13 @@
 		CDE9056D1FB7FE5900D67787 /* FormFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldTableViewCell.swift; sourceTree = "<group>"; };
 		CDE9056F1FB7FF4900D67787 /* FormFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormFieldTableViewCell.xib; sourceTree = "<group>"; };
 		CDEF41BE1FABFEAB00391BF2 /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = Carthage/Build/iOS/Hero.framework; sourceTree = "<group>"; };
+		CDFD2BCB1FC39E0900A3E49A /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		CDFD2BCD1FC39F2A00A3E49A /* CategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
+		CDFD2BCF1FC3B0A200A3E49A /* ItemsTableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableManager.swift; sourceTree = "<group>"; };
+		CDFD2BD21FC3B30100A3E49A /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		CDFD2BD41FC3B36900A3E49A /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
+		CDFD2BD61FC3B5EF00A3E49A /* AddItemForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemForm.swift; sourceTree = "<group>"; };
+		CDFD2BD81FC3B7FA00A3E49A /* EditCategoryForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +227,15 @@
 			name = CategoryTableViewCell;
 			sourceTree = "<group>";
 		};
+		CD2266771FC39A010000A0E2 /* CategoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CDFD2BCB1FC39E0900A3E49A /* CategoryViewController.swift */,
+				CDFD2BCD1FC39F2A00A3E49A /* CategoryViewController.xib */,
+			);
+			name = CategoryViewController;
+			sourceTree = "<group>";
+		};
 		CD780D091F5DE5CA0007A37D = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +279,7 @@
 		CD780D271F5DE8790007A37D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CD2266771FC39A010000A0E2 /* CategoryViewController */,
 				CDD572CF1FB8059E00135EAB /* FormViewController */,
 				CDC714081FAE804400EE2859 /* ProjectsViewController */,
 				CD11ABCF1FBBEAFB00D1A81A /* ProjectViewController */,
@@ -274,6 +300,7 @@
 		CD780D331F5E1EB30007A37D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CDFD2BD11FC3B2E600A3E49A /* ItemTableViewCell */,
 				CD2266701FC27CE80000A0E2 /* CategoryTableViewCell */,
 				CDE9056C1FB7FE1F00D67787 /* FormFieldTableViewCell */,
 				CDC7141A1FB004AF00EE2859 /* AddButtonTableFooterView */,
@@ -349,6 +376,7 @@
 				CDE905691FB7F6AF00D67787 /* FormTableManager.swift */,
 				CDC714141FAFEBEE00EE2859 /* ProjectsTableManager.swift */,
 				CD22666E1FC27BF50000A0E2 /* CategoriesTableManager.swift */,
+				CDFD2BCF1FC3B0A200A3E49A /* ItemsTableManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -402,8 +430,11 @@
 			children = (
 				CDDEF2E11FBBD0C30027857A /* AddProjectForm.swift */,
 				CD2266751FC289190000A0E2 /* AddCategoryForm.swift */,
-				CDDEF2E31FBBD7B90027857A /* EditSettingForm.swift */,
+				CDFD2BD61FC3B5EF00A3E49A /* AddItemForm.swift */,
 				CDC0711D1FC0D91800E07AB1 /* EditProjectForm.swift */,
+				CDFD2BD81FC3B7FA00A3E49A /* EditCategoryForm.swift */,
+				CDDDD6E61FC50B8E00731E05 /* EditItemForm.swift */,
+				CDDEF2E31FBBD7B90027857A /* EditSettingForm.swift */,
 			);
 			name = Forms;
 			sourceTree = "<group>";
@@ -426,6 +457,15 @@
 				CDE9056F1FB7FF4900D67787 /* FormFieldTableViewCell.xib */,
 			);
 			name = FormFieldTableViewCell;
+			sourceTree = "<group>";
+		};
+		CDFD2BD11FC3B2E600A3E49A /* ItemTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CDFD2BD21FC3B30100A3E49A /* ItemTableViewCell.swift */,
+				CDFD2BD41FC3B36900A3E49A /* ItemTableViewCell.xib */,
+			);
+			name = ItemTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -494,9 +534,11 @@
 				CD2266741FC27EF10000A0E2 /* CategoryTableViewCell.xib in Resources */,
 				CDD572D11FB805B000135EAB /* FormViewController.xib in Resources */,
 				CDC714171FB0044F00EE2859 /* AddButtonTableFooterView.xib in Resources */,
+				CDFD2BD51FC3B36900A3E49A /* ItemTableViewCell.xib in Resources */,
 				CDC071281FC0FF4000E07AB1 /* ProjectDetailViewController.xib in Resources */,
 				CD780D201F5DE5CA0007A37D /* LaunchScreen.storyboard in Resources */,
 				CDE905701FB7FF4900D67787 /* FormFieldTableViewCell.xib in Resources */,
+				CDFD2BCE1FC39F2A00A3E49A /* CategoryViewController.xib in Resources */,
 				CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */,
 				CDC7140B1FAE805E00EE2859 /* ProjectsViewController.xib in Resources */,
 				CDC714121FAEBAA700EE2859 /* ProjectTableViewCell.xib in Resources */,
@@ -549,6 +591,7 @@
 				CDDEF2E21FBBD0C30027857A /* AddProjectForm.swift in Sources */,
 				CD2C71661F96D48A004954B6 /* ProjectReducer.swift in Sources */,
 				CDC714151FAFEBEE00EE2859 /* ProjectsTableManager.swift in Sources */,
+				CDFD2BCC1FC39E0900A3E49A /* CategoryViewController.swift in Sources */,
 				CD11C7E51F92BC23000D0DB1 /* CategoryActions.swift in Sources */,
 				CDAB7F2C1F9C0AA100AC43B2 /* Persistable.swift in Sources */,
 				CDAB7F341F9D56B200AC43B2 /* SettingObject.swift in Sources */,
@@ -574,21 +617,26 @@
 				CD2266721FC27D3F0000A0E2 /* CategoryTableViewCell.swift in Sources */,
 				CDC92E0A1F9709D300AC8061 /* SettingSelectors.swift in Sources */,
 				CDD572D31FB805BB00135EAB /* FormViewController.swift in Sources */,
+				CDFD2BD71FC3B5F000A3E49A /* AddItemForm.swift in Sources */,
 				CD11C7E01F92BA10000D0DB1 /* AppState.swift in Sources */,
 				CDC7140D1FAE807A00EE2859 /* ProjectsViewController.swift in Sources */,
+				CDFD2BD31FC3B30100A3E49A /* ItemTableViewCell.swift in Sources */,
 				CD2C715E1F96C9E6004954B6 /* Setting.swift in Sources */,
 				CD11C7EB1F92D654000D0DB1 /* Item.swift in Sources */,
 				CD780D3C1F5E1F7F0007A37D /* Registerable.swift in Sources */,
 				CDDF49C31F94435E00EFD357 /* AppReducer.swift in Sources */,
+				CDFD2BD91FC3B7FA00A3E49A /* EditCategoryForm.swift in Sources */,
 				CDAB7F2E1F9D4EAB00AC43B2 /* ProjectObject.swift in Sources */,
 				CDAB7F321F9D555C00AC43B2 /* ItemObject.swift in Sources */,
 				CDDF49BF1F94298A00EFD357 /* ItemActions.swift in Sources */,
+				CDDDD6E71FC50B8E00731E05 /* EditItemForm.swift in Sources */,
 				CD11C7ED1F92EB36000D0DB1 /* Array.swift in Sources */,
 				CDC071221FC0E35000E07AB1 /* AddProjectMiddleware.swift in Sources */,
 				CD11C7EF1F92F289000D0DB1 /* IdEquatable.swift in Sources */,
 				CDC92E081F97090E00AC8061 /* ProjectSelectors.swift in Sources */,
 				CDAB7F3C1F9D75B700AC43B2 /* Object.swift in Sources */,
 				CDC714191FB0047600EE2859 /* AddButtonTableFooterView.swift in Sources */,
+				CDFD2BD01FC3B0A200A3E49A /* ItemsTableManager.swift in Sources */,
 				CD2C71641F96D40C004954B6 /* SettingReducer.swift in Sources */,
 				CDE9056A1FB7F6AF00D67787 /* FormTableManager.swift in Sources */,
 				CD11C7E31F92BA7E000D0DB1 /* CategoryReducer.swift in Sources */,

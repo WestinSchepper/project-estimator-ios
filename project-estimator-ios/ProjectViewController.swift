@@ -14,6 +14,7 @@ final class ProjectViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
 
   @IBAction func close(_ sender: UIButton) {
+    setupHeroForProject()
     dismiss(animated: true)
   }
 
@@ -22,6 +23,7 @@ final class ProjectViewController: UIViewController {
   }
 
   @IBAction func expand(_ sender: UIButton) {
+    setupHeroForProject()
     let detail = ProjectDetailViewController(withProject: project)
 
     present(detail, animated: true)
@@ -30,7 +32,7 @@ final class ProjectViewController: UIViewController {
   var project: Project!
 
   lazy var tableManager: CategoriesTableManager = {
-    let manager = CategoriesTableManager(withTableView: self.tableView)
+    let manager = CategoriesTableManager(withTableView: self.tableView, project: self.project)
     manager.addCategoryPressed = { [unowned self] in
       self.presentAddCategory()
     }
@@ -54,7 +56,7 @@ final class ProjectViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    setupHero()
+    setupHeroForProject()
     setupViewUI()
 
     tableManager.start()
@@ -70,7 +72,7 @@ final class ProjectViewController: UIViewController {
     mainStore.unsubscribe(self)
   }
 
-  func setupHero() {
+  func setupHeroForProject() {
     isHeroEnabled = true
 
     headerContainer.heroID = "\(project.id)-container"
@@ -78,7 +80,18 @@ final class ProjectViewController: UIViewController {
     projectTitle.heroID = "\(project.id)-title"
     priceLabel.heroID = "\(project.id)-price"
     hoursLabel.heroID = "\(project.id)-hours"
-    expandButton.heroID = "\(project.id)-details-button"
+  }
+
+  func setupHeroForCategory(_ category: Category) {
+    isHeroEnabled = true
+
+    headerContainer.heroID = ""
+    headerContainerBackground.heroID = ""
+    projectTitle.heroID = "\(project.id)-title"
+    priceLabel.heroID = "\(category.id)-price"
+    hoursLabel.heroID = "\(category.id)-hours"
+
+    tableView.heroModifiers = [.fade, .translate(x: 0, y: 150, z: 0)]
   }
 
   func setupViewUI() {
@@ -123,7 +136,10 @@ final class ProjectViewController: UIViewController {
   }
 
   private func presentCategory(_ category: Category) {
+    setupHeroForCategory(category)
+    let categoryViewController = CategoryViewController(withCategory: category)
 
+    present(categoryViewController, animated: true)
   }
 }
 

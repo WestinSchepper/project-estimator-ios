@@ -21,6 +21,10 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGi-x7-DUn">
                         <rect key="frame" x="16" y="0.0" width="311" height="43.5"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mtz-1u-z04">
+                                <rect key="frame" x="0.0" y="0.0" width="311" height="43.5"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0E-XI-Rvv">
                                 <rect key="frame" x="12" y="9" width="122" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -34,12 +38,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196078430000004" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="814-5k-mq5" firstAttribute="centerY" secondItem="xGi-x7-DUn" secondAttribute="centerY" id="11d-U4-A3x"/>
+                            <constraint firstItem="Mtz-1u-z04" firstAttribute="leading" secondItem="xGi-x7-DUn" secondAttribute="leading" id="81p-iJ-yJz"/>
                             <constraint firstItem="c0E-XI-Rvv" firstAttribute="centerY" secondItem="xGi-x7-DUn" secondAttribute="centerY" id="8gH-sM-vNO"/>
+                            <constraint firstAttribute="bottom" secondItem="Mtz-1u-z04" secondAttribute="bottom" id="DtR-QQ-A3Y"/>
                             <constraint firstItem="c0E-XI-Rvv" firstAttribute="leading" secondItem="xGi-x7-DUn" secondAttribute="leading" constant="12" id="M9n-tp-7Jg"/>
+                            <constraint firstItem="Mtz-1u-z04" firstAttribute="top" secondItem="xGi-x7-DUn" secondAttribute="top" id="TrS-Bo-aks"/>
                             <constraint firstAttribute="trailing" secondItem="814-5k-mq5" secondAttribute="trailing" constant="12" id="Ua1-XT-tug"/>
+                            <constraint firstAttribute="trailing" secondItem="Mtz-1u-z04" secondAttribute="trailing" id="Z2O-P5-uHG"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -52,6 +59,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="containerView" destination="xGi-x7-DUn" id="Lzt-cS-zNa"/>
+                <outlet property="containerViewBackground" destination="Mtz-1u-z04" id="djR-Zb-aZc"/>
                 <outlet property="priceHoursLabel" destination="814-5k-mq5" id="e87-86-4e2"/>
                 <outlet property="titleLabel" destination="c0E-XI-Rvv" id="kH7-gn-ZHd"/>
             </connections>

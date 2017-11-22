@@ -10,6 +10,10 @@ func getCategory (_ state: AppState, categoryId: String) -> Category {
   return state.categories.first { $0.id == categoryId }!
 }
 
+func getCategory (_ categories: [Category], categoryId: String) -> Category {
+  return categories.first { $0.id == categoryId }!
+}
+
 func getCategoryItems (_ state: AppState, categoryId: String) -> [Item] {
   return state.items.filter { $0.categoryId == categoryId }
 }

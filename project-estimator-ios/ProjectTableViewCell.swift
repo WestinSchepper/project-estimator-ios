@@ -9,6 +9,7 @@ final class ProjectTableViewCell: UITableViewCell, Registerable {
   @IBOutlet weak var priceLabel: UILabel!
   @IBOutlet weak var hoursLabel: UILabel!
   @IBOutlet weak var containerView: UIView!
+  @IBOutlet weak var containerViewBackground: UIView!
 
   var project: Project! {
     didSet {
@@ -27,7 +28,7 @@ final class ProjectTableViewCell: UITableViewCell, Registerable {
   }
 
   func setupHero() {
-    containerView.heroID = "\(project.id)-container"
+    containerViewBackground.heroID = "\(project.id)-container"
     titleLabel.heroID = "\(project.id)-title"
   }
 }

@@ -1,8 +1,8 @@
-//  Created by Westin Schepper on 11/19/17.
+//  Created by Westin Schepper on 11/20/17.
 
 import UIKit
 
-final class CategoryTableViewCell: UITableViewCell, Registerable {
+final class ItemTableViewCell: UITableViewCell, Registerable {
   static let preferredHeight: CGFloat = 60
 
   @IBOutlet weak var titleLabel: UILabel!
@@ -10,23 +10,23 @@ final class CategoryTableViewCell: UITableViewCell, Registerable {
   @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var containerViewBackground: UIView!
 
-  var category: Category! {
+  var item: Item! {
     didSet {
-      titleLabel.text = category.title
+      titleLabel.text = item.title
     }
   }
 
-  func configure(withCategory category: Category) {
+  func configure(withItem item: Item) {
     containerView.layer.cornerRadius = 5
     containerView.layer.masksToBounds = true
     selectionStyle = .none
 
-    self.category = category
+    self.item = item
     setupHero()
   }
 
   func setupHero() {
-    containerViewBackground.heroID = "\(category.id)-container"
-    titleLabel.heroID = "\(category.id)-title"
+    containerViewBackground.heroID = "\(item.id)-container"
+    titleLabel.heroID = "\(item.id)-title"
   }
 }
