@@ -73,7 +73,7 @@
                                 <constraint firstAttribute="height" constant="22" id="kvo-EI-8Cz"/>
                                 <constraint firstAttribute="width" constant="22" id="myi-iP-5S4"/>
                             </constraints>
-                            <state key="normal" backgroundImage="close"/>
+                            <state key="normal" backgroundImage="back"/>
                             <connections>
                                 <action selector="close:" destination="-1" eventType="touchUpInside" id="Paz-nT-zPc"/>
                             </connections>
@@ -132,7 +132,7 @@
         </view>
     </objects>
     <resources>
-        <image name="close" width="20" height="20"/>
+        <image name="back" width="21" height="20"/>
         <image name="more" width="21" height="5"/>
     </resources>
 </document>
