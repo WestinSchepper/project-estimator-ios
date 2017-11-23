@@ -26,10 +26,16 @@ func getProjectSetting (_ state: AppState, projectId: String) -> Setting {
   return state.settings.first { $0.projectId == projectId }!
 }
 
-func getProjectEstimate (_ state: AppState, projectId: String) -> Int {
-  let projectCategories = getProjectCategories(state, projectId: projectId)
+func getProjectEstimate (projectId: String) -> Int {
+  let projectCategories = getProjectCategories(mainStore.state, projectId: projectId)
 
   return projectCategories.reduce(0) {
     $0 + getCategoryEstimate(categoryId: $1.id)
   }
+}
+
+func getProjectCost (projectId: String) -> Int {
+  let projectSettings = getProjectSetting(mainStore.state, projectId: projectId)
+
+  return getProjectEstimate(projectId: projectId) * projectSettings.hourlyRate
 }

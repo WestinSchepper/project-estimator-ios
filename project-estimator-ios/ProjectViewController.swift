@@ -98,6 +98,12 @@ final class ProjectViewController: UIViewController {
 
   func setupViewUI() {
     projectTitle.text = project.title
+
+    let hours = getProjectEstimate(projectId: project.id)
+    let cost = getProjectCost(projectId: project.id)
+
+    hoursLabel.text = "\(hours) hours"
+    priceLabel.text = "$\(cost)"
   }
 
   func presentActions() {
