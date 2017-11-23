@@ -13,6 +13,10 @@ final class CategoryTableViewCell: UITableViewCell, Registerable {
   var category: Category! {
     didSet {
       titleLabel.text = category.title
+      let hours = getCategoryEstimate(categoryId: category.id)
+      let cost = getCategoryCost(categoryId: category.id)
+
+      priceHoursLabel.text = "$\(cost) / \(hours) hours"
     }
   }
 

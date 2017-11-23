@@ -30,6 +30,6 @@ func getProjectEstimate (_ state: AppState, projectId: String) -> Int {
   let projectCategories = getProjectCategories(state, projectId: projectId)
 
   return projectCategories.reduce(0) {
-    $0 + getCategoryEstimate(state, categoryId: $1.id)
+    $0 + getCategoryEstimate(categoryId: $1.id)
   }
 }
