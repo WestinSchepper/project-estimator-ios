@@ -61,7 +61,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZz-4H-k0d">
-                    <rect key="frame" x="166" y="30" width="43" height="29"/>
+                    <rect key="frame" x="165.5" y="30" width="44.5" height="29"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -69,7 +69,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="dZz-4H-k0d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kVa-Ci-zan" secondAttribute="trailing" constant="128" id="2ff-NF-dGL"/>
+                <constraint firstItem="dZz-4H-k0d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kVa-Ci-zan" secondAttribute="trailing" constant="12" id="2ff-NF-dGL"/>
                 <constraint firstItem="kVa-Ci-zan" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="BMd-Y7-JYW"/>
                 <constraint firstItem="L4K-eh-o5T" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FUb-yK-6wc"/>
                 <constraint firstItem="dZz-4H-k0d" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GDx-CY-eLE"/>
