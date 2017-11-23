@@ -13,6 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProjectViewController" customModule="project_estimator_ios" customModuleProvider="target">
             <connections>
+                <outlet property="closeButtonImage" destination="EVp-Rw-1Xa" id="uuq-HO-Qr2"/>
                 <outlet property="expandButton" destination="Bff-X8-bq0" id="IQK-XG-kiG"/>
                 <outlet property="headerContainer" destination="XiM-Ca-FuK" id="Ftu-Wo-03L"/>
                 <outlet property="headerContainerBackground" destination="6r5-Y4-v8f" id="lwt-m4-c1a"/>
