@@ -7,6 +7,7 @@ import ReSwift
 final class ProjectViewController: UIViewController {
   @IBOutlet weak var headerContainer: UIView!
   @IBOutlet weak var headerContainerBackground: UIView!
+  @IBOutlet weak var closeButtonImage: UIImageView!
   @IBOutlet weak var expandButton: UIButton!
   @IBOutlet weak var projectTitle: UILabel!
   @IBOutlet weak var priceLabel: UILabel!
@@ -91,6 +92,7 @@ final class ProjectViewController: UIViewController {
     priceLabel.heroID = "\(category.id)-price"
     hoursLabel.heroID = "\(category.id)-hours"
 
+    closeButtonImage.heroModifiers = [.translate(x: -10, y: 0, z: 0)]
     tableView.heroModifiers = [.fade, .translate(x: 0, y: 150, z: 0)]
   }
 
