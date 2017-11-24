@@ -51,5 +51,29 @@ final class ProjectDetailViewController: UIViewController {
 
   func setupViewUI() {
     projectTitle.text = project.title
+
+    let hours = getProjectEstimate(projectId: project.id)
+    let cost = getProjectCost(projectId: project.id)
+    let netHours = getProjectNetEstimate(projectId: project.id)
+    let netCost = getProjectNetCost(projectId: project.id)
+    let paddingHours = getProjectPaddingEstimate(projectId: project.id)
+    let paddingCost = getProjectPaddingCost(projectId: project.id)
+    let meetingHours = getProjectMeetingEstimate(projectId: project.id)
+    let meetingCost = getProjectMeetingCost(projectId: project.id)
+    let setting = getProjectSetting(mainStore.state, projectId: project.id)
+
+
+    hoursLabel.text = "\(hours) hours"
+    priceLabel.text = "$\(cost)"
+
+    netTotalLabel.text = "$\(netCost) (\(netHours) hours)"
+    paddingLabel.text = "$\(paddingCost) (\(paddingHours) hours)"
+    meetingsLabel.text = "$\(meetingCost) (\(meetingHours) hours)"
+
+    hourlyRateSettingLabel.text = "Hourly rate: $\(setting.hourlyRate)"
+    paddingSettingLabel.text = "Padding: \(Int(setting.paddingPercentage * 100))%"
+    hoursPerMeetingSettingLabel.text = "Hours per meeting: \(setting.meetingHoursPerPerson)"
+    hoursPerSprintSettingLabel.text = "Hours per sprint: \(setting.sprintHoursPerPerson)"
+
   }
 }

@@ -14,6 +14,12 @@ final class ProjectTableViewCell: UITableViewCell, Registerable {
   var project: Project! {
     didSet {
       titleLabel.text = project.title
+      
+      let hours = getProjectEstimate(projectId: project.id)
+      let cost = getProjectCost(projectId: project.id)
+
+      hoursLabel.text = "\(hours) hours"
+      priceLabel.text = "$\(cost)"
     }
   }
 

@@ -9,3 +9,12 @@ func getItems (_ state: AppState) -> [Item] {
 func getItem (_ state: AppState, itemId: String) -> Item {
   return state.items.first { $0.id == itemId }!
 }
+
+func getItemCost (_ item: Item) -> Int {
+  guard let state = mainStore.state else { return 0 }
+
+  let category = getCategory(state, categoryId: item.categoryId)
+  let projectSetting = getProjectSetting(state, projectId: category.projectId)
+
+  return item.estimate * projectSetting.hourlyRate
+}

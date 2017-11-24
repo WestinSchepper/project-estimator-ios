@@ -80,6 +80,12 @@ final class CategoryViewController: UIViewController {
   func setupViewUI() {
     categoryTitle.text = category.title
     projectTitle.text = project?.title ?? ""
+
+    let hours = getCategoryEstimate(categoryId: category.id)
+    let cost = getCategoryCost(categoryId: category.id)
+
+    hoursLabel.text = "\(hours) hours"
+    priceLabel.text = "$\(cost)"
   }
 
   func presentActions() {
