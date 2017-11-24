@@ -39,3 +39,35 @@ func getProjectCost (projectId: String) -> Int {
 
   return getProjectEstimate(projectId: projectId) * projectSettings.hourlyRate
 }
+
+func getProjectPaddingEstimate (projectId: String) -> Int {
+  let projectSettings = getProjectSetting(mainStore.state, projectId: projectId)
+  let estimate = getProjectEstimate(projectId: projectId)
+  let padding = Double(estimate) * projectSettings.paddingPercentage
+
+  return Int(ceil(padding))
+}
+
+func getProjectPaddingCost (projectId: String) -> Int {
+  let projectSettings = getProjectSetting(mainStore.state, projectId: projectId)
+
+  return getProjectPaddingEstimate(projectId: projectId) * projectSettings.hourlyRate
+}
+
+func getProjectMeetingEstimate (projectId: String) -> Int {
+  let projectSettings = getProjectSetting(mainStore.state, projectId: projectId)
+  let categories = getProjectCategories(mainStore.state, projectId: projectId)
+
+  return categories.reduce(0) {
+    $0 + getCategoryMeetingEstimate(categoryId: $1.id)
+  }
+}
+
+func getProjectMeetingCost (projectId: String) -> Int {
+  let projectSettings = getProjectSetting(mainStore.state, projectId: projectId)
+  let categories = getProjectCategories(mainStore.state, projectId: projectId)
+
+  return categories.reduce(0) {
+    $0 + getCategoryMeetingCost(categoryId: $1.id)
+  }
+}

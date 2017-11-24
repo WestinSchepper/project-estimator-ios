@@ -35,3 +35,30 @@ func getCategoryCost (categoryId: String) -> Int {
 
   return getCategoryEstimate(categoryId: category.id) * projectSetting.hourlyRate
 }
+
+func getCategoryMeetings (categoryId: String) -> Int {
+  guard let state = mainStore.state else { return 0 }
+  let category = getCategory(state, categoryId: categoryId)
+  let projectSettings = getProjectSetting(mainStore.state, projectId: category.projectId)
+  let estimate = getCategoryEstimate(categoryId: categoryId)
+
+  return Int(ceil(Double(estimate / projectSettings.sprintHoursPerPerson)))
+}
+
+func getCategoryMeetingEstimate (categoryId: String) -> Int {
+  guard let state = mainStore.state else { return 0 }
+  let category = getCategory(state, categoryId: categoryId)
+  let projectSettings = getProjectSetting(state, projectId: category.projectId)
+  let meetings = getCategoryMeetings(categoryId: category.id)
+
+  return meetings * projectSettings.meetingHoursPerPerson
+}
+
+func getCategoryMeetingCost (categoryId: String) -> Int {
+  guard let state = mainStore.state else { return 0 }
+  let category = getCategory(state, categoryId: categoryId)
+  let projectSettings = getProjectSetting(mainStore.state, projectId: category.projectId)
+  let meetingHours = getCategoryMeetingEstimate(categoryId: category.id)
+
+  return meetingHours * projectSettings.hourlyRate
+}
