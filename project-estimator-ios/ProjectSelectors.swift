@@ -26,7 +26,7 @@ func getProjectSetting (_ state: AppState, projectId: String) -> Setting {
   return state.settings.first { $0.projectId == projectId }!
 }
 
-func getProjectEstimate (projectId: String) -> Int {
+func getProjectNetEstimate (projectId: String) -> Int {
   let projectCategories = getProjectCategories(mainStore.state, projectId: projectId)
 
   return projectCategories.reduce(0) {
@@ -34,15 +34,32 @@ func getProjectEstimate (projectId: String) -> Int {
   }
 }
 
+func getProjectEstimate (projectId: String) -> Int {
+  let netEstimate = getProjectNetEstimate(projectId: projectId)
+  let paddingEstimate = getProjectPaddingEstimate(projectId: projectId)
+  let meetingsEstimate = getProjectMeetingEstimate(projectId: projectId)
+  let grossEstimate = netEstimate + paddingEstimate + meetingsEstimate
+
+  return grossEstimate
+}
+
 func getProjectCost (projectId: String) -> Int {
+  let settings = getProjectSetting(mainStore.state, projectId: projectId)
+  let grossEstimate = getProjectEstimate(projectId: projectId)
+  let grossCost = grossEstimate * settings.hourlyRate
+
+  return grossCost
+}
+
+func getProjectNetCost (projectId: String) -> Int {
   let projectSettings = getProjectSetting(mainStore.state, projectId: projectId)
 
-  return getProjectEstimate(projectId: projectId) * projectSettings.hourlyRate
+  return getProjectNetEstimate(projectId: projectId) * projectSettings.hourlyRate
 }
 
 func getProjectPaddingEstimate (projectId: String) -> Int {
   let projectSettings = getProjectSetting(mainStore.state, projectId: projectId)
-  let estimate = getProjectEstimate(projectId: projectId)
+  let estimate = getProjectNetEstimate(projectId: projectId)
   let padding = Double(estimate) * projectSettings.paddingPercentage
 
   return Int(ceil(padding))

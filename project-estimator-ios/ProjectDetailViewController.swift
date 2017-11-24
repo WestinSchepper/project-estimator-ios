@@ -54,6 +54,8 @@ final class ProjectDetailViewController: UIViewController {
 
     let hours = getProjectEstimate(projectId: project.id)
     let cost = getProjectCost(projectId: project.id)
+    let netHours = getProjectNetEstimate(projectId: project.id)
+    let netCost = getProjectNetCost(projectId: project.id)
     let paddingHours = getProjectPaddingEstimate(projectId: project.id)
     let paddingCost = getProjectPaddingCost(projectId: project.id)
     let meetingHours = getProjectMeetingEstimate(projectId: project.id)
@@ -64,7 +66,7 @@ final class ProjectDetailViewController: UIViewController {
     hoursLabel.text = "\(hours) hours"
     priceLabel.text = "$\(cost)"
 
-    netTotalLabel.text = "$\(cost) (\(hours) hours)"
+    netTotalLabel.text = "$\(netCost) (\(netHours) hours)"
     paddingLabel.text = "$\(paddingCost) (\(paddingHours) hours)"
     meetingsLabel.text = "$\(meetingCost) (\(meetingHours) hours)"
 
