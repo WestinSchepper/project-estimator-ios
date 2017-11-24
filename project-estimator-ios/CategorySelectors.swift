@@ -41,8 +41,9 @@ func getCategoryMeetings (categoryId: String) -> Int {
   let category = getCategory(state, categoryId: categoryId)
   let projectSettings = getProjectSetting(mainStore.state, projectId: category.projectId)
   let estimate = getCategoryEstimate(categoryId: categoryId)
+  let meetings = Double(Double(estimate) / Double(projectSettings.sprintHoursPerPerson))
 
-  return Int(ceil(Double(estimate / projectSettings.sprintHoursPerPerson)))
+  return Int(ceil(meetings))
 }
 
 func getCategoryMeetingEstimate (categoryId: String) -> Int {
