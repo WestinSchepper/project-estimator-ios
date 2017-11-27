@@ -51,7 +51,7 @@ final class ColorViewController: UIViewController {
   func handlePan(gestureRecognizer: UIPanGestureRecognizer) {
     if gestureRecognizer.state == .began {
 
-      UIView.animate(withDuration: 0.15) { [unowned self] in
+      UIView.animate(withDuration: 0.15) {
         self.closeButtonImage.transform = CGAffineTransform(translationX: -50.0, y: 0)
         self.confirmButtonImage.transform = CGAffineTransform(translationX: 50.0, y: 0)
       }
@@ -63,7 +63,7 @@ final class ColorViewController: UIViewController {
     }
 
     if gestureRecognizer.state == .ended {
-      UIView.animate(withDuration: 0.15) { [unowned self] in
+      UIView.animate(withDuration: 0.15) {
         self.closeButtonImage.transform = CGAffineTransform(translationX: 0.0, y: 0)
         self.confirmButtonImage.transform = CGAffineTransform(translationX: 0.0, y: 0)
       }
