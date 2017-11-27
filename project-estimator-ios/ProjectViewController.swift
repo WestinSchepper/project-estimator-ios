@@ -4,6 +4,10 @@ import UIKit
 import Hero
 import ReSwift
 
+protocol ProjectViewControllerDelegate: class {
+  func closeProject()
+}
+
 final class ProjectViewController: UIViewController {
   @IBOutlet weak var headerContainer: UIView!
   @IBOutlet weak var headerContainerBackground: UIView!
@@ -16,7 +20,7 @@ final class ProjectViewController: UIViewController {
 
   @IBAction func close(_ sender: UIButton) {
     setupHeroForProject()
-    dismiss(animated: true)
+    delegate?.closeProject()
   }
 
   @IBAction func more(_ sender: UIButton) {
@@ -31,6 +35,7 @@ final class ProjectViewController: UIViewController {
   }
 
   var project: Project!
+  weak var delegate: ProjectViewControllerDelegate?
 
   lazy var tableManager: CategoriesTableManager = {
     let manager = CategoriesTableManager(withTableView: self.tableView, project: self.project)

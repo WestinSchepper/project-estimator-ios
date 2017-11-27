@@ -31,6 +31,9 @@
 		CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD780D1C1F5DE5CA0007A37D /* Assets.xcassets */; };
 		CD780D201F5DE5CA0007A37D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD780D1E1F5DE5CA0007A37D /* LaunchScreen.storyboard */; };
 		CD780D3C1F5E1F7F0007A37D /* Registerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D3B1F5E1F7F0007A37D /* Registerable.swift */; };
+		CDA990601FCC8035002B2C50 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA9905F1FCC8035002B2C50 /* AppCoordinator.swift */; };
+		CDA990621FCC86A1002B2C50 /* ProjectsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA990611FCC86A1002B2C50 /* ProjectsCoordinator.swift */; };
+		CDA990641FCC8786002B2C50 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA990631FCC8786002B2C50 /* Coordinator.swift */; };
 		CDAB7F2C1F9C0AA100AC43B2 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F2B1F9C0AA100AC43B2 /* Persistable.swift */; };
 		CDAB7F2E1F9D4EAB00AC43B2 /* ProjectObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F2D1F9D4EAB00AC43B2 /* ProjectObject.swift */; };
 		CDAB7F301F9D508E00AC43B2 /* CategoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F2F1F9D508E00AC43B2 /* CategoryObject.swift */; };
@@ -105,6 +108,9 @@
 		CD780D1F1F5DE5CA0007A37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD780D211F5DE5CA0007A37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD780D3B1F5E1F7F0007A37D /* Registerable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registerable.swift; sourceTree = "<group>"; };
+		CDA9905F1FCC8035002B2C50 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		CDA990611FCC86A1002B2C50 /* ProjectsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsCoordinator.swift; sourceTree = "<group>"; };
+		CDA990631FCC8786002B2C50 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CDAB7F2B1F9C0AA100AC43B2 /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
 		CDAB7F2D1F9D4EAB00AC43B2 /* ProjectObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectObject.swift; sourceTree = "<group>"; };
 		CDAB7F2F1F9D508E00AC43B2 /* CategoryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryObject.swift; sourceTree = "<group>"; };
@@ -256,6 +262,7 @@
 		CD780D141F5DE5CA0007A37D /* project-estimator-ios */ = {
 			isa = PBXGroup;
 			children = (
+				CDA9905E1FCC8026002B2C50 /* Coordinators */,
 				CDDEF2E01FBBD0B40027857A /* Forms */,
 				CDDEF2DF1FBBD0A20027857A /* Classes */,
 				CDC714131FAFEBCC00EE2859 /* Manager */,
@@ -315,6 +322,7 @@
 				CD780D3B1F5E1F7F0007A37D /* Registerable.swift */,
 				CD11C7EE1F92F289000D0DB1 /* IdEquatable.swift */,
 				CDAB7F2B1F9C0AA100AC43B2 /* Persistable.swift */,
+				CDA990631FCC8786002B2C50 /* Coordinator.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -341,6 +349,15 @@
 				CDAB7F331F9D56B200AC43B2 /* SettingObject.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		CDA9905E1FCC8026002B2C50 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				CDA9905F1FCC8035002B2C50 /* AppCoordinator.swift */,
+				CDA990611FCC86A1002B2C50 /* ProjectsCoordinator.swift */,
+			);
+			name = Coordinators;
 			sourceTree = "<group>";
 		};
 		CDC071241FC0FE9900E07AB1 /* ProjectDetailViewController */ = {
@@ -587,12 +604,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDA990621FCC86A1002B2C50 /* ProjectsCoordinator.swift in Sources */,
 				CDC714101FAEBA9A00EE2859 /* ProjectTableViewCell.swift in Sources */,
 				CDDEF2E21FBBD0C30027857A /* AddProjectForm.swift in Sources */,
 				CD2C71661F96D48A004954B6 /* ProjectReducer.swift in Sources */,
 				CDC714151FAFEBEE00EE2859 /* ProjectsTableManager.swift in Sources */,
 				CDFD2BCC1FC39E0900A3E49A /* CategoryViewController.swift in Sources */,
 				CD11C7E51F92BC23000D0DB1 /* CategoryActions.swift in Sources */,
+				CDA990601FCC8035002B2C50 /* AppCoordinator.swift in Sources */,
 				CDAB7F2C1F9C0AA100AC43B2 /* Persistable.swift in Sources */,
 				CDAB7F341F9D56B200AC43B2 /* SettingObject.swift in Sources */,
 				CDDF49C61F9446E700EFD357 /* CategorySelectors.swift in Sources */,
@@ -633,6 +652,7 @@
 				CD11C7ED1F92EB36000D0DB1 /* Array.swift in Sources */,
 				CDC071221FC0E35000E07AB1 /* AddProjectMiddleware.swift in Sources */,
 				CD11C7EF1F92F289000D0DB1 /* IdEquatable.swift in Sources */,
+				CDA990641FCC8786002B2C50 /* Coordinator.swift in Sources */,
 				CDC92E081F97090E00AC8061 /* ProjectSelectors.swift in Sources */,
 				CDAB7F3C1F9D75B700AC43B2 /* Object.swift in Sources */,
 				CDC714191FB0047600EE2859 /* AddButtonTableFooterView.swift in Sources */,

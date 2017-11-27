@@ -19,6 +19,7 @@ let mainStore = Store<AppState>(
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
+  let appCoordinator = AppCoordinator()
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
@@ -26,8 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     if let window = window {
       window.backgroundColor = .white
+      window.rootViewController = appCoordinator.rootViewController
       window.makeKeyAndVisible()
-      window.rootViewController = ProjectsViewController()
+
+      appCoordinator.start()
 
     } else {
       fatalError("There was an issue accessing the window")

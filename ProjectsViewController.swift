@@ -3,45 +3,38 @@
 import UIKit
 import RealmSwift
 
+protocol ProjectsViewControllerDelegate: class {
+  func showEditSettings(withSettings setting: Setting)
+  func showAddProject()
+  func showProject(_ project: Project)
+}
+
 final class ProjectsViewController: UIViewController {
   @IBOutlet weak var projectsLabel: UILabel!
   @IBOutlet weak var tableView: UITableView!
+  weak var delegate: ProjectsViewControllerDelegate?
 
   lazy var tableManager: ProjectsTableManager = {
     let manager = ProjectsTableManager(withTableView: self.tableView)
     manager.addProjectPressed = { [unowned self] in
-      self.presentAddProject()
+      self.delegate?.showAddProject()
     }
 
     manager.projectSelected = { [unowned self] project in
-      self.presentProject(project)
+      self.delegate?.showProject(project)
     }
 
     return manager
   }()
 
   @IBAction func handleSettingsTapped(_ sender: UIButton) {
-    let defaultSetting = getDefaultSetting(mainStore.state)
-    let editSettingsForm = EditSettingForm(withSetting: defaultSetting, isDefault: true)
-
-    present(editSettingsForm.viewController, animated: true)
+    let setting = getDefaultSetting(mainStore.state)
+    delegate?.showEditSettings(withSettings: setting)
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     tableManager.start()
-  }
-
-  private func presentAddProject() {
-    let addProjectForm = AddProjectForm()
-
-    self.present(addProjectForm.viewController, animated: true)
-  }
-
-  private func presentProject(_ project: Project) {
-    let projectViewController = ProjectViewController(withProject: project)
-
-    present(projectViewController, animated: true)
   }
 }
