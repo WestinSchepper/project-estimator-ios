@@ -1,11 +1,13 @@
 //  Created by Westin Schepper on 10/17/17.
 
 import Foundation
+import UIKit
 
 struct Project: IdEquatable {
   var id: String = UUID().uuidString
   var title: String = ""
   var createdAt: Date = Date()
+  var color: Color = Color()
 }
 
 extension Project: Persistable {
@@ -13,6 +15,7 @@ extension Project: Persistable {
     id = managedObject.id
     title = managedObject.title
     createdAt = managedObject.createAt
+    color = Color(managedObject: managedObject.color ?? ColorObject())
   }
 
   var managedObject: ProjectObject {
@@ -21,6 +24,7 @@ extension Project: Persistable {
     project.id = id
     project.title = title
     project.createAt = createdAt
+    project.color = color.managedObject
 
     return project
   }

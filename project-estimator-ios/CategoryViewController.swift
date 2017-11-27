@@ -53,7 +53,7 @@ final class CategoryViewController: UIViewController {
     setupHero()
     setupViewUI()
 
-        tableManager.start()
+    tableManager.start()
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -78,6 +78,7 @@ final class CategoryViewController: UIViewController {
   }
 
   func setupViewUI() {
+    headerContainerBackground.backgroundColor = project?.color.uiColor
     categoryTitle.text = category.title
     projectTitle.text = project?.title ?? ""
 

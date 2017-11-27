@@ -97,6 +97,7 @@ final class ProjectViewController: UIViewController {
   }
 
   func setupViewUI() {
+    headerContainerBackground.backgroundColor = project.color.uiColor
     projectTitle.text = project.title
 
     let hours = getProjectEstimate(projectId: project.id)
@@ -126,12 +127,19 @@ final class ProjectViewController: UIViewController {
 
       self.present(form.viewController, animated: true)
     }
+
+    let color = UIAlertAction(title: "Color", style: .default) { _ in
+      let colorViewController = ColorViewController(forProject: self.project)
+
+      self.present(colorViewController, animated: true)
+    }
     
     let cancel = UIAlertAction(title: "Cancel", style: .cancel)
     
     actionController.addAction(delete)
     actionController.addAction(edit)
     actionController.addAction(settings)
+    actionController.addAction(color)
     actionController.addAction(cancel)
     
     present(actionController, animated: true)

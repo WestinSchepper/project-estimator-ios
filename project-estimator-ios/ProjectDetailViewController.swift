@@ -50,6 +50,7 @@ final class ProjectDetailViewController: UIViewController {
   }
 
   func setupViewUI() {
+    contentContainerBackground.backgroundColor = project.color.uiColor
     projectTitle.text = project.title
 
     let hours = getProjectEstimate(projectId: project.id)
