@@ -80,7 +80,7 @@
 
 /* Begin PBXFileReference section */
 		CD11ABD01FBBEB4A00D1A81A /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
-		CD11ABD21FBBEB5500D1A81A /* ProjectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProjectViewController.xib; path = ../ProjectViewController.xib; sourceTree = "<group>"; };
+		CD11ABD21FBBEB5500D1A81A /* ProjectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectViewController.xib; sourceTree = "<group>"; };
 		CD11C7DF1F92BA10000D0DB1 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		CD11C7E21F92BA7E000D0DB1 /* CategoryReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryReducer.swift; sourceTree = "<group>"; };
 		CD11C7E41F92BC23000D0DB1 /* CategoryActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryActions.swift; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		CDC071251FC0FEBE00E07AB1 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		CDC071271FC0FF4000E07AB1 /* ProjectDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectDetailViewController.xib; sourceTree = "<group>"; };
 		CDC7140A1FAE805E00EE2859 /* ProjectsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsViewController.xib; sourceTree = "<group>"; };
-		CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProjectsViewController.swift; path = ../ProjectsViewController.swift; sourceTree = "<group>"; };
+		CDC7140C1FAE807A00EE2859 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		CDC7140F1FAEBA9A00EE2859 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 		CDC714111FAEBAA700EE2859 /* ProjectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectTableViewCell.xib; sourceTree = "<group>"; };
 		CDC714141FAFEBEE00EE2859 /* ProjectsTableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableManager.swift; sourceTree = "<group>"; };
