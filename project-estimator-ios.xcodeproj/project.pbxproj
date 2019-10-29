@@ -31,6 +31,11 @@
 		CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD780D1C1F5DE5CA0007A37D /* Assets.xcassets */; };
 		CD780D201F5DE5CA0007A37D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD780D1E1F5DE5CA0007A37D /* LaunchScreen.storyboard */; };
 		CD780D3C1F5E1F7F0007A37D /* Registerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD780D3B1F5E1F7F0007A37D /* Registerable.swift */; };
+		CDA990541FCB7FC5002B2C50 /* ColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDA990531FCB7FC5002B2C50 /* ColorViewController.xib */; };
+		CDA990561FCB7FD2002B2C50 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA990551FCB7FD2002B2C50 /* ColorViewController.swift */; };
+		CDA990581FCB92EE002B2C50 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA990571FCB92EE002B2C50 /* Color.swift */; };
+		CDA9905A1FCB92FE002B2C50 /* ColorObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA990591FCB92FE002B2C50 /* ColorObject.swift */; };
+		CDA9905D1FCC5095002B2C50 /* RealmMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA9905C1FCC5095002B2C50 /* RealmMigrator.swift */; };
 		CDAB7F2C1F9C0AA100AC43B2 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F2B1F9C0AA100AC43B2 /* Persistable.swift */; };
 		CDAB7F2E1F9D4EAB00AC43B2 /* ProjectObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F2D1F9D4EAB00AC43B2 /* ProjectObject.swift */; };
 		CDAB7F301F9D508E00AC43B2 /* CategoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB7F2F1F9D508E00AC43B2 /* CategoryObject.swift */; };
@@ -105,6 +110,11 @@
 		CD780D1F1F5DE5CA0007A37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD780D211F5DE5CA0007A37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD780D3B1F5E1F7F0007A37D /* Registerable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registerable.swift; sourceTree = "<group>"; };
+		CDA990531FCB7FC5002B2C50 /* ColorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorViewController.xib; sourceTree = "<group>"; };
+		CDA990551FCB7FD2002B2C50 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		CDA990571FCB92EE002B2C50 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		CDA990591FCB92FE002B2C50 /* ColorObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorObject.swift; sourceTree = "<group>"; };
+		CDA9905C1FCC5095002B2C50 /* RealmMigrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigrator.swift; sourceTree = "<group>"; };
 		CDAB7F2B1F9C0AA100AC43B2 /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
 		CDAB7F2D1F9D4EAB00AC43B2 /* ProjectObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectObject.swift; sourceTree = "<group>"; };
 		CDAB7F2F1F9D508E00AC43B2 /* CategoryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryObject.swift; sourceTree = "<group>"; };
@@ -256,6 +266,7 @@
 		CD780D141F5DE5CA0007A37D /* project-estimator-ios */ = {
 			isa = PBXGroup;
 			children = (
+				CDA9905B1FCC5087002B2C50 /* Utilities */,
 				CDDEF2E01FBBD0B40027857A /* Forms */,
 				CDDEF2DF1FBBD0A20027857A /* Classes */,
 				CDC714131FAFEBCC00EE2859 /* Manager */,
@@ -279,6 +290,7 @@
 		CD780D271F5DE8790007A37D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CDA990521FCB7FA2002B2C50 /* ColorViewController */,
 				CD2266771FC39A010000A0E2 /* CategoryViewController */,
 				CDD572CF1FB8059E00135EAB /* FormViewController */,
 				CDC714081FAE804400EE2859 /* ProjectsViewController */,
@@ -339,8 +351,27 @@
 				CDAB7F311F9D555C00AC43B2 /* ItemObject.swift */,
 				CD2C715D1F96C9E6004954B6 /* Setting.swift */,
 				CDAB7F331F9D56B200AC43B2 /* SettingObject.swift */,
+				CDA990571FCB92EE002B2C50 /* Color.swift */,
+				CDA990591FCB92FE002B2C50 /* ColorObject.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		CDA990521FCB7FA2002B2C50 /* ColorViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CDA990551FCB7FD2002B2C50 /* ColorViewController.swift */,
+				CDA990531FCB7FC5002B2C50 /* ColorViewController.xib */,
+			);
+			name = ColorViewController;
+			sourceTree = "<group>";
+		};
+		CDA9905B1FCC5087002B2C50 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CDA9905C1FCC5095002B2C50 /* RealmMigrator.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		CDC071241FC0FE9900E07AB1 /* ProjectDetailViewController */ = {
@@ -541,6 +572,7 @@
 				CDFD2BCE1FC39F2A00A3E49A /* CategoryViewController.xib in Resources */,
 				CD780D1D1F5DE5CA0007A37D /* Assets.xcassets in Resources */,
 				CDC7140B1FAE805E00EE2859 /* ProjectsViewController.xib in Resources */,
+				CDA990541FCB7FC5002B2C50 /* ColorViewController.xib in Resources */,
 				CDC714121FAEBAA700EE2859 /* ProjectTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,6 +632,7 @@
 				CD11ABD11FBBEB4A00D1A81A /* ProjectViewController.swift in Sources */,
 				CDE9056E1FB7FE5900D67787 /* FormFieldTableViewCell.swift in Sources */,
 				CD22666F1FC27BF50000A0E2 /* CategoriesTableManager.swift in Sources */,
+				CDA990581FCB92EE002B2C50 /* Color.swift in Sources */,
 				CD2C71601F96D105004954B6 /* ProjectActions.swift in Sources */,
 				CDD572DB1FB80A5900135EAB /* FormField.swift in Sources */,
 				CD2266761FC289190000A0E2 /* AddCategoryForm.swift in Sources */,
@@ -618,15 +651,18 @@
 				CDC92E0A1F9709D300AC8061 /* SettingSelectors.swift in Sources */,
 				CDD572D31FB805BB00135EAB /* FormViewController.swift in Sources */,
 				CDFD2BD71FC3B5F000A3E49A /* AddItemForm.swift in Sources */,
+				CDA9905D1FCC5095002B2C50 /* RealmMigrator.swift in Sources */,
 				CD11C7E01F92BA10000D0DB1 /* AppState.swift in Sources */,
 				CDC7140D1FAE807A00EE2859 /* ProjectsViewController.swift in Sources */,
 				CDFD2BD31FC3B30100A3E49A /* ItemTableViewCell.swift in Sources */,
+				CDA990561FCB7FD2002B2C50 /* ColorViewController.swift in Sources */,
 				CD2C715E1F96C9E6004954B6 /* Setting.swift in Sources */,
 				CD11C7EB1F92D654000D0DB1 /* Item.swift in Sources */,
 				CD780D3C1F5E1F7F0007A37D /* Registerable.swift in Sources */,
 				CDDF49C31F94435E00EFD357 /* AppReducer.swift in Sources */,
 				CDFD2BD91FC3B7FA00A3E49A /* EditCategoryForm.swift in Sources */,
 				CDAB7F2E1F9D4EAB00AC43B2 /* ProjectObject.swift in Sources */,
+				CDA9905A1FCB92FE002B2C50 /* ColorObject.swift in Sources */,
 				CDAB7F321F9D555C00AC43B2 /* ItemObject.swift in Sources */,
 				CDDF49BF1F94298A00EFD357 /* ItemActions.swift in Sources */,
 				CDDDD6E71FC50B8E00731E05 /* EditItemForm.swift in Sources */,

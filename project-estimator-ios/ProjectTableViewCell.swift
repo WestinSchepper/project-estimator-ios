@@ -13,6 +13,7 @@ final class ProjectTableViewCell: UITableViewCell, Registerable {
 
   var project: Project! {
     didSet {
+      containerViewBackground.backgroundColor = project.color.uiColor
       titleLabel.text = project.title
       
       let hours = getProjectEstimate(projectId: project.id)
